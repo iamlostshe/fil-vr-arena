@@ -1,0 +1,70 @@
+.c-faq__list {}
+
+
+.c-faq-item {
+  &__question {
+    border-top: 1px solid #eee;
+
+    & button {
+      display: block;
+      width: 100%;
+      padding: 27px 30px 27px 0;
+      font-size: 18px;
+      line-height: 1.4;
+      text-align: left;
+      cursor: pointer;
+      color: #fff;
+      &:extend(.o-tr);
+      position: relative;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 15px;
+        padding: 20px 30px 20px 0;
+      }
+
+      &:after {
+        display: block;
+        content: "\0020";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top:50%;
+        right: 0;
+        margin-top: -6px;
+        &:extend(.o-tr);
+        background-size: 12px 12px;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMSAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzI2NDhfMTIyKSI+CjxwYXRoIGQ9Ik01LjY1NyA5LjA3MTA3TDAgMy40MTQzNkwxLjQxNDIxIDIuMDAwMTVMNS42NTY4NSA2LjI0Mjc5TDkuODk5NjUgMkwxMS4zMTM5IDMuNDE0MjFMNS42NTcgOS4wNzEwN1oiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjY0OF8xMjIiPgo8cmVjdCB3aWR0aD0iMTEiIGhlaWdodD0iMTEiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+
+        .is-open & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+
+    .is-open & {
+      max-height: 5000px;
+    }
+  }
+
+  &__content {
+    padding: 0 0 20px;
+    transition-delay: 0.5s;
+    &:extend(.o-tr);
+
+    .is-open & {
+      opacity: 1;
+    }
+  }
+}

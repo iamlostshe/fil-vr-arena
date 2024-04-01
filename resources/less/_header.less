@@ -1,0 +1,129 @@
+.c-header {
+  position: fixed;
+  z-index: 10;
+  top:0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.85);
+  //background: linear-gradient(to bottom, rgba(0,0,0,1) 90%,rgba(0,0,0,0) 100%);
+  backdrop-filter: blur(4px);
+
+  & a {
+    text-transform: uppercase;
+    color:#fff;
+    line-height: 1;
+    text-decoration: none;
+
+    &:hover {
+      color:@color-red;
+    }
+
+    &.is-active {
+      font-weight: bold;
+      pointer-events: none;
+      cursor: default;
+      color:@color-red;
+      text-decoration: underline;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: @header_height;
+    position: relative;
+    gap:40px;
+
+    @media screen and (max-width: 1200px) {
+      height: @header_height_mobile;
+    }
+  }
+
+  &__logo {
+    &:extend(.c-logo);
+    margin: 0 40px;
+
+    @media screen and (max-width: 1200px) {
+      margin: 0 20px 0 0;
+    }
+
+
+    & span {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    @media screen and (max-width: 1200px) {
+      justify-content: flex-start;
+    }
+
+    & ul {
+      display: flex;
+      gap:40px;
+      width: 100%;
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+
+      &:first-child {
+        justify-content: flex-end;
+      }
+
+      & li {
+        display: block;
+      }
+
+    }
+  }
+
+  &__contacts {
+    position: absolute;
+    top:10px;
+    bottom: 10px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (max-width: 1200px) {
+      right: 50px;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    position: relative;
+    width: 24px;
+    height: 20px;
+    min-width: 24px;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
+
+
+    @media screen and (max-width: 1200px) {
+      display: block;
+    }
+
+    &:after {
+      display: block;
+      content: "\0020";
+      position: absolute;
+      top:50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #fff;
+      margin-top: -1px;
+    }
+  }
+
+}

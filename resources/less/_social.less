@@ -1,0 +1,53 @@
+.c-social {
+  display: flex;
+  gap: 20px;
+
+  &.o-align--center {
+    justify-content: center;
+  }
+}
+
+
+.c-social a,
+.c-social-item {
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  gap: 5px;
+  color:#fff;
+  text-decoration: none;
+
+  &:before {
+    display: block;
+    content: "\0020";
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  &:hover {
+    opacity: 1;
+    color:#fff;
+  }
+
+  &[href*="https://instagram.com"]:before,
+  &[href*="https://www.instagram.com"]:before
+  { background-image: url("../img/social/icon-instagram.svg");}
+
+  &[href*="https://www.facebook.com"]:before,
+  &[href*="https://facebook.com"]:before { background-image: url("../img/social/icon-facebook.svg");}
+
+  & img,
+  & svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

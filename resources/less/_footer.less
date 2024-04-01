@@ -1,0 +1,130 @@
+.c-footer {
+  padding: 70px 0;
+  color:#fff;
+
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  &__logo {
+    display: block;
+    width: 160px;
+    min-width: 160px;
+    height: 25px;
+    background-image: url("../img/logotype.svg");
+    background-size: cover;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav {
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 30px;
+    }
+
+    & ul {
+      display: flex;
+      gap:20px;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap:10px;
+      }
+    }
+
+    & li {
+      display: block;
+    }
+
+    & a {
+      font-size: 18px;
+      color:#fff;
+      text-decoration: none;
+
+      &:hover {
+        color:@color-red;
+      }
+    }
+  }
+
+  &__social {}
+
+  &__contacts {
+    padding-top: 50px;
+    line-height: 1.7;
+    font-size: 17px;
+
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 30px;
+    }
+
+    & a {
+      color:#fff;
+      text-decoration: none;
+
+      &:hover {
+        color:@color-red;
+      }
+    }
+  }
+
+  &__legal {
+    padding-top: 50px;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 30px;
+    }
+
+    & ul {
+      display: flex;
+      gap:20px;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap:10px;
+      }
+    }
+
+    & li {
+      display: block;
+    }
+
+    & a {
+      opacity: 0.7;
+      color:#fff;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 12px;
+    padding-top: 50px;
+    opacity: 0.7;
+  }
+}

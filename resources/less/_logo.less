@@ -1,0 +1,28 @@
+.c-logo {
+  display: block;
+  width: 78px;
+  min-width: 78px;
+  height: 40px;
+  background: url("../img/logo.svg");
+  background-size: cover;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 1;
+  text-indent: 100px;
+  &:extend(.o-tr);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 55px;
+    min-width: 55px;
+    height: 28px;
+  }
+
+  & span {
+    display: none;
+  }
+}
+

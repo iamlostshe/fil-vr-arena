@@ -1,0 +1,45 @@
+.c-layout {
+  width: 100%;
+  max-width: @max-width;
+  margin: 0 auto;
+
+  &--wide {
+    max-width: @max-width-wide;
+  }
+
+  @media screen and (max-width: @max-width) {
+    width: auto;
+    margin: 0 @indent;
+
+    &--wide {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 @indentTablet;
+
+    &--wide {
+      margin: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 640px) {
+    margin: 0 @indentMobile;
+
+    &--wide {
+      margin: 0;
+    }
+  }
+}
+
+
+.c-site {
+}
+
+.c-main {
+  max-width: 100vw;
+}

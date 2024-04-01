@@ -1,0 +1,93 @@
+html,
+body  {
+  min-height: 100vh;
+  background-color: #000;
+  max-width: 100%;
+}
+
+html {
+  background-color: #000;
+}
+
+body {
+  font-family: @font;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #fff;
+  background-image: url("../img/bg-sky-dark.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  @media screen and (max-width: 640px) {
+    font-size: 13px;
+  }
+}
+
+
+.image-block {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.o-tr,
+.o-transition {
+  transition:all .25s cubic-bezier(0.645,0.05,0.355,1);
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: @color-red;
+  text-decoration: none;
+  &:extend(.o-transition);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.o-font--alt {
+  font-family: @fontAlt;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+.o-align {
+  &--center {
+    text-align: center;
+  }
+}
+
+button {
+  color:#fff;
+}
+
+.c-site,
+#app {
+  min-width: 280px;
+}
+
+.c-map {
+  & iframe {
+    display: block;
+    width: 100%;
+    height: 75vh;
+
+    @media screen and (max-width: 1023px) {
+      height: 400px;
+    }
+  }
+}
