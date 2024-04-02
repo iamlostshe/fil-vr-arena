@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('page')
-    <main class="c-main">
 
         <section class="c-section" id="section-page">
 
@@ -36,5 +35,4 @@
 
         </section>
 
-    </main>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('page')
-    <main class="c-main">
+
         <section class="c-hero" id="section-hero">
             <div class="c-layout">
                 <div class="c-hero__meta">
@@ -261,5 +261,5 @@
             </div>
         </section>
 
-    </main>
+
 @endsection

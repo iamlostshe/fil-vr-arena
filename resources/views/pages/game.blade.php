@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('page')
-    <main class="c-main">
+
 
         <section class="c-section" id="section-game">
             <div class="c-game">
@@ -84,5 +84,5 @@
             </div><!--/swiper-->
         </section>
 
-    </main>
+
 @endsection

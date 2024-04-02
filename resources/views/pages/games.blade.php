@@ -1,7 +1,5 @@
 @extends('layouts.app')
 @section('page')
-    <main class="c-main">
-
         <section class="c-section" id="section-games-list">
             <div class="c-layout">
                 <div class="c-section__title">Jogos</div>
@@ -129,5 +127,4 @@
             </div><!--/c-game__list-->
         </section>
 
-    </main>
 @endsection

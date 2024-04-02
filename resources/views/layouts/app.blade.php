@@ -102,7 +102,9 @@
             </div>
         </div>
     </header>
-    @yield('page')
+    <main class="c-main">
+        @yield('page')
+    </main>
     <footer class="c-footer">
         <div class="c-layout">
             <div class="c-footer__container">

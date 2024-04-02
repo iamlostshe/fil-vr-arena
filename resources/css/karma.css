@@ -809,7 +809,7 @@ body.is-bar .c-header {
 }
 @media screen and (max-width: 1200px) {
   .c-main {
-    height: 50px;
+    padding-top: 50px;
   }
 }
 .c-section {
