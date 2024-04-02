@@ -23,8 +23,9 @@ mix.js('resources/js/jquery-3.3.1.min.js', 'public/js').version();
 mix.js('resources/plugins/jquery.mask.min.js', 'public/js').version();
 mix.js('resources/plugins/fancybox/jquery.fancybox.min.js', 'public/js/plugins/fancybox').version();
 mix.js('resources/plugins/swiper10/swiper-bundle.min.js', 'public/js/plugins/swiper10').version();
-mix.js('resources/js/core.swiper.js', 'public/js').version();
 mix.js('resources/js/core.js', 'public/js').version();
+mix.js('resources/js/core.swiper.js', 'public/js').version();
+// Media
 mix.copyDirectory('resources/img', 'public/img');
 mix.copyDirectory('resources/media', 'public/media');
 
