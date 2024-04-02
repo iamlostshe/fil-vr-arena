@@ -20,19 +20,20 @@
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:site_name" content="ANANOTHER WORLD"/>
-    <meta property="og:title" content="Парк виртуальных миров Another World. VR аттракцион виртуальной реальности в разных городах по всему"/>
+    <meta property="og:title" content="Virtual reality Porto parque com movimento livre"/>
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Another World – это многоуровневые арены с полным погружением в виртуальную реальность. У нас Вы найдете: передовую систему трекинга, просторные помещения, опытных инструкторов и новейшее оборудование. Реалистичные спецэффекты максимально погружают наших гостей в виртуальный мир. Приходите за красочными спецэффектами и невероятными эмоциями в нашу арену"/>
-    <meta property="og:image" content="https://vr-arena.com/img/poster.jpg?v=2"/>
-    <meta property="og:image:secure_url" content="https://vr-arena.com/" />
+    <meta property="og:description" content="Virtual reality Porto parque com movimento livre"/>
+    <meta property="og:image" content="https://vr-arena.pt/img/poster.jpg?v=2"/>
+    <meta property="og:image:secure_url" content="https://vr-arena.pt/" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:url" content="https://vr-arena.com/"/><meta name="twitter:title" content="ANOTHER WORLD" />
-    <meta name="twitter:image" content="https://vr-arena.com/img/poster.jpg?v=2" />
-    <meta name="twitter:url" content="https://vr-arena.com/" />
+    <meta property="og:url" content="https://vr-arena.pt/"/>
+    <meta name="twitter:title" content="ANOTHER WORLD" />
+    <meta name="twitter:image" content="https://vr-arena.pt/img/poster.jpg?v=2" />
+    <meta name="twitter:url" content="https://vr-arena.pt/" />
     <meta name="twitter:card" content="ANANOTHER WORLD" />
-    <link rel="image_src" href="https://vr-arena.com/img/poster.jpg?v=2" />
+    <link rel="image_src" href="https://vr-arena.pt/img/poster.jpg?v=2" />
 
 
     <link rel="stylesheet" href="{{ mix('css/plugins/aos/aos.css') }}"/>
@@ -46,12 +47,9 @@
     <script type="text/javascript" src="{{ mix('js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/plugins/fancybox/jquery.fancybox.min.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/plugins/swiper10/swiper-bundle.min.js') }}"></script>
-    <script type="text/javascript" src="{{ mix('js/core.swiper.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/core.js') }}"></script>
+    <script type="text/javascript" src="{{ mix('js/core.swiper.js') }}"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
