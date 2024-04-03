@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>Another World</title>
+    <title>{{ __('app.title') }}</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name='viewport' id='viewport'
           content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
@@ -62,19 +62,21 @@
         <div class="c-bar__main">
             <div class="c-bar__content">
                 <ul>
-                    <li><a href="{{route('games')}}">Aventura</a></li>
-                    <li><a href="#">Reserve uma experiência</a></li>
-                    <li><a href="{{route('about')}}">Sobre nós</a></li>
-                    <li><a href="{{route('contacts')}}">Contatos</a></li>
-                    <li><a href="https://another-world.com/" target="_blank">Franquia</a></li>
+                    <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
+                    <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
+                    <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
+                    <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
+                    <li><a href="https://another-world.com/" target="_blank">{{ __('app.franchise') }}</a></li>
                 </ul>
             </div>
         </div>
     </aside>
-
+    @php
+    $selectedLang = app()->getLocale();
+    @endphp
     <ul class="c-languages">
-        <li><a href="#" class="is-active">PT</a></li>
-        <li><a href="#">EN</a></li>
+        <li><a href="/pt" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a></li>
+        <li><a href="/en" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a></li>
     </ul>
 
     <header class="c-header">
@@ -82,14 +84,14 @@
             <div class="c-header__container">
                 <div class="c-header__nav">
                     <ul>
-                        <li><a href="{{route('games')}}">Aventura</a></li>
-                        <li><a href="#">Reserve uma experiência</a></li>
-                        <li><a href="{{route('about')}}">Sobre nós</a></li>
+                        <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
+                        <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
                     </ul>
                     <a href="#" class="c-header__logo"></a>
                     <ul>
-                        <li><a href="{{route('contacts')}}">Contatos</a></li>
-                        <li><a href="https://another-world.com/" target="_blank">Franquia</a></li>
+                        <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="https://another-world.com/" target="_blank">{{ __('app.franchise') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">
@@ -109,15 +111,15 @@
                 <a href="#" class="c-footer__logo"></a>
                 <nav class="c-footer__nav">
                     <ul>
-                        <li><a href="{{route('games')}}">Aventura</a></li>
-                        <li><a href="#">Reserve uma experiência</a></li>
-                        <li><a href="{{route('about')}}">Sobre nós</a></li>
-                        <li><a href="{{route('contacts')}}">Contatos</a></li>
-                        <li><a href="https://another-world.com/" target="_blank">Franquia</a></li>
+                        <li><a href="{{route('games')}}">{{ __('app.adventure') }}</a></li>
+                        <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="https://another-world.com/" target="_blank">{{ __('app.franchise') }}</a></li>
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
-                    <a href="#" class="c-button c-button--alt">Reserva a tua experiência</a>
+                    <a href="#" class="c-button c-button--alt">{{ __('app.reserve_experience') }}</a>
                 </div>
             </div>
             <div class="c-footer__container">
@@ -135,13 +137,13 @@
             </div>
             <div class="c-footer__legal">
                 <ul>
-                    <li><a href="#">Informação da companhia</a></li>
-                    <li><a href="#">Política de Confidencialidade</a></li>
-                    <li><a href="#">Acordo do usuário</a></li>
+                    <li><a href="#">{{ __('app.company_information') }}</a></li>
+                    <li><a href="#">{{ __('app.privacy_policy') }}</a></li>
+                    <li><a href="#">{{ __('app.user_agreement') }}</a></li>
                 </ul>
             </div>
             <div class="c-footer__copyright">
-                &copy; 2024 All right reserved
+                {{ __('app.all_rights_reserved') }}
             </div>
         </div>
     </footer>

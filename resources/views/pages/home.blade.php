@@ -9,26 +9,26 @@
                     </div>
 
                     <div class="c-hero__content">
-                        <div class="c-hero__title">VIRTUAL REALITY <span>PORTO PARQUE</span> COM MOVIMENTO LIVRE</div>
+                        <div class="c-hero__title">{!! __('home.block_1_title') !!}</div>
                         <ul class="c-hero__options">
-                            <li>festas de aniversário</li>
-                            <li>eventos corporativos</li>
-                            <li>experiências</li>
+                            <li>{!! __('home.block_1_list.item_1') !!}</li>
+                            <li>{!! __('home.block_1_list.item_2') !!}</li>
+                            <li>{!! __('home.block_1_list.item_3') !!}</li>
                         </ul>
                         <div class="c-hero__actions">
-                            <a href="#" class="c-button">Reserva a tua experiência</a>
+                            <a href="#" class="c-button">{!! __('home.book_button') !!}</a>
                         </div>
                     </div>
 
                     <div class="c-promo">
-                        <div class="c-promo__title"><span>ANOTHER WORLD VIRTUAL REALITY</span><br/> - ISTO É</div>
+                        <div class="c-promo__title">{!! __('home.block_2_title') !!}</div>
                         <div class="c-promo__list">
                             <article class="c-promo-item">
                                 <div class="c-promo-item__media">
                                     <img src="{{asset('/img/promo-girl.png')}}" alt=""/>
                                 </div>
                                 <div class="c-promo-item__meta">
-                                    Plataforma virtual <span>multinível</span> 3 vezes maior do que um campo de jogo real
+                                    {!! __('home.block_2_list.item_1') !!}
                                 </div>
                             </article>
                             <article class="c-promo-item">
@@ -36,7 +36,7 @@
                                     <img src="{{asset('/img/promo-visor.png')}}" alt=""/>
                                 </div>
                                 <div class="c-promo-item__meta">
-                                    O <span>sistema de rastreamento avançado transferirá</span> os teus movimentos para o jogo de forma realista
+                                    {!! __('home.block_2_list.item_2') !!}
                                 </div>
                             </article>
                             <article class="c-promo-item">
@@ -44,7 +44,7 @@
                                     <img src="{{asset('/img/promo-boy.png')}}" alt=""/>
                                 </div>
                                 <div class="c-promo-item__meta">
-                                    <span>Apoio e assistência</span> dos nossos assistentes de VR qualificados
+                                    {!! __('home.block_2_list.item_3') !!}
                                 </div>
                             </article>
                         </div><!--/c-promo__list-->
@@ -58,8 +58,7 @@
         <section class="c-section" id="section-games">
             <div class="c-layout">
                 <div class="c-section__title">
-                    REÚNE A TUA EQUIPA<br/>
-                    <span>OUTROS MUNDOS ESTÃO À TUA ESPERA!</span>
+                    {!! __('home.block_3_title') !!}
                 </div>
             </div>
             <div class="c-layout c-layout--wide">
@@ -194,7 +193,7 @@
                         </tr></tbody></table>
                 </div>
                 <div class="c-section__actions">
-                    <a href="#" class="c-button">Reserva a tua experiência</a>
+                    <a href="#" class="c-button">{!! __('app.reserve_experience_button') !!}</a>
                 </div>
 
             </div>
