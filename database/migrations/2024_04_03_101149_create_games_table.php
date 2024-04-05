@@ -21,7 +21,7 @@ return new class extends Migration {
                 ->nullable();
             $table->string(EntityFields::GENRE)
                 ->nullable();
-            $table->string(EntityFields::TEASER)
+            $table->text(EntityFields::TEASER)
                 ->nullable();
             $table->string(EntityFields::DURATION);
             $table->string(EntityFields::PLAYERS);

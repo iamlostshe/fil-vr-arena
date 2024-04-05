@@ -70,7 +70,7 @@ class Game extends Resource {
                         ->rules('required', 'max:255'),
                     TextArea::make('Teaser', EntityFields::TEASER . '_en')
                         ->withMeta(['value' => $eng_teaser ?? NULL])
-                        ->rules('required', 'max:255'),
+                        ->rules('required'),
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_en')
                         ->withMeta(['value' => $eng_description ?? NULL])
                         ->onlyOnForms()
@@ -86,7 +86,7 @@ class Game extends Resource {
                         ->hideFromIndex(),
                     TextArea::make('Teaser', EntityFields::TEASER . '_pt')
                         ->withMeta(['value' => $pt_teaser ?? NULL])
-                        ->rules('required', 'max:255'),
+                        ->rules('required'),
 
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_pt')
                         ->withMeta(['value' => $pt_description ?? NULL])
