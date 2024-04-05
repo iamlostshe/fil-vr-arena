@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Game;
-use App\Nova\User;
+use App\Models\Faq;
+use App\Observers\FaqObserver;
 use App\Observers\GameObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -28,6 +29,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Game::observe(GameObserver::class);
+        Faq::observe(FaqObserver::class);
     }
 
     /**

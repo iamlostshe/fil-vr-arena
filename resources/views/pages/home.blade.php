@@ -109,57 +109,7 @@
             </div>
         </section>
 
-        <section class="c-section" id="section-faq">
-            <div class="c-layout">
-                <div class="c-section__title">
-                    FAQ
-                </div>
-                <div class="c-faq__list">
-                    <article class="c-faq-item js-spoiler-item" id="spoiler-1">
-                        <div class="c-faq-item__question">
-                            <button class="js-spoiler-trigger" data-spoiler="spoiler-1">
-                                Existe uma idade mínima para jogar?
-                            </button>
-                        </div>
-                        <div class="c-faq-item__answer">
-                            <div class="c-faq-item__content">
-                                <p>
-                                    A Realidade Virtual é uma experiência envolvente e estimulante e, embora as recomendações de idade variem de um headset VR para outro, aconselhamos que os utilizadores tenham pelo menos 8 anos de idade.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="c-faq-item js-spoiler-item" id="spoiler-2">
-                        <div class="c-faq-item__question">
-                            <button class="js-spoiler-trigger" data-spoiler="spoiler-2">
-                                Se viermos com crianças, haverá alguém para ajudar?
-                            </button>
-                        </div>
-                        <div class="c-faq-item__answer">
-                            <div class="c-faq-item__content">
-                                <p>
-                                    Claro! Sempre que precisar de ajuda, o nosso assistente de VR estará feliz em ajudá-lo!
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="c-faq-item js-spoiler-item" id="spoiler-3">
-                        <div class="c-faq-item__question">
-                            <button class="js-spoiler-trigger" data-spoiler="spoiler-3">
-                                Posso trazer comida e bebidas comigo?
-                            </button>
-                        </div>
-                        <div class="c-faq-item__answer">
-                            <div class="c-faq-item__content">
-                                <p>
-                                    Sim, pode! Mas, por favor, certifique-se de que as suas bebidas não contêm álcool.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+        @include('widgets.faq', ['faqs' => $faqs])
 
         <section class="c-section" id="section-map">
             <div class="c-layout">
