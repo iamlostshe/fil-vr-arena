@@ -43,7 +43,7 @@
                     {{$game->getTitle()}}
                 </div>
                 <div class="c-game-chapter__text">
-                    {{$game->getDescription()}}
+                    {!! $game->getDescription()!!}
                 </div>
                 <div class="c-game-chapter__actions">
                     <a href="#" class="c-button">{!! __('app.reserve_experience_button') !!}</a>

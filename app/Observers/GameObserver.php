@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Constants\EntityFields;
 use App\Constants\RouteNames;
 use App\Drivers\MySQL\MySQLTranslationDriver;
 use App\Models\Game;
@@ -87,14 +88,14 @@ class GameObserver {
      */
     public function saveTranslationsToCache(Game $game)
     :void {
-        Cache::put('title_en', $game->title_en, 10);
-        Cache::put('description_en', $game->description_en, 10);
-        Cache::put('genre_en', $game->genre_en, 10);
-        Cache::put('title_pt', $game->title_pt, 10);
-        Cache::put('description_pt', $game->description_pt, 10);
-        Cache::put('genre_pt', $game->genre_pt, 10);
-        Cache::put('teaser_en', $game->teaser_en, 10);
-        Cache::put('teaser_pt', $game->teaser_pt, 10);
+        Cache::put($this->getTitleName('en'), $game->title_en, 10);
+        Cache::put($this->getDescriptionName('en'), $game->description_en, 10);
+        Cache::put($this->getGenreName('en'), $game->genre_en, 10);
+        Cache::put($this->getTeaserName('en'), $game->teaser_en, 10);
+        Cache::put($this->getTitleName('pt'), $game->title_pt, 10);
+        Cache::put($this->getDescriptionName('pt'), $game->description_pt, 10);
+        Cache::put($this->getGenreName('pt'), $game->genre_pt, 10);
+        Cache::put($this->getTeaserName('pt'), $game->teaser_pt, 10);
         unset($game->title_en);
         unset($game->teaser_en);
         unset($game->description_en);
@@ -111,14 +112,14 @@ class GameObserver {
      * @return void
      */
     public function saveTranslationsToModel(Game $game) {
-        $title_en = Cache::get('title_en');
-        $teaser_en = Cache::get('teaser_en');
-        $description_en = Cache::get('description_en');
-        $genre_en = Cache::get('genre_en');
-        $title_pt = Cache::get('title_pt');
-        $teaser_pt = Cache::get('teaser_pt');
-        $description_pt = Cache::get('description_pt');
-        $genre_pt = Cache::get('genre_pt');
+        $title_en = Cache::get($this->getTitleName('en'));
+        $teaser_en = Cache::get($this->getTeaserName('en'));
+        $description_en = Cache::get($this->getDescriptionName('en'));
+        $genre_en = Cache::get($this->getGenreName('en'));
+        $title_pt = Cache::get($this->getTitleName('pt'));
+        $teaser_pt = Cache::get($this->getTeaserName('pt'));
+        $description_pt = Cache::get($this->getDescriptionName('pt'));
+        $genre_pt = Cache::get($this->getGenreName('pt'));
         $this->translationDriver->putTranslationsForModel($game, 'en', [
             'title' => $title_en,
             'description' => $description_en,
@@ -131,5 +132,59 @@ class GameObserver {
             'teaser' => $teaser_pt,
             'genre' => $genre_pt,
         ]);
+    }
+    
+    /**
+     * @param $language
+     *
+     * @return string
+     */
+    public function getTitleName($language)
+    :string {
+        
+        return match ($language) {
+            'pt' => EntityFields::TITLE_PT,
+            default => EntityFields::TITLE_EN,
+        };
+    }
+    
+    /**
+     * @param $language
+     *
+     * @return string
+     */
+    public function getDescriptionName($language)
+    :string {
+        
+        return match ($language) {
+            'pt' => EntityFields::DESCRIPTION_PT,
+            default => EntityFields::DESCRIPTION_EN,
+        };
+    }
+    
+    /**
+     * @param $language
+     *
+     * @return string
+     */
+    public function getTeaserName($language)
+    :string {
+        return match ($language) {
+            'pt' => EntityFields::TEASER_PT,
+            default => EntityFields::TEASER_EN,
+        };
+    }
+    
+    /**
+     * @param $language
+     *
+     * @return string
+     */
+    public function getGenreName($language)
+    :string {
+        return match ($language) {
+            'pt' => EntityFields::GENRE_PT,
+            default => EntityFields::GENRE_EN,
+        };
     }
 }
