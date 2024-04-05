@@ -11,10 +11,10 @@ return [
     ],
 
     /*
-     * This is the model used by the Db Translation loader. You can put any model here
+     * This is the game used by the Db Translation loader. You can put any game here
      * that extends Spatie\TranslationLoader\LanguageLine.
      */
-    'model' => Spatie\TranslationLoader\LanguageLine::class,
+    'game' => Spatie\TranslationLoader\LanguageLine::class,
 
     /*
      * This is the translation manager which overrides the default Laravel `translation.loader`

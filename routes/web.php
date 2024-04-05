@@ -1,14 +1,11 @@
 <?php
 
+use App\Constants\RouteNames;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-Route::middleware('auth:admin')
-    ->prefix('filemanager')
-    ->group(function() {
 
-        \UniSharp\LaravelFilemanager\Lfm::routes();
-
-    });
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,13 +16,18 @@ Route::middleware('auth:admin')
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware'=>[
-    'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function() {
+Route::redirect('/home', '/');
+Route::redirect('/index.php', '/');
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [
+        'localeSessionRedirect',
+        'localizationRedirect',
+        'localeViewPath',
+    ]
+], function() {
 
-    Route::get('/', function() {
-
-        return view('pages/home');
-    })
+    Route::get('/', [HomeController::class, 'index'])
         ->name('home');
     Route::get('/about', function() {
 
@@ -37,14 +39,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware'=>[
         return view('pages/contacts');
     })
         ->name('contacts');
-    Route::get('/game', function() {
+    Route::get('/games', [GameController::class, 'index'])
+        ->name(RouteNames::GAMES);
+    Route::get('/games/{id}', [GameController::class, 'show'])
+        ->name(RouteNames::GAMES_DETAIL);
 
-        return view('pages/game');
-    })
-        ->name('game');
-    Route::get('/games', function() {
 
-        return view('pages/games');
-    })
-        ->name('games');
 });

@@ -72,12 +72,16 @@
         </div>
     </aside>
     @php
-    $selectedLang = app()->getLocale();
+        $currentUrl = url()->current();
+        $selectedLang = LaravelLocalization::getCurrentLocale();
     @endphp
+
+
     <ul class="c-languages">
-        <li><a href="/pt" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a></li>
-        <li><a href="/en" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a></li>
+        <li><a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a></li>
+        <li><a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a></li>
     </ul>
+
 
     <header class="c-header">
         <div class="c-layout">
