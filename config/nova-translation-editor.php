@@ -2,7 +2,8 @@
 return [
     'groups' => [
         'app',
-        'home'
+        'home',
+        'game_item'
     ],
     'languages' => [
         'en',
