@@ -14,6 +14,12 @@ return [
         'item_3' => '<span>Apoio e assistência</span> dos nossos<br>assistentes de VR qualificados',
     ],
     'block_3_title' => 'REÚNE A TUA EQUIPA <br><span>OUTROS MUNDOS ESTÃO À TUA ESPERA!</span>',
-    'find_block_title' => 'COMO NOS PODES <span>ENCONTRAR?</span>'
+    'find_block_title' => 'COMO NOS PODES <span>ENCONTRAR?</span>',
+    'prices_block_title' => 'PREÇO<span> JOGOS</span>',
+    'prices_block_duration_header' => 'DURAÇÃO, MINS',
+    'prices_block_price_header' => 'PREÇO',
+    'prices_block_people' => 'pessoas',
+    'prices_block_arenas' => 'arenas',
+
 
 ];

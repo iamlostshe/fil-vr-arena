@@ -14,5 +14,10 @@ return [
         'item_3' => '<span>Support and assistance</span><br>from our qualified VR attendants',
     ],
     'block_3_title' => 'GET YOUR TEAM TOGETHER<br><span>OTHER WORLDS ARE WAITING FOR YOU!</span>',
-    'find_block_title' => 'HOW CAN WE <span>FIND?</span>'
+    'find_block_title' => 'HOW CAN WE <span>FIND?</span>',
+    'prices_block_title' => 'PRICE<span> GAMES</span>',
+    'prices_block_duration_header' => 'DURATION, MINS',
+    'prices_block_price_header' => 'PRICE',
+    'prices_block_people' => 'people',
+    'prices_block_arenas' => 'arenas',
 ];

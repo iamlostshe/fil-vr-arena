@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>{{ __('app.title') }}</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name='viewport' id='viewport'
           content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
@@ -53,7 +52,6 @@
                     <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
                     <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
                     <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
-                    <li><a href="https://another-world.com/" target="_blank">{{ __('app.franchise') }}</a></li>
                 </ul>
             </div>
         </div>
@@ -76,18 +74,18 @@
                 <div class="c-header__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
-                        <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="tel:+351929089725">{{ __('app.reserve_experience') }}</a></li>
+
                     </ul>
-                    <a href="#" class="c-header__logo"></a>
+                    <a href="/" class="c-header__logo"></a>
                     <ul>
+                        <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
-                        <li><a href="https://another-world.com/" target="_blank">{{ __('app.franchise') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">
-                    <a href="tel:+351965914900">+351965914900</a>
-                    <a target="_blank" class="c-social-item" href="https://www.instagram.com/anotherworld.porto/"></a>
+                    <a href="tel:+351929089725">+351 929 089 725</a>
+                    <a target="_blank" class="c-social-item" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr"></a>
                 </div>
                 <button class="c-header__hamburger js-bar-trigger"></button>
             </div>
@@ -106,7 +104,6 @@
                         <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
                         <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
-                        <li><a href="https://another-world.com/" target="_blank">{{ __('app.franchise') }}</a></li>
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
@@ -116,13 +113,12 @@
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
                     LLC "ANOTHER WORLD"<br/>
-                    <a href="tel:+351965914900">+351965914900</a><br/>
-                    <a href="mailto:anotherworld.porto@gmail.com">anotherworld.porto@gmail.com</a><br/>
-                    R. Dr. Joaquim Pires de Lima 119, 4200-347 Porto
+                    <a href="tel:+351929089725">+351 929 089 725</a><br/>
+                    <a href="mailto:info@vr-arena.pt">info@vr-arena.pt</a><br/>
                 </div>
                 <div class="c-footer__social">
                     <div class="c-social">
-                        <a target="_blank" href="https://www.instagram.com/anotherworld.porto/">instagram</a>
+                        <a target="_blank" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr">instagram</a>
                     </div>
                 </div>
             </div>

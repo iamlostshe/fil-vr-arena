@@ -14,5 +14,7 @@ return [
     'company_information' => 'Company Information',
     'privacy_policy' => 'Privacy Policy',
     'user_agreement' => 'User Agreement',
+    'phone_number' => 'Phone Number',
+    'email' => 'Email',
     'all_rights_reserved' => '© 2024 All rights reserved'
 ];

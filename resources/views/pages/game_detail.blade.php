@@ -20,7 +20,7 @@
                         </p>
                     </div>
                     <div class="c-game__actions">
-                        <a href="#" class="c-button">{!! __('app.reserve_experience_button') !!}</a>
+                        @include('partials.reserve_button')
                         <a href="{{$game->trailer_link}}" data-fancybox="" class="c-button c-button--readmore">{!! __('app.watch_trailer') !!}</a>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     {!! $game->getDescription()!!}
                 </div>
                 <div class="c-game-chapter__actions">
-                    <a href="#" class="c-button">{!! __('app.reserve_experience_button') !!}</a>
+                    @include('partials.reserve_button')
                 </div>
             </div>
         </div>

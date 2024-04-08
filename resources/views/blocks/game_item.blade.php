@@ -17,7 +17,7 @@
                 {{$game->getTeaser()}}
             </div>
             <div class="c-game-item__actions">
-                <a href="#" class="c-button">{!! __('app.reserve_experience_button') !!}</a>
+                @include('partials.reserve_button')
                 <a href="{{route(\App\Constants\RouteNames::GAMES_DETAIL, $game->id)}}"
                    class="c-button c-button--readmore">{!! __('app.more_details') !!}</a>
                 <a href="{{$game->getTrailerLink()}}" data-fancybox=""
