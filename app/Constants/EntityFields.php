@@ -22,5 +22,7 @@ abstract class EntityFields {
     const TRAILER_LINK = 'trailer_link';
     const STATUS = 'status';
     const WEIGHT = 'weight';
+    const URI = 'uri';
+    const KEYWORDS = 'keywords';
 
 }
