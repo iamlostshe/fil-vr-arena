@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ mix('css/plugins/swiper10/swiper-bundle.min.css') }}" />
     <link rel="stylesheet" media="all" href="{{ mix('css/karma.css') }}" />
 
-    <script type="text/javascript" src="{{ mix('js/jquery-3.3.1.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ mix('js/jquery-3.3.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/device.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/plugins/fancybox/jquery.fancybox.min.js') }}"></script>

@@ -72,13 +72,13 @@
                             <td>{!! __('home.prices_block_price_header') !!}</td>
                         </tr>
                         <tr>
-                            <td>2-12 {!! __('home.prices_block_people') !!} (1 {!! __('home.prices_block_arenas') !!})</td>
+                            <td>2 - 12 {!! __('home.prices_block_people') !!}</td>
                             <td>30</td>
                             <td>19€</td>
                         </tr>
                         <tr>
-                            <td>2-12 {!! __('home.prices_block_people') !!} (1 {!! __('home.prices_block_arenas') !!})</td>
-                            <td><p>60</p></td>
+                            <td>2 - 12 {!! __('home.prices_block_people') !!}</td>
+                            <td>60</td>
                             <td>24€</td>
                         </tr>
                         </tbody></table>
@@ -92,7 +92,7 @@
 
         @include('widgets.faq', ['faqs' => $faqs])
 
-{{--        @include('widgets.map')--}}
+        {{--        @include('widgets.map')--}}
 
 
 @endsection

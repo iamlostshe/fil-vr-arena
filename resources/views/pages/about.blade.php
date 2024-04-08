@@ -25,7 +25,7 @@
                             </p>
                         </div>
                         <div class="c-page__actions">
-                            <a href="{{route('game')}}" class="c-button c-button--readmore">sobre a aventura</a>
+                            <a href="{{route('games')}}" class="c-button c-button--readmore">sobre a aventura</a>
                             <a href="https://www.youtube.com/watch?v=no4D4xJdxYQ&t=3s" data-fancybox="" class="c-button c-button--readmore">Ver trailer</a>
                             <a href="#" class="c-button">Reserva uma experiência</a>
                         </div>
