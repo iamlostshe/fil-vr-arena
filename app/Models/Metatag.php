@@ -17,7 +17,7 @@ class Metatag extends Model {
     use Localization;
 
     protected $fillable = [
-        EntityFields::URL,
+        EntityFields::URI,
         EntityFields::TITLE,
         EntityFields::DESCRIPTION,
         EntityFields::KEYWORDS,
