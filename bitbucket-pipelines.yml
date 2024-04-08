@@ -5,7 +5,5 @@ pipelines:
   branches:
     DEV:
       - step:
-          caches:
-            - docker
           script:
             - ssh $USER@$HOST "$PIPELINE_V2 $DIR $PHP81"
