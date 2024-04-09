@@ -251,7 +251,6 @@ a,
 .c-form-actions button[type="reset"],
 .c-faq-item__question button,
 .c-faq-item__question button:after,
-.c-faq-item__content,
 .c-header__logo {
   transition: all 0.25s cubic-bezier(0.645, 0.05, 0.355, 1);
 }
@@ -1970,14 +1969,14 @@ select:-webkit-autofill:focus {
 .c-faq-item__answer {
   max-height: 0;
   overflow: hidden;
-  transition: all 1s ease-in-out;
+  transition: all 0.1s linear;
 }
 .is-open .c-faq-item__answer {
-  max-height: 5000px;
+  max-height: 1000px;
 }
 .c-faq-item__content {
   padding: 0 0 20px;
-  transition-delay: 0.5s;
+  transition: all 0.1s linear;
 }
 .is-open .c-faq-item__content {
   opacity: 1;

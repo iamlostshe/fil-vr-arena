@@ -51,17 +51,16 @@
   &__answer {
     max-height: 0;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 0.1s linear;
 
     .is-open & {
-      max-height: 5000px;
+      max-height: 1000px;
     }
   }
 
   &__content {
     padding: 0 0 20px;
-    transition-delay: 0.5s;
-    &:extend(.o-tr);
+    transition: all 0.1s linear;
 
     .is-open & {
       opacity: 1;
