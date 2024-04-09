@@ -230,6 +230,9 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+.is-safari body {
+  background-attachment: scroll;
+}
 @media screen and (max-width: 640px) {
   body {
     font-size: 13px;
@@ -1161,6 +1164,9 @@ body.is-bar .c-header {
   background-repeat: no-repeat;
   padding-top: 60px;
   padding-bottom: 70px;
+}
+.is-safari .c-hero {
+  background-attachment: scroll;
 }
 .c-hero:before {
   display: block;

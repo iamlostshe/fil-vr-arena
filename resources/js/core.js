@@ -2,6 +2,7 @@ var $ = jQuery;
 
 
 $(document).ready(function () {
+    browserDetect();
     setTimeout(function () {
         $("body").addClass('is-loaded');
     }, 200);
@@ -28,6 +29,27 @@ $(function () {
         }, 500);
     });
 });
+
+function browserDetect() {
+    var browser = '';
+    if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+        browser = 'is-opera';
+    } else if (navigator.userAgent.indexOf("Edg") != -1) {
+        browser = 'is-edge';
+    } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+        browser = 'is-chrome';
+    } else if (navigator.userAgent.indexOf("Safari") != -1) {
+        browser = 'is-safari';
+    } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        browser = 'is-firefox';
+    } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+    {
+        browser = 'is-ie';
+    } else {
+        browser = 'is-unknown';
+    }
+    document.documentElement.classList.add(browser);
+}
 
 
 /* Sticky Header start */
