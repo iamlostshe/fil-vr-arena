@@ -1155,7 +1155,7 @@ body.is-bar .c-header {
   z-index: 1;
   background-size: 100% auto;
   background-position: top center;
-  background-image: url("../img/bg.webp");
+  background-image: url("../img/bg.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding-top: 60px;
@@ -2135,12 +2135,12 @@ select:-webkit-autofill:focus {
 }
 @media screen and (max-width: 1023px) {
   .c-game-item__meta {
-    padding: 0 30px;
+    padding: 40px 30px;
   }
 }
 @media screen and (max-width: 640px) {
   .c-game-item__meta {
-    padding: 0 20px;
+    padding: 40px 20px;
   }
 }
 .swiper-slide .c-game-item__meta {
