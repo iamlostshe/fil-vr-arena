@@ -107,7 +107,7 @@
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
-                    <a href="#" class="c-button c-button--alt">{{ __('app.reserve_experience') }}</a>
+                    <a href="/" class="c-button c-button--alt">{{ __('app.reserve_experience') }}</a>
                 </div>
             </div>
             <div class="c-footer__container">
