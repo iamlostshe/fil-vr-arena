@@ -58,9 +58,11 @@
 
         <div class="swiper-wrapper">
             @foreach($game->gallery() as $image)
+
             <article class="swiper-slide">
+
                 <div class="swiper__title">
-                    <span class="swiper__title__value">{{$image['text']}}</span>
+                    <span class="swiper__title__value">{{__('app.gameplay')}}</span>
                 </div>
                 <img src="{{$image['url']}}"/>
             </article>

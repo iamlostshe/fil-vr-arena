@@ -14,5 +14,6 @@ return [
     'privacy_policy' => 'Política de Confidencialidade',
     'user_agreement' => 'Acordo do usuário',
     'phone_number' => 'Número de telefone',
+    'gameplay' => 'Jogabilidade',
     'all_rights_reserved' => '© 2024 Todos os direitos reservados'
 ];

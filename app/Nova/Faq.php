@@ -10,12 +10,9 @@ use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Faq extends Resource
@@ -67,20 +64,20 @@ class Faq extends Resource
             ID::make(EntityFields::ID),
             Tabs::make('FAQ', [
                 Tab::make(Languages::EN_FULL, [
-                    Text::make('Title', EntityFields::TITLE . '_en')
+                    Text::make('Question', EntityFields::TITLE . '_en')
                         ->withMeta(['value' => $eng_title ?? NULL])
                         ->rules('required', 'max:255'),
-                    NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_en')
+                    NovaTinyMCE::make('Answer', EntityFields::DESCRIPTION . '_en')
                         ->withMeta(['value' => $eng_description ?? NULL])
                         ->rules('required'),
                 ]),
                 Tab::make(Languages::PT_FULL, [
-                    Text::make('Title', EntityFields::TITLE . '_pt')
+                    Text::make('Question', EntityFields::TITLE . '_pt')
                         ->withMeta(['value' => $pt_title ?? NULL])
                         ->rules('required', 'max:255')
                         ->hideFromIndex(),
 
-                    NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_pt')
+                    NovaTinyMCE::make('Answer', EntityFields::DESCRIPTION . '_pt')
                         ->withMeta(['value' => $pt_description ?? NULL])
                         ->rules('required'),
 

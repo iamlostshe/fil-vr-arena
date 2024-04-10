@@ -205,7 +205,6 @@ class Game extends Model implements HasMedia {
         foreach ($gallery as $key => $media) {
 
             $result[$key]['url'] = $media->getUrl();
-            $result[$key]['text'] = $media->getCustomProperty('text');
         }
 
         return $result;

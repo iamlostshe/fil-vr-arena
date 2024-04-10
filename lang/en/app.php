@@ -16,5 +16,6 @@ return [
     'user_agreement' => 'User Agreement',
     'phone_number' => 'Phone Number',
     'email' => 'Email',
+    'gameplay' => 'Gameplay',
     'all_rights_reserved' => '© 2024 All rights reserved'
 ];
