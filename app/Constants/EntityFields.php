@@ -13,6 +13,9 @@ abstract class EntityFields {
     const DESCRIPTION = 'description';
     const DESCRIPTION_EN = 'description_en';
     const DESCRIPTION_PT = 'description_pt';
+    const BODY = 'body';
+    const BODY_EN = 'body_en';
+    const BODY_PT = 'body_pt';
     const GENRE = 'genre';
     const GENRE_EN = 'genre_en';
     const GENRE_PT = 'genre_pt';
@@ -24,5 +27,6 @@ abstract class EntityFields {
     const WEIGHT = 'weight';
     const URI = 'uri';
     const KEYWORDS = 'keywords';
+    const PAGE_KEY = 'page_key';
 
 }

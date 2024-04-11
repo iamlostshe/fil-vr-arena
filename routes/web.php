@@ -3,6 +3,7 @@
 use App\Constants\RouteNames;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
+use App\Services\StaticPageService;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -26,19 +27,9 @@ Route::group([
         'localeViewPath',
     ]
 ], function() {
-
+    StaticPageService::routes();
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
-    Route::get('/about', function() {
-
-        return view('pages/about');
-    })
-        ->name('about');
-    Route::get('/contacts', function() {
-
-        return view('pages/contacts');
-    })
-        ->name('contacts');
     Route::get('/games', [GameController::class, 'index'])
         ->name(RouteNames::GAMES);
     Route::get('/games/{id}', [GameController::class, 'show'])

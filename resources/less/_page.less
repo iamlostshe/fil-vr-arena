@@ -13,6 +13,11 @@
     right: 0;
     min-height: 50vh;
 
+
+    &:empty {
+      display: none;
+    }
+
     & img {
       display: block;
       width: 100%;
@@ -25,6 +30,11 @@
     gap:20px;
     margin-bottom: 30px;
 
+
+    &:empty {
+      display: none;
+    }
+
     @media screen and (max-width: 767px) {
       gap:10px;
     }
@@ -33,6 +43,10 @@
   &__meta {
     position: relative;
     z-index: 2;
+
+    &:empty {
+      display: none;
+    }
   }
 
   &__title {
@@ -42,6 +56,10 @@
     font-weight: bold;
     margin-bottom: 50px;
     color:#fff;
+
+    &:empty {
+      display: none;
+    }
 
     @media screen and (max-width: 1023px) {
       font-size: 28px;

@@ -9,6 +9,7 @@ use Butschster\Head\Contracts\MetaTags\MetaInterface;
 use Butschster\Head\Facades\Meta;
 use Butschster\Head\Packages\Entities\OpenGraphPackage;
 use Butschster\Head\Packages\Entities\TwitterCardPackage;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -136,6 +137,9 @@ class MetatagService {
     public static function getImage($route) {
 
         $gameService = app(GameService::class);
+        if($route === NULL) {
+            return self::getDefaultImage();
+        }
         $route_name = $route->getName();
         if ($route_name === RouteNames::GAMES_DETAIL) {
             $id = $route->parameter('id');

@@ -70,7 +70,8 @@ class Game extends Resource {
                         ->rules('required', 'max:255'),
                     TextArea::make('Teaser', EntityFields::TEASER . '_en')
                         ->withMeta(['value' => $eng_teaser ?? NULL])
-                        ->rules('required'),
+                        ->rules('required')
+                        ->help('The teaser is displayed on the main page.'),
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_en')
                         ->withMeta(['value' => $eng_description ?? NULL])
                         ->onlyOnForms()
@@ -86,7 +87,8 @@ class Game extends Resource {
                         ->hideFromIndex(),
                     TextArea::make('Teaser', EntityFields::TEASER . '_pt')
                         ->withMeta(['value' => $pt_teaser ?? NULL])
-                        ->rules('required'),
+                        ->rules('required')
+                        ->help('The teaser is displayed on the main page.'),
 
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_pt')
                         ->withMeta(['value' => $pt_description ?? NULL])
@@ -105,9 +107,7 @@ class Game extends Resource {
                 ->singleImageRules([new ImageSizeRule(10)])
                 ->conversionOnIndexView('teaser')
                 ->conversionOnDetailView('teaser')
-                ->customPropertiesFields([
-                    Text::make('Text'),
-                ])
+                ->help('The poster image is displayed on the main page.')
                 ->conversionOnForm('teaser'),
             Images::make('Description image', MediaNames::GAME_DESCRIPTION_IMAGE)
                 ->help(__('Valid formats are .jpeg, .png Maximum size: 10 MB.'))
@@ -115,17 +115,16 @@ class Game extends Resource {
                 ->singleImageRules([new ImageSizeRule(10)])
                 ->conversionOnIndexView('teaser')
                 ->conversionOnDetailView('teaser')
-                ->conversionOnForm('teaser'),
+                ->conversionOnForm('teaser')
+            ->help('The image is displayed on the game detail page.'),
             Images::make('Gallery Images', MediaNames::GAME_DETAIL_GALLERY)
                 ->help(__('Valid formats are .jpeg, .png Maximum size: 10 MB.'))
                 ->setAllowedFileTypes(['image'])
                 ->singleImageRules([new ImageSizeRule(10)])
-                ->customPropertiesFields([
-                    Text::make('Text'),
-                ])
                 ->conversionOnIndexView('teaser')
                 ->conversionOnDetailView('teaser')
-                ->conversionOnForm('teaser'),
+                ->conversionOnForm('teaser')
+            ->help('The gallery images are displayed on the game detail page.'),
             Text::make('Duration', EntityFields::DURATION)
                 ->rules('required'),
             Text::make('Players', EntityFields::PLAYERS)

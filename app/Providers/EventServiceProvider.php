@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use App\Models\Game;
+use App\Models\StaticPage;
 use App\Models\Faq;
 use App\Observers\FaqObserver;
 use App\Observers\GameObserver;
+use App\Observers\StaticPageObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -30,6 +32,7 @@ class EventServiceProvider extends ServiceProvider
     {
         Game::observe(GameObserver::class);
         Faq::observe(FaqObserver::class);
+        StaticPage::observe(StaticPageObserver::class);
     }
 
     /**

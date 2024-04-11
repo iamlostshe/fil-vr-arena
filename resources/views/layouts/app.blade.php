@@ -49,9 +49,9 @@
             <div class="c-bar__content">
                 <ul>
                     <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
-                    <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
-                    <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
+                    <li><a href="tel:+351929089725">{{ __('app.reserve_experience') }}</a></li>
+                    <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
+                    <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
                 </ul>
             </div>
         </div>
@@ -79,8 +79,8 @@
                     </ul>
                     <a href="/" class="c-header__logo"></a>
                     <ul>
-                        <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
-                        <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">
@@ -97,13 +97,13 @@
     <footer class="c-footer">
         <div class="c-layout">
             <div class="c-footer__container">
-                <a href="#" class="c-footer__logo"></a>
+                <a href="/" class="c-footer__logo"></a>
                 <nav class="c-footer__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{{ __('app.adventure') }}</a></li>
-                        <li><a href="#">{{ __('app.reserve_experience') }}</a></li>
-                        <li><a href="{{route('about')}}">{{ __('app.about_us') }}</a></li>
-                        <li><a href="{{route('contacts')}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="tel:+351929089725">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
@@ -124,9 +124,9 @@
             </div>
             <div class="c-footer__legal">
                 <ul>
-                    <li><a href="#">{{ __('app.company_information') }}</a></li>
-                    <li><a href="#">{{ __('app.privacy_policy') }}</a></li>
-                    <li><a href="#">{{ __('app.user_agreement') }}</a></li>
+                    <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO))}}">{{ __('app.company_information') }}</a></li>
+                    <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY))}}">{{ __('app.privacy_policy') }}</a></li>
+                    <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT))}}">{{ __('app.user_agreement') }}</a></li>
                 </ul>
             </div>
             <div class="c-footer__copyright">
