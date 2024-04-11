@@ -75,9 +75,22 @@
     opacity: 1;
   }
 
+  &.swiper-button-disabled {
+    opacity: 0;
+    display: none;
+  }
+
   &:before,
   &:after {
     display: none;
+  }
+
+  .has-paginator & {
+    @media screen and (max-width: 767px) {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }
 
@@ -107,6 +120,7 @@
 
     & .swiper-pagination-bullet {
       background: #000;
+      border: 2px solid rgba(255,255,255,0.3);
       border-radius: 50%;
       width: 50px;
       height: 50px;
