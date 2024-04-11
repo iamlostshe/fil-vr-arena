@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="c-layout c-layout--wide">
-        <div class="c-swiper swiper js-swiper-games">
+        <div class="c-swiper has-paginator swiper js-swiper-games">
             <div class="swiper-wrapper">
                 @php
                 /** @var \App\Models\Game $game */
