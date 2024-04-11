@@ -154,12 +154,8 @@ class Game extends Model implements HasMedia {
         $this->addMediaConversion('teaser')
             ->width(368)
             ->height(232);
-        $this->addMediaConversion(MediaNames::GAME_POSTER_IMAGE)
-            ->width(2000)
-            ->height(752);
-        $this->addMediaConversion(MediaNames::GAME_DESCRIPTION_IMAGE)
-            ->width(2000)
-            ->height(752);
+        $this->addMediaConversion(MediaNames::GAME_POSTER_IMAGE);
+        $this->addMediaConversion(MediaNames::GAME_DESCRIPTION_IMAGE);
     }
 
     /**

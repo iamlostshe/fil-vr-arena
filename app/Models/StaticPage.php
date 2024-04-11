@@ -76,7 +76,7 @@ class StaticPage extends Model {
      */
     public function getTitle()
     :?string {
-
+        $this->setLanguage($this->selectedLanguage);
         return $this->title;
     }
 
