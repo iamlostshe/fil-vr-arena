@@ -686,7 +686,7 @@ body.is-bar .c-header {
 @media screen and (max-width: 767px) {
   .c-header__contacts {
     right: 40px;
-    gap: 6px;
+    gap: 8px;
   }
 }
 .c-header__contacts__booking {
@@ -697,8 +697,9 @@ body.is-bar .c-header {
   text-align: center;
   justify-content: center;
   background: #de1943;
-  padding: 5px 10px;
+  padding: 5px 10px 4px;
   font-size: 10px;
+  font-weight: bold;
   line-height: 1.2;
   color: #fff;
 }
@@ -1024,7 +1025,7 @@ body.is-bar .c-header {
   top: 50%;
   margin: -16px 0 0 0;
   box-shadow: 0 0 20px #de1943;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
