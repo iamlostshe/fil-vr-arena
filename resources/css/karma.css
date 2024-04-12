@@ -314,14 +314,6 @@ button {
   position: relative;
   left: -10px;
 }
-.c-link.o-mobile-only {
-  display: none !important;
-}
-@media screen and (max-width: 1200px) {
-  .c-link.o-mobile-only {
-    display: inline-flex !important;
-  }
-}
 .c-loader {
   width: 30px;
   height: 30px;
@@ -689,6 +681,35 @@ body.is-bar .c-header {
 @media screen and (max-width: 1200px) {
   .c-header__contacts {
     right: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-header__contacts {
+    right: 40px;
+    gap: 6px;
+  }
+}
+.c-header__contacts__booking {
+  max-width: 100px;
+  display: none;
+  align-items: center;
+  white-space: break-spaces;
+  text-align: center;
+  justify-content: center;
+  background: #de1943;
+  padding: 5px 10px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #fff;
+}
+.c-header__contacts__booking:hover {
+  background: #ea4065;
+  color: #fff !important;
+  text-decoration: none;
+}
+@media screen and (max-width: 1200px) {
+  .c-header__contacts__booking {
+    display: flex;
   }
 }
 .c-header__hamburger {

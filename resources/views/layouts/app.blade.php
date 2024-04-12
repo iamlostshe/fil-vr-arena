@@ -84,7 +84,7 @@
                     </ul>
                 </div>
                 <div class="c-header__contacts">
-                    <a href="https://wa.me/+351929089725" class="c-link--highlight o-mobile-only">{{ __('app.reserve_experience') }}</a>
+                    <a href="https://wa.me/+351929089725" class="c-header__contacts__booking">{{ __('app.reserve_experience') }}</a>
                     <a href="tel:+351929089725" class="c-social-item"><span>+351 929 089 725</span></a>
                     <a target="_blank" class="c-social-item" href="https://wa.me/+351929089725"></a>
                 </div>
