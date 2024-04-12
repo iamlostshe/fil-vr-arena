@@ -121,7 +121,7 @@
                     <div class="c-social">
                         <a href="tel:+351929089725"><span>+351 929 089 725</span></a>
                         <a target="_blank" href="https://wa.me/+351929089725"></a>
-                        <a target="_blank" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr">instagram</a>
+                        <a target="_blank" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr"><span>instagram</span></a>
                     </div>
                 </div>
             </div>
