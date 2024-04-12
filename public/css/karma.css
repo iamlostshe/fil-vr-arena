@@ -306,19 +306,20 @@ button {
 }
 .c-link--highlight:hover {
   background: #ea4065;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
+.c-footer .c-link--highlight,
 .c-bar .c-link--highlight {
   position: relative;
   left: -10px;
 }
 .c-link.o-mobile-only {
-  display: none;
+  display: none !important;
 }
 @media screen and (max-width: 1200px) {
   .c-link.o-mobile-only {
-    display: block;
+    display: inline-flex !important;
   }
 }
 .c-loader {
@@ -614,6 +615,7 @@ body.is-bar .c-header {
   color: #fff;
   line-height: 1;
   text-decoration: none;
+  display: inline-flex;
 }
 .c-header a:hover {
   color: #de1943;
@@ -765,11 +767,13 @@ body.is-bar .c-header {
 }
 .c-footer__nav ul {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 @media screen and (max-width: 767px) {
   .c-footer__nav ul {
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
   }
 }
@@ -1375,7 +1379,7 @@ body.is-bar .c-header {
   width: 36px;
   height: 36px;
   min-width: 36px;
-  background-size: cover;
+  background-size: 30px 30px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1406,7 +1410,7 @@ body.is-bar .c-header {
 .c-social-item[href*="https://wa.me"]:before,
 .c-social a[href*="https://www.wa.me"]:before,
 .c-social-item[href*="https://www.wa.me"]:before {
-  background-image: url(/images/icon-whatsapp.svg?95d845c54edb7033667a1ff5aabc7803);
+  background-image: url(/images/icon-whatsapp.svg?67745d6d65cf90cf23664ff9c4994380);
 }
 .c-social a--tel:before,
 .c-social-item--tel:before,
@@ -1414,7 +1418,7 @@ body.is-bar .c-header {
 .c-social-item--phone:before,
 .c-social a[href*="tel:"]:before,
 .c-social-item[href*="tel:"]:before {
-  background-image: url(/images/icon-tel.svg?f5b7aee7e0621465c50112580b722eb1);
+  background-image: url(/images/icon-tel.svg?60811ab4d64b5566748697c624471c02);
 }
 .c-social a img,
 .c-social-item img,

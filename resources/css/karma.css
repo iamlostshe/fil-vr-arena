@@ -306,19 +306,20 @@ button {
 }
 .c-link--highlight:hover {
   background: #ea4065;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
+.c-footer .c-link--highlight,
 .c-bar .c-link--highlight {
   position: relative;
   left: -10px;
 }
 .c-link.o-mobile-only {
-  display: none;
+  display: none !important;
 }
 @media screen and (max-width: 1200px) {
   .c-link.o-mobile-only {
-    display: block;
+    display: inline-flex !important;
   }
 }
 .c-loader {
@@ -612,6 +613,7 @@ body.is-bar .c-header {
   color: #fff;
   line-height: 1;
   text-decoration: none;
+  display: inline-flex;
 }
 .c-header a:hover {
   color: #de1943;
@@ -763,11 +765,13 @@ body.is-bar .c-header {
 }
 .c-footer__nav ul {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 @media screen and (max-width: 767px) {
   .c-footer__nav ul {
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
   }
 }
@@ -1370,7 +1374,7 @@ body.is-bar .c-header {
   width: 36px;
   height: 36px;
   min-width: 36px;
-  background-size: cover;
+  background-size: 30px 30px;
   background-repeat: no-repeat;
   background-position: center;
 }
