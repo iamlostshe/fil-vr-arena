@@ -710,7 +710,7 @@ body.is-bar .c-header {
 }
 @media screen and (max-width: 1200px) {
   .c-header__contacts__booking {
-    display: flex !important;
+    display: inline !important;
   }
 }
 .c-header__hamburger {
