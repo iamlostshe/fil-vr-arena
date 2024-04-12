@@ -102,7 +102,6 @@
                 <nav class="c-footer__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{{ __('app.adventure') }}</a></li>
-                        <li><a href="https://wa.me/+351929089725" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
                         <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
                     </ul>
