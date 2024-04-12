@@ -296,6 +296,31 @@ button {
     height: 400px;
   }
 }
+.c-link--highlight {
+  color: #fff;
+  background: #de1943;
+  padding: 5px 10px;
+  white-space: nowrap;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.c-link--highlight:hover {
+  background: #ea4065;
+  color: #fff;
+  text-decoration: none;
+}
+.c-bar .c-link--highlight {
+  position: relative;
+  left: -10px;
+}
+.c-link.o-mobile-only {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .c-link.o-mobile-only {
+    display: block;
+  }
+}
 .c-loader {
   width: 30px;
   height: 30px;
@@ -996,14 +1021,6 @@ body.is-bar .c-header {
 .swiper-button-next:after {
   display: none;
 }
-@media screen and (max-width: 767px) {
-  .has-paginator .swiper-button-prev,
-  .has-paginator .swiper-button-next {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 .swiper-button-prev {
   background-image: url(/images/prev.svg?acda3cba75a2284a25419d8cfd188133);
   left: 10px;
@@ -1050,8 +1067,8 @@ body.is-bar .c-header {
 }
 @media screen and (max-width: 767px) {
   .swiper.swiper-horizontal > .swiper-pagination .swiper-pagination-bullet {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     margin: 0 2px;
   }
 }
@@ -1367,17 +1384,37 @@ body.is-bar .c-header {
   opacity: 1;
   color: #fff;
 }
+.c-social a--instagram:before,
+.c-social-item--instagram:before,
 .c-social a[href*="https://instagram.com"]:before,
 .c-social-item[href*="https://instagram.com"]:before,
 .c-social a[href*="https://www.instagram.com"]:before,
 .c-social-item[href*="https://www.instagram.com"]:before {
   background-image: url(/images/icon-instagram.svg?14accb7b28724f5bf038bafe0e920076);
 }
+.c-social a--facebook:before,
+.c-social-item--facebook:before,
 .c-social a[href*="https://www.facebook.com"]:before,
 .c-social-item[href*="https://www.facebook.com"]:before,
 .c-social a[href*="https://facebook.com"]:before,
 .c-social-item[href*="https://facebook.com"]:before {
   background-image: url(/images/icon-facebook.svg?d91cb0fa75216e33f0e9740621e3e9ab);
+}
+.c-social a--whatsapp:before,
+.c-social-item--whatsapp:before,
+.c-social a[href*="https://wa.me"]:before,
+.c-social-item[href*="https://wa.me"]:before,
+.c-social a[href*="https://www.wa.me"]:before,
+.c-social-item[href*="https://www.wa.me"]:before {
+  background-image: url(/images/icon-whatsapp.svg?95d845c54edb7033667a1ff5aabc7803);
+}
+.c-social a--tel:before,
+.c-social-item--tel:before,
+.c-social a--phone:before,
+.c-social-item--phone:before,
+.c-social a[href*="tel:"]:before,
+.c-social-item[href*="tel:"]:before {
+  background-image: url(/images/icon-tel.svg?f5b7aee7e0621465c50112580b722eb1);
 }
 .c-social a img,
 .c-social-item img,
@@ -1386,6 +1423,10 @@ body.is-bar .c-header {
   width: 100%;
   height: auto;
   display: block;
+}
+.c-social a span,
+.c-social-item span {
+  display: none;
 }
 .c-page {
   position: relative;
@@ -1476,6 +1517,7 @@ body.is-bar .c-header {
   .c-page__actions {
     gap: 10px;
     padding-top: 30px;
+    flex-direction: column;
   }
 }
 .c-form-item {
@@ -2243,6 +2285,16 @@ select:-webkit-autofill:focus {
 }
 .c-game-item__play:hover {
   opacity: 0.7;
+}
+@media screen and (max-width: 767px) {
+  .swiper-slide .c-game-item__text {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 /* Game page */
 .c-game {

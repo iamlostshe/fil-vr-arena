@@ -49,7 +49,7 @@
             <div class="c-bar__content">
                 <ul>
                     <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="tel:+351929089725">{{ __('app.reserve_experience') }}</a></li>
+                    <li><a href="https://wa.me/+351929089725" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
                     <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
                     <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
                 </ul>
@@ -74,7 +74,7 @@
                 <div class="c-header__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="tel:+351929089725">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="https://wa.me/+351929089725" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
                     <a href="/" class="c-header__logo"></a>
@@ -84,8 +84,9 @@
                     </ul>
                 </div>
                 <div class="c-header__contacts">
-                    <a href="tel:+351929089725">+351 929 089 725</a>
-                    <a target="_blank" class="c-social-item" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr"></a>
+                    <a href="https://wa.me/+351929089725" class="c-link--highlight o-mobile-only">{{ __('app.reserve_experience') }}</a>
+                    <a href="tel:+351929089725" class="c-social-item"><span>+351 929 089 725</span></a>
+                    <a target="_blank" class="c-social-item" href="https://wa.me/+351929089725"></a>
                 </div>
                 <button class="c-header__hamburger js-bar-trigger"></button>
             </div>
@@ -101,7 +102,7 @@
                 <nav class="c-footer__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{{ __('app.adventure') }}</a></li>
-                        <li><a href="tel:+351929089725">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="https://wa.me/+351929089725" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
                         <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
                     </ul>
@@ -118,6 +119,8 @@
                 </div>
                 <div class="c-footer__social">
                     <div class="c-social">
+                        <a href="tel:+351929089725"><span>+351 929 089 725</span></a>
+                        <a target="_blank" href="https://wa.me/+351929089725"></a>
                         <a target="_blank" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr">instagram</a>
                     </div>
                 </div>

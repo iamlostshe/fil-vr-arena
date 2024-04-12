@@ -95,3 +95,35 @@ button {
     }
   }
 }
+
+
+.c-link {
+  &--highlight {
+    color: #fff;
+    background: @color-red;
+    padding: 5px 10px;
+    white-space: nowrap;
+    border-radius: 2px;
+    text-decoration: none;
+
+    &:hover {
+      background: lighten(@color-red, 10%);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .c-bar & {
+      position: relative;
+      left: -10px;
+    }
+  }
+
+  &.o-mobile-only {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+}
