@@ -1,6 +1,6 @@
 <?php
 return [
-    'block_1_title' => "VIRTUAL REALITY <span>PORTO PARQUE</span> COM MOVIMENTO LIVRE",
+    'block_1_title' => "VIRTUAL REALITY <span>LISBOA PARQUE</span> COM MOVIMENTO LIVRE",
     'block_1_list' => [
         'item_1' => 'festas de aniversário',
         'item_2' => 'eventos corporativos',

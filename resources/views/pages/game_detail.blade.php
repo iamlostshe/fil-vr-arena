@@ -55,7 +55,7 @@
 </section>
 
 <section class="c-section" id="section-game-gallery">
-    <div class="swiper js-swiper-gallery">
+    <div class="swiper swiper-gallery js-swiper-gallery">
 
         <div class="swiper-wrapper">
             @foreach($game->gallery() as $image)
