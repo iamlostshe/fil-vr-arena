@@ -91,7 +91,7 @@
                 <div class="c-header__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="https://wa.me/+351929089725" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
                     <a href="/" class="c-header__logo"></a>
@@ -104,9 +104,9 @@
                     <a href="{{__('contacts.reserve_link')}}">{{__('contacts.phone_number')}}</a>
                     <a target="_blank" class="c-social-item"
                        href="{{__('contacts.instagram_link')}}"></a>
-                    <a href="https://wa.me/+351929089725" class="c-header__contacts__booking">{{ __('app.reserve_experience') }}</a>
-                    <a href="tel:+351929089725" class="c-social-item"><span>+351 929 089 725</span></a>
-                    <a target="_blank" class="c-social-item" href="https://wa.me/+351929089725"></a>
+                    <a href="{{ __('contacts.reserve_link') }}" class="c-header__contacts__booking">{{ __('app.reserve_experience') }}</a>
+                    <a href="{{ __('contacts.tel_link') }}" class="c-social-item"><span>{{ __('contacts.phone_number') }}</span></a>
+                    <a target="_blank" class="c-social-item" href="{{ __('contacts.reserve_link') }}"></a>
                 </div>
                 <button class="c-header__hamburger js-bar-trigger"></button>
             </div>
@@ -127,20 +127,20 @@
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
-                    <a href="https://wa.me/+351929089725" class="c-button c-button--alt">{{ __('app.reserve_experience') }}</a>
+                    <a href="{{ __('contacts.reserve_link') }}" class="c-button c-button--alt">{{ __('app.reserve_experience') }}</a>
                 </div>
             </div>
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
                     LLC "ANOTHER WORLD"<br/>
-                    <a href="tel:+351929089725">+351 929 089 725</a><br/>
-                    <a href="mailto:info@vr-arena.pt">info@vr-arena.pt</a><br/>
+                    <a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
+                    <a href="mailto:{{ __('contacts.email') }}">{{ __('contacts.email') }}</a><br/>
                 </div>
                 <div class="c-footer__social">
                     <div class="c-social">
-                        <a href="tel:+351929089725"><span>+351 929 089 725</span></a>
-                        <a target="_blank" href="https://wa.me/+351929089725"></a>
-                        <a target="_blank" href="https://www.instagram.com/vrarena.pt?igsh=MWd1ZjVxZTVnM3JwMA%3D%3D&utm_source=qr"><span>instagram</span></a>
+                        <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
+                        <a target="_blank" href="{{ __('contacts.reserve_link') }}"></a>
+                        <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
                     </div>
                 </div>
             </div>
