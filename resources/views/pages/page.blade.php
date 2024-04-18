@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', $page->getTitle())
 @section('page')
 <section class="c-section" id="section-content">
     <div class="c-layout">

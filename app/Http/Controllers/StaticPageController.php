@@ -36,8 +36,12 @@ class StaticPageController extends Controller {
         $page = $this->staticPageService->getByPageKey($pageKey);
         if (empty($page))
             abort(404);
-        $breadcrumbs = TRUE;
+        $view = 'pages.page';
+        if ($pageKey == 'about') {
+            $view = 'pages.about';
+        }
 
-        return view('pages.page', compact('page'));
+
+        return view($view, compact('page'));
     }
 }

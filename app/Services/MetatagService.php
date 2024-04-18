@@ -9,7 +9,6 @@ use Butschster\Head\Contracts\MetaTags\MetaInterface;
 use Butschster\Head\Facades\Meta;
 use Butschster\Head\Packages\Entities\OpenGraphPackage;
 use Butschster\Head\Packages\Entities\TwitterCardPackage;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,13 +20,9 @@ class MetatagService {
      */
     public static function getCurrent() {
 
-        $locale = app()->getLocale();
         $metatagRepository = app(MetatagRepository::class);
         $uri = Request::getRequestUri();
         $metatag = $metatagRepository->getByUri($uri);
-        if (empty($metatag)) {
-            $metatag = $metatagRepository->getByUri('/' . $locale);
-        }
 
         return $metatag;
     }
@@ -55,6 +50,19 @@ class MetatagService {
         $html = $meta->toHtml() . $og->toHtml() . $twitter->toHtml();
 
         return $html;
+    }
+
+    public static function getDefaultMetatag($route) {
+        $route_name = $route->getName();
+        $title = '';
+        $description = '';
+        $keywords = '';
+        if($route_name === RouteNames::GAMES_DETAIL) {
+            $game_id = $route->parameter('id');
+            $game = app(GameService::class)->getById($game_id);
+            $title = $game->title;
+            $description = $game->description;
+        }
     }
 
     /**

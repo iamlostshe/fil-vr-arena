@@ -37,10 +37,6 @@ class StaticPage extends Model {
             EntityFields::TITLE,
             EntityFields::BODY,
         ];
-        $this->translatedAttributes = [
-            EntityFields::TITLE,
-            EntityFields::BODY,
-        ];
     }
 
 

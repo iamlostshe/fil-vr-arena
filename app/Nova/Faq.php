@@ -63,14 +63,6 @@ class Faq extends Resource
         return [
             ID::make(EntityFields::ID),
             Tabs::make('FAQ', [
-                Tab::make(Languages::EN_FULL, [
-                    Text::make('Question', EntityFields::TITLE . '_en')
-                        ->withMeta(['value' => $eng_title ?? NULL])
-                        ->rules('required', 'max:255'),
-                    NovaTinyMCE::make('Answer', EntityFields::DESCRIPTION . '_en')
-                        ->withMeta(['value' => $eng_description ?? NULL])
-                        ->rules('required'),
-                ]),
                 Tab::make(Languages::PT_FULL, [
                     Text::make('Question', EntityFields::TITLE . '_pt')
                         ->withMeta(['value' => $pt_title ?? NULL])
@@ -81,6 +73,14 @@ class Faq extends Resource
                         ->withMeta(['value' => $pt_description ?? NULL])
                         ->rules('required'),
 
+                ]),
+                Tab::make(Languages::EN_FULL, [
+                    Text::make('Question', EntityFields::TITLE . '_en')
+                        ->withMeta(['value' => $eng_title ?? NULL])
+                        ->rules('required', 'max:255'),
+                    NovaTinyMCE::make('Answer', EntityFields::DESCRIPTION . '_en')
+                        ->withMeta(['value' => $eng_description ?? NULL])
+                        ->rules('required'),
                 ]),
             ]),
             Number::make('Weight', EntityFields::WEIGHT)

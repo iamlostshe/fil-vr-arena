@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', __('game_item.games'))
 @section('page')
         <section class="c-section" id="section-games-list">
             <div class="c-layout">

@@ -6,6 +6,7 @@ use App\Constants\EntityFields;
 use App\Drivers\MySQL\MySQLTranslationDriver;
 use App\Models\StaticPage;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class StaticPageObserver {
     protected MySQLTranslationDriver $translationDriver;
@@ -25,6 +26,7 @@ class StaticPageObserver {
      */
     public function creating(StaticPage $model)
     :void {
+
         $this->saveTranslationsToCache($model);
     }
 
@@ -35,8 +37,10 @@ class StaticPageObserver {
      */
     public function updating(StaticPage $model)
     :void {
+
         $this->saveTranslationsToCache($model);
     }
+
     /**
      * Handle the staticPage "created" event.
      */
@@ -51,6 +55,7 @@ class StaticPageObserver {
      */
     public function updated(StaticPage $staticPage)
     :void {
+
         $this->saveTranslationsToModel($staticPage);
     }
 
@@ -85,6 +90,7 @@ class StaticPageObserver {
      */
     public function saveTranslationsToCache(StaticPage $staticPage)
     :void {
+
         Cache::put($this->getTitleName('en'), $staticPage->title_en, 10);
         Cache::put($this->getBodyName('en'), $staticPage->body_en, 10);
         Cache::put($this->getTitleName('pt'), $staticPage->title_pt, 10);
@@ -101,18 +107,22 @@ class StaticPageObserver {
      * @return void
      */
     public function saveTranslationsToModel(StaticPage $staticPage) {
+
         $title_en = Cache::get($this->getTitleName('en'));
         $body_en = Cache::get($this->getBodyName('en'));
         $title_pt = Cache::get($this->getTitleName('pt'));
         $body_pt = Cache::get($this->getBodyName('pt'));
+
         $this->translationDriver->putTranslationsForModel($staticPage, 'en', [
             'title' => $title_en,
-            'body' => $body_en,
+            'body' => $body_en
         ]);
         $this->translationDriver->putTranslationsForModel($staticPage, 'pt', [
             'title' => $title_pt,
-            'body' => $body_pt,
+            'body' => $body_pt
         ]);
+
+
     }
 
     /**

@@ -4,10 +4,13 @@ namespace App\Drivers\MySQL;
 
 use App\Models\Translation;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\Contracts\TranslationDriver;
+use Illuminate\Support\Facades\Log;
 
 class MySQLTranslationDriver implements TranslationDriver
 {
@@ -23,19 +26,25 @@ class MySQLTranslationDriver implements TranslationDriver
         return $query;
     }
 
-    public function storeTranslationsForModel(Model $model, string $language, array $translations): bool
-    {
-        $translations = collect($translations)->map(function ($translation, $attribute) use ($language, $model) {
-            return [
-                'translatable_type' => $model->getModelIdentifier(),
-                'translatable_id' => $model->getInstanceIdentifier(),
-                'language' => $language,
-                'name' => $attribute,
-                'value' => $translation,
-            ];
-        });
+    public function storeTranslationsForModel(Model $model, string $language, array $translations): bool {
 
-        return Translation::query()->insert($translations->toArray());
+        Log::error('storeTranslationsForModel', ['model' => $model, 'language' => $language, 'translations' => $translations]);
+        if (count($translations) > 0) {
+            $translations = collect($translations)->map(function($translation, $attribute) use ($language, $model) {
+
+                return [
+                    'translatable_type' => $model->getModelIdentifier(),
+                    'translatable_id' => $model->getInstanceIdentifier(),
+                    'language' => $language,
+                    'name' => $attribute,
+                    'value' => $translation,
+                ];
+            });
+
+            return Translation::query()
+                ->insert($translations->toArray());
+        }
+        return false;
     }
 
     public function getTranslationsForModel(Model $model, string $language): array

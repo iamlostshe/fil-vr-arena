@@ -3,7 +3,8 @@ return [
     'groups' => [
         'app',
         'home',
-        'game_item'
+        'game_item',
+        'contacts'
     ],
     'languages' => [
         'en',

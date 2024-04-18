@@ -16,7 +16,7 @@
                             <li>{!! __('home.block_1_list.item_3') !!}</li>
                         </ul>
                         <div class="c-hero__actions">
-                            <a href="tel:+351929089725" class="c-button">{!! __('home.book_button') !!}</a>
+                            <a href="{{__('contacts.reserve_link')}}" class="c-button">{!)! __('home.book_button') !!}</a>
                         </div>
                     </div>
 

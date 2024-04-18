@@ -61,14 +61,6 @@ class StaticPage extends Resource {
             Text::make('Page Key', EntityFields::PAGE_KEY)
                 ->rules('required', 'max:255'),
             Tabs::make(Languages::EN_FULL, [
-                Tab::make(Languages::EN_FULL, [
-                    Text::make('Title', EntityFields::TITLE_EN)
-                        ->withMeta(['value' => $eng_title ?? NULL])
-                        ->rules('required', 'max:255'),
-                    NovaTinyMCE::make('Body', EntityFields::BODY_EN)
-                        ->withMeta(['value' => $eng_body ?? NULL])
-                        ->rules('required'),
-                ]),
                 Tab::make(Languages::PT_FULL, [
                     Text::make('Title', EntityFields::TITLE_PT)
                         ->withMeta(['value' => $pt_title ?? NULL])
@@ -78,6 +70,15 @@ class StaticPage extends Resource {
                         ->rules('required'),
 
                 ]),
+                Tab::make(Languages::EN_FULL, [
+                    Text::make('Title', EntityFields::TITLE_EN)
+                        ->withMeta(['value' => $eng_title ?? NULL])
+                        ->rules('required', 'max:255'),
+                    NovaTinyMCE::make('Body', EntityFields::BODY_EN)
+                        ->withMeta(['value' => $eng_body ?? NULL])
+                        ->rules('required'),
+                ]),
+
             ]),
             Boolean::make('Status', EntityFields::STATUS)
                 ->rules('required'),
