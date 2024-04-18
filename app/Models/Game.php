@@ -4,6 +4,8 @@ namespace App\Models;
 
 use App\Constants\EntityFields;
 use App\Constants\MediaNames;
+use App\Contracts\HasUrlAlias;
+use App\Traits\InteractsWithUrlAlias;
 use App\Traits\LocaleScopes;
 use App\Traits\Localization;
 use App\Traits\Translates;
@@ -13,7 +15,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
@@ -22,7 +24,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 /**
  * @method void prepareToAttachMedia(Media $media, FileAdder $fileAdder)
  */
-class Game extends Model implements HasMedia {
+class Game extends Model implements HasMedia, HasUrlAlias {
     use HasTabs;
     use HasFactory;
     use Translates;
@@ -31,6 +33,7 @@ class Game extends Model implements HasMedia {
     use LocaleScopes;
     use Localization;
     use InteractsWithMedia;
+    use InteractsWithUrlAlias;
 
     protected $table = 'games';
 
@@ -204,6 +207,25 @@ class Game extends Model implements HasMedia {
         }
 
         return $result;
+    }
+
+    public function getDetailRoute()
+    :string {
+        return route('games.detail', ['game' => $this], FALSE);
+    }
+    public function getAliasURL($absolute = FALSE) {
+
+        $relativeLink = $this->getAliasPrefix() . Str::slug(Str::lower($this->title));
+
+        return $absolute ? config('app.url') . '/' . $relativeLink : $relativeLink;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAliasPrefix()
+    :string {
+        return 'games/';
     }
 
 

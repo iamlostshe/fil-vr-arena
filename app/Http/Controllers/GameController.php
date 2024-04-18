@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Game;
 use App\Services\GameService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -38,14 +39,12 @@ class GameController extends Controller {
      *
      * @return array|false|Application|Factory|View|\Illuminate\Foundation\Application|mixed
      */
-    public function show($game_id) {
+    public function show(Game $game) {
 
-        $game = $this->gameService->getById($game_id);
-
-        if (!$game) {
-            Log::error('Game not found');
-            abort(404);
-        }
+//        if (!$game) {
+//            Log::error('Game not found');
+//            abort(404);
+//        }
 
         return view('pages.game_detail', compact('game'));
     }

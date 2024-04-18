@@ -189,4 +189,31 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    /*
+     * Url ignored by localization
+     */
+    'localeUrlsIgnored' => [
+        '/skipped',
+        '/admin',
+        '/admin/*',
+        '/_debugbar',
+        '/_debugbar/*',
+        '/nova',
+        '/nova/*',
+        '/nova-api/*',
+        '/horizon',
+        '/horizon/*',
+        '/telescope',
+        '/telescope/*',
+        'filemanager',
+        'filemanager/*',
+        'filemanager-api',
+        'filemanager-api/*',
+        'vendor/*',
+        '/storage/*',
+        '/nova-vendor/*',
+        'vendor',
+        '*.js'
+    ],
+
 ];

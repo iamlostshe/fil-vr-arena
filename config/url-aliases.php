@@ -12,7 +12,7 @@ return [
      |  Support localized aliases and redirects.
      | -----------------------------------------------------------------
      */
-    'use_localization' => true,
+    'use_localization' => TRUE,
 
     'use_key_get_param_localization' => 'locale',
 
@@ -34,7 +34,31 @@ return [
      | -----------------------------------------------------------------
      */
     'ignored_paths' => [
+        'admin',
         'admin/*',
-        '*download*',
+        'nova',
+        'nova/*',
+        'nova-api/*',
+        '/skipped',
+        '/admin',
+        '/admin/*',
+        '/_debugbar',
+        '/_debugbar/*',
+        '/nova',
+        '/nova/*',
+        '/nova-api/*',
+        '/horizon',
+        '/horizon/*',
+        '/telescope',
+        '/telescope/*',
+        'filemanager',
+        'filemanager/*',
+        'filemanager-api',
+        'filemanager-api/*',
+        'vendor/*',
+        '/storage/*',
+        '/nova-vendor/*',
+        'vendor',
+        '*.js'
     ],
 ];

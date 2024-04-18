@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\UrlAliasMiddleware;
+use App\Http\Middleware\UrlAliasMiddlewareLoc;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -22,6 +23,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
+        UrlAliasMiddlewareLoc::class,
 
     ];
 

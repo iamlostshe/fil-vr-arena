@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Managers\UrlAliasLocalizationManager;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class UrlAliasMiddleware
 {
@@ -48,7 +49,7 @@ class UrlAliasMiddleware
             $urlModels = $this->getByPath($path);
 
             // If visited source - system path
-            if ($urlModel = $urlModels->where('source', $path)->where('type', null)->first()) {
+            if ($urlModel = $urlModels->where('source', $path)->where('type', null)->where('locale', App::getLocale())->first()) {
 
                 $redirectStatus = $this->config->get('url-aliases.redirect_for_system_path', 301) == 301 ? 301 : 302;
 
@@ -166,6 +167,7 @@ class UrlAliasMiddleware
 
     protected function isAvailableLocalizationPath(Request $request)
     {
+        info($request->path());
         if ($request->is(...$this->config->get('url-aliases-laravellocalization.urlsIgnored', []))) {
             return false;
         }

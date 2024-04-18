@@ -32,20 +32,20 @@ class GameObserver {
     }
 
     /**
-     * @param Game $model
+     * @param Game $game
      *
      * @return void
      */
-    public function updating(Game $model)
+    public function updating(Game $game)
     :void {
-        $this->saveTranslationsToCache($model);
+        $this->saveTranslationsToCache($game);
     }
     /**
      * Handle the Game "created" event.
      */
     public function created(Game $game)
     :void {
-
+        $game->createAlias();
         $this->saveTranslationsToModel($game);
     }
 
@@ -55,6 +55,8 @@ class GameObserver {
     public function updated(Game $game)
     :void {
         $this->saveTranslationsToModel($game);
+        $game->deleteAlias();
+        $game->createAlias();
     }
 
     /**
@@ -63,6 +65,7 @@ class GameObserver {
     public function deleted(Game $game)
     :void {
         //
+        $game->deleteAlias();
     }
 
     /**
@@ -133,7 +136,7 @@ class GameObserver {
             'genre' => $genre_pt,
         ]);
     }
-    
+
     /**
      * @param $language
      *
@@ -141,13 +144,13 @@ class GameObserver {
      */
     public function getTitleName($language)
     :string {
-        
+
         return match ($language) {
             'pt' => EntityFields::TITLE_PT,
             default => EntityFields::TITLE_EN,
         };
     }
-    
+
     /**
      * @param $language
      *
@@ -155,13 +158,13 @@ class GameObserver {
      */
     public function getDescriptionName($language)
     :string {
-        
+
         return match ($language) {
             'pt' => EntityFields::DESCRIPTION_PT,
             default => EntityFields::DESCRIPTION_EN,
         };
     }
-    
+
     /**
      * @param $language
      *
@@ -174,7 +177,7 @@ class GameObserver {
             default => EntityFields::TEASER_EN,
         };
     }
-    
+
     /**
      * @param $language
      *

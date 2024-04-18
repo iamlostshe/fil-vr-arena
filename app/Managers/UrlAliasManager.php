@@ -36,14 +36,15 @@ class UrlAliasManager
 
         if (! empty($parameters[0]) && ($parameters[0] instanceof \Illuminate\Database\Eloquent\Model)) {
             $entity = $parameters[0];
-            if ($entity->urlAlias) {
+            $urlAlias = $entity->urlAlias()->where('locale', $this->config->get('app.locale'));
+            if ($urlAlias) {
                 unset($parameters[0]);
                 if (! $this->config->get('url-aliases.use_localization')) {
-                	$alias = $entity->urlAlias->alias;
-                } elseif ($this->config->get('url-aliases-laravellocalization.origin_default_locale') == $entity->urlAlias->locale && $this->config->get('url-aliases-laravellocalization.hideDefaultLocaleInURL') && !$forceWithLocalePrefix) {
-                    $alias = $entity->urlAlias->alias;
+                	$alias = $urlAlias->alias;
+                } elseif ($this->config->get('url-aliases-laravellocalization.origin_default_locale') == $urlAlias->locale && $this->config->get('url-aliases-laravellocalization.hideDefaultLocaleInURL') && !$forceWithLocalePrefix) {
+                    $alias = $urlAlias->alias;
                 } else {
-                    $alias = $entity->urlAlias->localeAlias;
+                    $alias = $urlAlias->localeAlias;
                 }
 
                 if (count($parameters)) {

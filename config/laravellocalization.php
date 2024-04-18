@@ -298,6 +298,7 @@ return [
         //'ko'          => ['name' => 'Korean',                 'script' => 'Hang', 'native' => '한국어', 'regional' => 'ko_KR'],
     ],
 
+
     // Requires middleware `LaravelSessionRedirect.php`.
     //
     // Automatically determine locale from browser (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
@@ -309,7 +310,7 @@ return [
     // again if the session expires.
     //
     // If false, system will take app.php locale attribute
-    'useAcceptLanguageHeader' => true,
+    'useAcceptLanguageHeader' => TRUE,
 
     // If `hideDefaultLocaleInURL` is true, then a url without locale
     // is identical with the same url with default locale.
@@ -326,12 +327,12 @@ return [
     // If `useAcceptLanguageHeader` is true, then the first time
     // the locale will be determined from browser and redirect to that language.
     // After that, `hideDefaultLocaleInURL` behaves as usual.
-    'hideDefaultLocaleInURL' => false,
+    'hideDefaultLocaleInURL' => FALSE,
 
     // If you want to display the locales in particular order in the language selector you should write the order here.
     //CAUTION: Please consider using the appropriate locale code otherwise it will not work
     //Example: 'localesOrder' => ['es','en'],
-    'localesOrder' => [],
+    'localesOrder' => ['en', 'pt'],
 
     // If you want to use custom language URL segments like 'at' instead of 'de-AT', you can map them to allow the
     // LanguageNegotiator to assign the desired locales based on HTTP Accept Language Header. For example, if you want
@@ -344,7 +345,34 @@ return [
 
     // URLs which should not be processed, e.g. '/nova', '/nova/*', '/nova-api/*' or specific application URLs
     // Defaults to []
-    'urlsIgnored' => ['/skipped'],
+    'urlsIgnored' => [
+        'admin',
+        'admin/*',
+        'nova',
+        'nova/*',
+        'nova-api/*',
+        '/skipped',
+        '/admin',
+        '/admin/*',
+        '/_debugbar',
+        '/_debugbar/*',
+        '/nova',
+        '/nova/*',
+        '/nova-api/*',
+        '/horizon',
+        '/horizon/*',
+        '/telescope',
+        '/telescope/*',
+        'filemanager',
+        'filemanager/*',
+        'filemanager-api',
+        'filemanager-api/*',
+        'vendor/*',
+        '/storage/*',
+        '/nova-vendor/*',
+        'vendor',
+        '*.js'
+    ],
 
     'httpMethodsIgnored' => ['POST', 'PUT', 'PATCH', 'DELETE'],
 ];

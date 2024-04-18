@@ -21,18 +21,18 @@ Route::redirect('/home', '/');
 Route::redirect('/index.php', '/');
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [
-        'localeSessionRedirect',
-        'localizationRedirect',
-        'localeViewPath',
-    ]
+//    'middleware' => [
+//        'localeSessionRedirect',
+//        'localizationRedirect',
+//        'localeViewPath',
+//    ]
 ], function() {
     StaticPageService::routes();
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
     Route::get('/games', [GameController::class, 'index'])
         ->name(RouteNames::GAMES);
-    Route::get('/games/{id}', [GameController::class, 'show'])
+    Route::get('/games/{game}', [GameController::class, 'show'])
         ->name(RouteNames::GAMES_DETAIL);
 
 
