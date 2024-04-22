@@ -36,7 +36,7 @@ class UrlAliasManager
 
         if (! empty($parameters[0]) && ($parameters[0] instanceof \Illuminate\Database\Eloquent\Model)) {
             $entity = $parameters[0];
-            $urlAlias = $entity->urlAlias()->where('locale', $this->config->get('app.locale'));
+            $urlAlias = $entity->urlAlias()->where('locale', $this->config->get('app.locale'))->first();
             if ($urlAlias) {
                 unset($parameters[0]);
                 if (! $this->config->get('url-aliases.use_localization')) {

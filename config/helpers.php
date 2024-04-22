@@ -1,5 +1,7 @@
 <?php
 
+use App\Facades\UrlAlias;
+
 if (!function_exists('route_alias')) {
     /**
      * Get URL-path (alias/system path) for entity.
