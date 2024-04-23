@@ -12,7 +12,7 @@
                         </button>
                     </div>
                     <div class="c-faq-item__answer">
-                        <div class="c-faq-item__content">
+                        <div class="c-faq-item__content c-format">
                             <p>
                                 {!! $faq->getDescription()!!}
                             </p>

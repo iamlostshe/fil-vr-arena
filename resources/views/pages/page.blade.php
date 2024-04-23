@@ -7,7 +7,7 @@
             <div class="c-page__title">
                 {!! $page->getTitle() !!}
             </div>
-            <div class="c-page__text">
+            <div class="c-page__text c-format">
                 {!! $page->getPageBody() !!}
             </div>
         </div>
