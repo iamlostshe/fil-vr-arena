@@ -5,6 +5,9 @@ namespace App\Nova;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource as NovaResource;
 
+/**
+ *
+ */
 abstract class Resource extends NovaResource
 {
     /**
@@ -55,5 +58,28 @@ abstract class Resource extends NovaResource
     public static function relatableQuery(NovaRequest $request, $query)
     {
         return parent::relatableQuery($request, $query);
+    }
+
+    /**
+     * @param $height
+     * @return array
+     */
+    public static function editorOptions($height = '980') {
+        return [
+            //'content_css' => '/css/editor.css',
+            'height' => $height,
+            'plugins' => [
+                'lists','preview','anchor','pagebreak', 'link', 'image','wordcount','fullscreen','directionality', 'code',
+            ],
+            'image_class_list' => [
+                [ 'title' => 'Wide', 'value' => 'is-wide' ],
+                [ 'title' => 'Left', 'value' => 'is-float-left' ],
+                [ 'title' => 'Right', 'value' => 'is-float-right' ],
+            ],
+            'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link | code',
+            'use_lfm' => true,
+            //'language' => 'ru',
+            //'language_url' => '/vendor/tinymce/langs/ru.js',
+        ];
     }
 }

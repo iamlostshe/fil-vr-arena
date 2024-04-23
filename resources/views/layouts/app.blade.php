@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
+    <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name='viewport' id='viewport'
           content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
@@ -16,7 +18,6 @@
     <link rel="manifest" href="{{asset('/img/icons/site.webmanifest')}}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    @yield('title')
     @php
         $storedMetatags = \App\Services\MetatagService::getCurrentHtml();
     @endphp
@@ -26,14 +27,36 @@
         @else
             <title>{{ config('app.name') }}</title>
         @endif
-@else
+    @else
         {!! $storedMetatags !!}
     @endif
 
     {!! \App\Services\MetatagService::getCurrentHtml() !!}
+    
+    <meta name="description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
+    <meta name="keywords" content="virtual reality Lisbon, vr arena lisboa, birthday party for kids, VR arena Portugal, free roam VR experience, VR gaming Lisbon, virtual reality adventures, vr experience, realidade virtual lisboa, ">
+    <meta name="author" content="Another World Lisboa">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="PT-11">
+    <meta name="geo.placename" content="Lisboa">
+    <meta name="geo.position" content="38.7223;-9.1393">
+    <meta name="ICBM" content="38.7223, -9.1393">
+    
+    <meta property="og:title" content="Virtual Reality Free Roam Arena in Lisbon, Portugal">
+    <meta property="og:description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vr-arena.pt">
+    <meta property="og:image" content="https://vr-arena.pt/img/poster.jpg?v=2">
+    <meta property="og:site_name" content="Another World Lisboa">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Virtual Reality Free Roam Arena in Lisboa">
+    <meta name="twitter:description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
+    <meta name="twitter:image" content="https://vr-arena.pt/img/poster.jpg?v=2">
+    <meta name="twitter:site" content="https://vr-arena.pt">
+    
     <link rel="image_src" href="https://vr-arena.pt/img/poster.jpg?v=2" />
-
-
+    
     <link rel="stylesheet" href="{{ mix('css/plugins/aos/aos.css') }}"/>
     <link rel="stylesheet" href="{{ mix('css/plugins/fancybox/jquery.fancybox.min.css') }}" />
     <link rel="stylesheet" href="{{ mix('css/plugins/select2/select2.min.css') }}" />
@@ -136,7 +159,7 @@
             </div>
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
-                    LLC "ANOTHER WORLD"<br/>
+                    MOMENTO FORMOSO UNIPESSOAL LDA<br/>
                     <a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
                     <a href="mailto:{{ __('contacts.email') }}">{{ __('contacts.email') }}</a><br/>
                 </div>

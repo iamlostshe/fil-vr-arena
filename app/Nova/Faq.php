@@ -70,6 +70,7 @@ class Faq extends Resource
                         ->hideFromIndex(),
 
                     NovaTinyMCE::make('Answer', EntityFields::DESCRIPTION . '_pt')
+                        ->options(self::editorOptions())
                         ->withMeta(['value' => $pt_description ?? NULL])
                         ->rules('required'),
 
@@ -79,6 +80,7 @@ class Faq extends Resource
                         ->withMeta(['value' => $eng_title ?? NULL])
                         ->rules('required', 'max:255'),
                     NovaTinyMCE::make('Answer', EntityFields::DESCRIPTION . '_en')
+                        ->options(self::editorOptions())
                         ->withMeta(['value' => $eng_description ?? NULL])
                         ->rules('required'),
                 ]),

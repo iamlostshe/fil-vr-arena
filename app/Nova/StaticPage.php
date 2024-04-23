@@ -66,6 +66,7 @@ class StaticPage extends Resource {
                         ->withMeta(['value' => $pt_title ?? NULL])
                         ->rules('required', 'max:255'),
                     NovaTinyMCE::make('Body', EntityFields::BODY_PT)
+                        ->options(self::editorOptions())
                         ->withMeta(['value' => $pt_body ?? NULL])
                         ->rules('required'),
 
@@ -75,6 +76,7 @@ class StaticPage extends Resource {
                         ->withMeta(['value' => $eng_title ?? NULL])
                         ->rules('required', 'max:255'),
                     NovaTinyMCE::make('Body', EntityFields::BODY_EN)
+                        ->options(self::editorOptions())
                         ->withMeta(['value' => $eng_body ?? NULL])
                         ->rules('required'),
                 ]),

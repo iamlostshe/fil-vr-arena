@@ -76,6 +76,7 @@ class Game extends Resource {
 
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_pt')
                         ->withMeta(['value' => $pt_description ?? NULL])
+                        ->options(self::editorOptions())
                         ->hideFromIndex()
                         ->onlyOnForms()
                         ->rules('required'),
@@ -94,6 +95,7 @@ class Game extends Resource {
                         ->help('The teaser is displayed on the main page.'),
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_en')
                         ->withMeta(['value' => $eng_description ?? NULL])
+                        ->options(self::editorOptions())
                         ->onlyOnForms()
                         ->rules('required'),
                     Text::make('Genre', EntityFields::GENRE . '_en')
