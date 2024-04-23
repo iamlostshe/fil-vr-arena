@@ -689,6 +689,26 @@ body.is-bar .c-header {
     gap: 10px;
   }
 }
+.c-header__contacts__desktop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .c-header__contacts__desktop {
+    display: none;
+  }
+}
+.c-header__contacts__mobile {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .c-header__contacts__mobile {
+    display: flex;
+  }
+}
 .c-header__contacts__booking {
   max-width: 100px;
   display: none !important;

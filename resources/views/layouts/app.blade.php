@@ -101,11 +101,15 @@
                     </ul>
                 </div>
                 <div class="c-header__contacts">
-                    <a href="{{__('contacts.reserve_link')}}">{{__('contacts.phone_number')}}</a>
-                    <a target="_blank" class="c-social-item"
-                       href="{{__('contacts.instagram_link')}}"></a>
+                    <div class="c-header__contacts__desktop">
+                        <a href="{{__('contacts.reserve_link')}}">{{__('contacts.phone_number')}}</a>
+                        <a target="_blank" class="c-social-item"
+                           href="{{__('contacts.instagram_link')}}"></a>
+                    </div>
                     <a href="{{ __('contacts.reserve_link') }}" class="c-header__contacts__booking">{{ __('app.reserve_experience') }}</a>
-                    <a href="{{ __('contacts.tel_link') }}" class="c-social-item"><span>{{ __('contacts.phone_number') }}</span></a>
+                    <div class="c-header__contacts__mobile">
+                        <a href="{{ __('contacts.tel_link') }}" class="c-social-item"><span>{{ __('contacts.phone_number') }}</span></a>
+                    </div>
                     <a target="_blank" class="c-social-item" href="{{ __('contacts.reserve_link') }}"></a>
                 </div>
                 <button class="c-header__hamburger js-bar-trigger"></button>
