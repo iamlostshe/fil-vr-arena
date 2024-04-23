@@ -117,7 +117,7 @@
                         <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
-                    <a href="/" class="c-header__logo"></a>
+                    <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
                     <ul>
                         <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
