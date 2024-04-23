@@ -691,6 +691,26 @@ body.is-bar .c-header {
     gap: 10px;
   }
 }
+.c-header__contacts__desktop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .c-header__contacts__desktop {
+    display: none;
+  }
+}
+.c-header__contacts__mobile {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .c-header__contacts__mobile {
+    display: flex;
+  }
+}
 .c-header__contacts__booking {
   max-width: 100px;
   display: none !important;
@@ -1416,7 +1436,7 @@ body.is-bar .c-header {
 .c-social-item[href*="https://instagram.com"]:before,
 .c-social a[href*="https://www.instagram.com"]:before,
 .c-social-item[href*="https://www.instagram.com"]:before {
-  background-image: url(/images/icon-instagram.svg?14accb7b28724f5bf038bafe0e920076);
+  background-image: url(/images/icon-instagram.svg?976027db32cca5d22cf0df19683a997c);
 }
 .c-social a--facebook:before,
 .c-social-item--facebook:before,
@@ -1432,7 +1452,7 @@ body.is-bar .c-header {
 .c-social-item[href*="https://wa.me"]:before,
 .c-social a[href*="https://www.wa.me"]:before,
 .c-social-item[href*="https://www.wa.me"]:before {
-  background-image: url(/images/icon-whatsapp.svg?67745d6d65cf90cf23664ff9c4994380);
+  background-image: url(/images/icon-whatsapp.svg?8f6009b1f41075db55337940d684a230);
 }
 .c-social a--tel:before,
 .c-social-item--tel:before,
@@ -1440,7 +1460,7 @@ body.is-bar .c-header {
 .c-social-item--phone:before,
 .c-social a[href*="tel:"]:before,
 .c-social-item[href*="tel:"]:before {
-  background-image: url(/images/icon-tel.svg?60811ab4d64b5566748697c624471c02);
+  background-image: url(/images/icon-tel.svg?1b96980239dbc12d49588c25b0e446ff);
 }
 .c-social a img,
 .c-social-item img,
