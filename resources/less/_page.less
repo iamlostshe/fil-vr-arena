@@ -3,6 +3,10 @@
 
   &.has-media {
     padding-top: 40vh;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 0;
+    }
   }
 
   &__media {
@@ -12,6 +16,14 @@
     left: 0;
     right: 0;
     min-height: 50vh;
+
+    @media screen and (max-width: 767px) {
+      position: relative;
+      top:auto;
+      left: auto;
+      right: auto;
+      min-height: 150px;
+    }
 
 
     &:empty {

@@ -1487,6 +1487,11 @@ body.is-bar .c-header {
 .c-page.has-media {
   padding-top: 40vh;
 }
+@media screen and (max-width: 767px) {
+  .c-page.has-media {
+    padding-top: 0;
+  }
+}
 .c-page__media {
   position: absolute;
   z-index: 1;
@@ -1494,6 +1499,15 @@ body.is-bar .c-header {
   left: 0;
   right: 0;
   min-height: 50vh;
+}
+@media screen and (max-width: 767px) {
+  .c-page__media {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    min-height: 150px;
+  }
 }
 .c-page__media:empty {
   display: none;
