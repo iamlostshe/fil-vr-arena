@@ -20,22 +20,21 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     @php
-        $storedMetatags = \App\Services\MetatagService::getCurrentHtml();
+        $title = !empty($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) : config('app.name');
+        $description ="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!";
+        $keywords = "virtual reality Lisbon, vr arena lisboa, birthday party for kids, VR arena Portugal, free roam VR experience, VR gaming Lisbon, virtual reality adventures, vr experience, realidade virtual lisboa";
+        $metatag = \App\Services\MetatagService::getCurrent();
+        $image = !empty($__env->yieldContent('image')) ? trim($__env->yieldContent('image')) : "https://vr-arena.pt/img/poster.jpg?v=2";
+        if($metatag){
+            $title = $metatag->title;
+            $description = $metatag->description;
+            $keywords = $metatag->keywords;
+        }
+
     @endphp
-    @if($storedMetatags==="")
-        @if(!empty(trim($__env->yieldContent('title'))))
-            <title>@yield('title')</title>
-        @else
-            <title>{{ config('app.name') }}</title>
-        @endif
-    @else
-        {!! $storedMetatags !!}
-    @endif
-
-    {!! \App\Services\MetatagService::getCurrentHtml() !!}
-
-    <meta name="description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
-    <meta name="keywords" content="virtual reality Lisbon, vr arena lisboa, birthday party for kids, VR arena Portugal, free roam VR experience, VR gaming Lisbon, virtual reality adventures, vr experience, realidade virtual lisboa, ">
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{$description}}">
+    <meta name="keywords" content="{{$keywords}}">
     <meta name="author" content="Another World Lisboa">
     <meta name="robots" content="index, follow">
     <meta name="geo.region" content="PT-11">
@@ -43,20 +42,20 @@
     <meta name="geo.position" content="38.7223;-9.1393">
     <meta name="ICBM" content="38.7223, -9.1393">
 
-    <meta property="og:title" content="Virtual Reality Free Roam Arena in Lisbon, Portugal">
-    <meta property="og:description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
+    <meta property="og:title" content="{{$title}}">
+    <meta property="og:description" content="{{$description}}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vr-arena.pt">
-    <meta property="og:image" content="https://vr-arena.pt/img/poster.jpg?v=2">
+    <meta property="og:image" content="{{$image}}">
     <meta property="og:site_name" content="Another World Lisboa">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Virtual Reality Free Roam Arena in Lisboa">
-    <meta name="twitter:description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
-    <meta name="twitter:image" content="https://vr-arena.pt/img/poster.jpg?v=2">
+    <meta name="twitter:title" content="{{$title}}">
+    <meta name="twitter:description" content="{{$description}}">
+    <meta name="twitter:image" content="{{$image}}">
     <meta name="twitter:site" content="https://vr-arena.pt">
 
-    <link rel="image_src" href="https://vr-arena.pt/img/poster.jpg?v=2" />
+    <link rel="image_src" href="{{$image}}" />
 
     <link rel="stylesheet" href="{{ mix('css/plugins/aos/aos.css') }}"/>
     <link rel="stylesheet" href="{{ mix('css/plugins/fancybox/jquery.fancybox.min.css') }}" />
@@ -75,15 +74,12 @@
 
 </head>
 @php
+$current_route_name = Route::currentRouteName();
 $about_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT);
 $contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS);
 $company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
 $privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
 $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
-function isActive($page){
-
-    return Route::currentRouteName() === $page ? 'is-active' : '';
-}
 @endphp
 <body>
 
@@ -94,13 +90,13 @@ function isActive($page){
         <div class="c-bar__main">
             <div class="c-bar__content">
                 <ul>
-                    <li><a href="{{route('games')}}" class="{{isActive('games')}}">{!! __('app.adventures') !!}</a></li>
+                    <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
                     <li><a href="{{__('contacts.reserve_link')}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     <li>
-                        <a href="{{route($about_route_name)}}" class="{{isActive($about_route_name)}}">{{ __('app.about_us') }}</a>
+                        <a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a>
                     </li>
                     <li>
-                        <a href="{{route($contacts_route_name)}}"  class="{{isActive($contacts_route_name)}}">{{ __('app.contacts') }}</a>
+                        <a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a>
                     </li>
                 </ul>
             </div>
@@ -123,14 +119,14 @@ function isActive($page){
             <div class="c-header__container">
                 <div class="c-header__nav">
                     <ul>
-                        <li><a href="{{route('games')}}" class="{{isActive('games')}}">{!! __('app.adventures') !!}</a></li>
+                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
                         <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
                     <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
                     <ul>
-                        <li><a href="{{route($about_route_name)}}" class="{{isActive($about_route_name)}}">{{ __('app.about_us') }}</a></li>
-                        <li><a href="{{route($contacts_route_name)}}" class="{{isActive($contacts_route_name)}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">
@@ -158,9 +154,9 @@ function isActive($page){
                 <a href="/" class="c-footer__logo"></a>
                 <nav class="c-footer__nav">
                     <ul>
-                        <li><a href="{{route('games')}}" class="{{isActive('games')}}">{{ __('app.adventure') }}</a></li>
-                        <li><a href="{{route($about_route_name)}}" class="{{isActive($about_route_name)}}">{{ __('app.about_us') }}</a></li>
-                        <li><a href="{{route($contacts_route_name)}}" class="{{isActive($contacts_route_name)}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{{ __('app.adventure') }}</a></li>
+                        <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
@@ -184,13 +180,13 @@ function isActive($page){
             <div class="c-footer__legal">
                 <ul>
                     <li>
-                        <a href="{{route($company_info_route_name)}}" class="{{isActive($company_info_route_name)}}">{{ __('app.company_information') }}</a>
+                        <a href="{{route($company_info_route_name)}}" class="{{$current_route_name === $company_info_route_name ? 'is-active' : ''}}">{{ __('app.company_information') }}</a>
                     </li>
                     <li>
-                        <a href="{{route($privacy_policy_route_name)}}" class="{{isActive($privacy_policy_route_name)}}">{{ __('app.privacy_policy') }}</a>
+                        <a href="{{route($privacy_policy_route_name)}}" class="{{$current_route_name === $privacy_policy_route_name ? 'is-active' : ''}}">{{ __('app.privacy_policy') }}</a>
                     </li>
                     <li>
-                        <a href="{{route($user_agreement_route_name)}}" class="{{isActive($user_agreement_route_name)}}">{{ __('app.user_agreement') }}</a>
+                        <a href="{{route($user_agreement_route_name)}}" class="{{$current_route_name === $user_agreement_route_name ? 'is-active' : ''}}">{{ __('app.user_agreement') }}</a>
                     </li>
                 </ul>
             </div>

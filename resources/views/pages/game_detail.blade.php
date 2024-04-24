@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title', $game->getTitle())
+@section('image', $game->poster())
 @section('page')
 <section class="c-section" id="section-game">
     <div class="c-game">
