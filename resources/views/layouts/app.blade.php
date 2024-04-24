@@ -85,7 +85,7 @@
             <div class="c-bar__content">
                 <ul>
                     <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="{{__('contacts.reserve_link')}}">{{ __('app.reserve_experience') }}</a></li>
+                    <li><a href="{{__('contacts.reserve_link')}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     <li>
                         <a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a>
                     </li>
@@ -114,7 +114,7 @@
                 <div class="c-header__nav">
                     <ul>
                         <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
                     <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
@@ -129,7 +129,7 @@
                         <a target="_blank" class="c-social-item"
                            href="{{__('contacts.instagram_link')}}"></a>
                     </div>
-                    <a href="{{ __('contacts.reserve_link') }}" class="c-header__contacts__booking">{{ __('app.reserve_experience') }}</a>
+                    <a href="{{ __('contacts.reserve_link') }}" class="c-header__contacts__booking" target="_blank">{{ __('app.reserve_experience') }}</a>
                     <div class="c-header__contacts__mobile">
                         <a href="{{ __('contacts.tel_link') }}" class="c-social-item"><span>{{ __('contacts.phone_number') }}</span></a>
                     </div>
@@ -154,7 +154,7 @@
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
-                    <a href="{{ __('contacts.reserve_link') }}" class="c-button c-button--alt">{{ __('app.reserve_experience') }}</a>
+                    <a href="{{ __('contacts.reserve_link') }}" class="c-button c-button--alt" target="_blank">{{ __('app.reserve_experience') }}</a>
                 </div>
             </div>
             <div class="c-footer__container">
