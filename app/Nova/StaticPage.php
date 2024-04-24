@@ -59,13 +59,18 @@ class StaticPage extends Resource {
             ID::make()
                 ->sortable(),
             Text::make('Page Key', EntityFields::PAGE_KEY)
-                ->rules('required', 'max:255'),
+                ->help('The page key is used to identify the page in the code. It should be unique and should not contain spaces or special characters.')
+                ->rules('required', 'max:255', 'unique:static_pages,page_key,' . $this->id),
             Tabs::make(Languages::EN_FULL, [
                 Tab::make(Languages::PT_FULL, [
                     Text::make('Title', EntityFields::TITLE_PT)
+                        ->hideFromIndex()
+                        ->help('The title of the page')
                         ->withMeta(['value' => $pt_title ?? NULL])
                         ->rules('required', 'max:255'),
                     NovaTinyMCE::make('Body', EntityFields::BODY_PT)
+                        ->hideFromIndex()
+                        ->help('The body of the page')
                         ->options(self::editorOptions())
                         ->withMeta(['value' => $pt_body ?? NULL])
                         ->rules('required'),
@@ -73,9 +78,11 @@ class StaticPage extends Resource {
                 ]),
                 Tab::make(Languages::EN_FULL, [
                     Text::make('Title', EntityFields::TITLE_EN)
+                        ->help('The title of the page')
                         ->withMeta(['value' => $eng_title ?? NULL])
                         ->rules('required', 'max:255'),
                     NovaTinyMCE::make('Body', EntityFields::BODY_EN)
+                        ->help('The body of the page')
                         ->options(self::editorOptions())
                         ->withMeta(['value' => $eng_body ?? NULL])
                         ->rules('required'),
