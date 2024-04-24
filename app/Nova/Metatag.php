@@ -46,15 +46,9 @@ class Metatag extends Resource {
                 ->help('The URL field should be the relative path of the page. For example, if the page is located at https://vr-arena.pt/en/about, the URL field should be en/about.')
                 ->creationRules([
                     'unique:metatags,uri',
-                    'required' => 'The URL field is required for new metatags.',
-                    'max' => 'The URL field must not exceed 255 characters.',
-                    'unique' => 'The URL has already been taken by another metatag.',
                 ])
                 ->updateRules([
                     'unique:metatags,uri,{{resourceId}}',
-                    'required' => 'The URL field is required for updating metatags.',
-                    'max' => 'The URL field must not exceed 255 characters.',
-                    'unique' => 'The URL has already been taken by another metatag.',
                 ]),
             Text::make('Title', EntityFields::TITLE)
                 ->rules('required', 'max:255')

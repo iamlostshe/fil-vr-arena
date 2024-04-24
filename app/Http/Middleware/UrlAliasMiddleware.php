@@ -167,7 +167,6 @@ class UrlAliasMiddleware
 
     protected function isAvailableLocalizationPath(Request $request)
     {
-        info($request->path());
         if ($request->is(...$this->config->get('url-aliases-laravellocalization.urlsIgnored', []))) {
             return false;
         }
