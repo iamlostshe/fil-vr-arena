@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Facades\Route; @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -32,7 +33,7 @@
     @endif
 
     {!! \App\Services\MetatagService::getCurrentHtml() !!}
-    
+
     <meta name="description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
     <meta name="keywords" content="virtual reality Lisbon, vr arena lisboa, birthday party for kids, VR arena Portugal, free roam VR experience, VR gaming Lisbon, virtual reality adventures, vr experience, realidade virtual lisboa, ">
     <meta name="author" content="Another World Lisboa">
@@ -41,7 +42,7 @@
     <meta name="geo.placename" content="Lisboa">
     <meta name="geo.position" content="38.7223;-9.1393">
     <meta name="ICBM" content="38.7223, -9.1393">
-    
+
     <meta property="og:title" content="Virtual Reality Free Roam Arena in Lisbon, Portugal">
     <meta property="og:description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
     <meta property="og:type" content="website">
@@ -54,9 +55,9 @@
     <meta name="twitter:description" content="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!">
     <meta name="twitter:image" content="https://vr-arena.pt/img/poster.jpg?v=2">
     <meta name="twitter:site" content="https://vr-arena.pt">
-    
+
     <link rel="image_src" href="https://vr-arena.pt/img/poster.jpg?v=2" />
-    
+
     <link rel="stylesheet" href="{{ mix('css/plugins/aos/aos.css') }}"/>
     <link rel="stylesheet" href="{{ mix('css/plugins/fancybox/jquery.fancybox.min.css') }}" />
     <link rel="stylesheet" href="{{ mix('css/plugins/select2/select2.min.css') }}" />
@@ -73,24 +74,33 @@
     <script type="text/javascript" src="{{ mix('js/core.js') }}"></script>
 
 </head>
+@php
+$about_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT);
+$contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS);
+$company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
+$privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
+$user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
+function isActive($page){
+
+    return Route::currentRouteName() === $page ? 'is-active' : '';
+}
+@endphp
 <body>
 
 <div class="c-site" id="app">
-
-
     <aside class="c-bar">
         <div class="c-bar__overlay js-bar-close"></div>
         <button class="c-bar__close js-bar-close"></button>
         <div class="c-bar__main">
             <div class="c-bar__content">
                 <ul>
-                    <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
+                    <li><a href="{{route('games')}}" class="{{isActive('games')}}">{!! __('app.adventures') !!}</a></li>
                     <li><a href="{{__('contacts.reserve_link')}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     <li>
-                        <a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a>
+                        <a href="{{route($about_route_name)}}" class="{{isActive($about_route_name)}}">{{ __('app.about_us') }}</a>
                     </li>
                     <li>
-                        <a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a>
+                        <a href="{{route($contacts_route_name)}}"  class="{{isActive($contacts_route_name)}}">{{ __('app.contacts') }}</a>
                     </li>
                 </ul>
             </div>
@@ -113,14 +123,14 @@
             <div class="c-header__container">
                 <div class="c-header__nav">
                     <ul>
-                        <li><a href="{{route('games')}}">{!! __('app.adventures') !!}</a></li>
+                        <li><a href="{{route('games')}}" class="{{isActive('games')}}">{!! __('app.adventures') !!}</a></li>
                         <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
                     <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
                     <ul>
-                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
-                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route($about_route_name)}}" class="{{isActive($about_route_name)}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route($contacts_route_name)}}" class="{{isActive($contacts_route_name)}}">{{ __('app.contacts') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">
@@ -148,9 +158,9 @@
                 <a href="/" class="c-footer__logo"></a>
                 <nav class="c-footer__nav">
                     <ul>
-                        <li><a href="{{route('games')}}">{{ __('app.adventure') }}</a></li>
-                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT))}}">{{ __('app.about_us') }}</a></li>
-                        <li><a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS))}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route('games')}}" class="{{isActive('games')}}">{{ __('app.adventure') }}</a></li>
+                        <li><a href="{{route($about_route_name)}}" class="{{isActive($about_route_name)}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route($contacts_route_name)}}" class="{{isActive($contacts_route_name)}}">{{ __('app.contacts') }}</a></li>
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
@@ -174,13 +184,13 @@
             <div class="c-footer__legal">
                 <ul>
                     <li>
-                        <a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO))}}">{{ __('app.company_information') }}</a>
+                        <a href="{{route($company_info_route_name)}}" class="{{isActive($company_info_route_name)}}">{{ __('app.company_information') }}</a>
                     </li>
                     <li>
-                        <a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY))}}">{{ __('app.privacy_policy') }}</a>
+                        <a href="{{route($privacy_policy_route_name)}}" class="{{isActive($privacy_policy_route_name)}}">{{ __('app.privacy_policy') }}</a>
                     </li>
                     <li>
-                        <a href="{{route(\App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT))}}">{{ __('app.user_agreement') }}</a>
+                        <a href="{{route($user_agreement_route_name)}}" class="{{isActive($user_agreement_route_name)}}">{{ __('app.user_agreement') }}</a>
                     </li>
                 </ul>
             </div>
