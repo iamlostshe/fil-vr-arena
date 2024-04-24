@@ -143,6 +143,12 @@ body.is-bar {
       & a {
         font-weight: normal;
         color:#fff;
+
+        &.is-active {
+          font-weight: bold;
+          color:@color-red;
+          pointer-events: none;
+        }
       }
     }
 

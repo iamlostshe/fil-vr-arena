@@ -587,6 +587,11 @@ body.is-bar .c-header {
   font-weight: normal;
   color: #fff;
 }
+.c-bar ul > li a.is-active {
+  font-weight: bold;
+  color: #de1943;
+  pointer-events: none;
+}
 .c-bar ul strong {
   font-family: 'Lora', serif;
   font-size: 1.4rem;
@@ -621,7 +626,7 @@ body.is-bar .c-header {
   pointer-events: none;
   cursor: default;
   color: #de1943;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .c-header__container {
   display: flex;
@@ -833,6 +838,13 @@ body.is-bar .c-header {
 }
 .c-footer__nav a:hover {
   color: #de1943;
+}
+.c-footer__nav a.is-active {
+  font-weight: bold;
+  pointer-events: none;
+  cursor: default;
+  color: #de1943;
+  text-decoration: none;
 }
 .c-footer__contacts {
   padding-top: 50px;
