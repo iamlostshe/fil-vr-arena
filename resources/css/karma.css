@@ -2561,19 +2561,31 @@ select:-webkit-autofill:focus {
   max-width: 340px;
   margin: 0 auto;
   text-align: center;
-  padding: 10vh 0;
+  padding: 15vh 0;
+}
+.c-error__media {
+  margin: 0 auto 2rem;
 }
 .c-error__media img {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto 2rem;
+}
+@media screen and (max-width: 767px) {
+  .c-error__media {
+    max-width: 220px;
+  }
 }
 .c-error__title {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .c-error__title {
+    font-size: 2rem;
+  }
 }
 .c-error__title:empty {
   display: none;

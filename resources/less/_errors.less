@@ -2,15 +2,22 @@
   max-width: 340px;
   margin: 0 auto;
   text-align: center;
-  padding: 10vh 0;
+  padding: 15vh 0;
 
   &__media {
+    margin: 0 auto 2rem;
+
     & img {
       display: block;
       width: 100%;
       height: auto;
-      margin: 0 auto 2rem;
     }
+
+
+    @media screen and (max-width: 767px) {
+      max-width: 220px;
+    }
+
   }
 
   &__meta {
@@ -21,6 +28,10 @@
     font-weight: bold;
     line-height: 1;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 767px) {
+      font-size: 2rem;
+    }
 
     &:empty {
       display: none;
