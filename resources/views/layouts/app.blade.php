@@ -24,7 +24,7 @@
         $description ="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!";
         $keywords = "virtual reality Lisbon, vr arena lisboa, birthday party for kids, VR arena Portugal, free roam VR experience, VR gaming Lisbon, virtual reality adventures, vr experience, realidade virtual lisboa";
         $metatag = \App\Services\MetatagService::getCurrent();
-        $image = !empty($__env->yieldContent('image')) ? trim($__env->yieldContent('image')) : "https://vr-arena.pt/img/poster.jpg?v=2";
+        $image = !empty($__env->yieldContent('image')) ? trim($__env->yieldContent('image')) : asset("/img/poster.jpg?v=2");
         if($metatag){
             $title = $metatag->title;
             $description = $metatag->description;

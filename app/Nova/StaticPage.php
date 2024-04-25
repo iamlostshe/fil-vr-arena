@@ -143,4 +143,13 @@ class StaticPage extends Resource {
 
         return [];
     }
+
+    /**
+     * @param Request $request
+     *
+     * @return false
+     */
+    public function authorizedToReplicate(Request $request) {
+        return false;
+    }
 }
