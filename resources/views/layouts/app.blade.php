@@ -20,9 +20,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     @php
-        $title = !empty($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) : config('app.name');
-        $description ="Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!";
-        $keywords = "virtual reality Lisbon, vr arena lisboa, birthday party for kids, VR arena Portugal, free roam VR experience, VR gaming Lisbon, virtual reality adventures, vr experience, realidade virtual lisboa";
+        $title = !empty($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) : __('app.meta_default.title');
+        $description = __('app.meta_default.description');
+        $keywords = __('app.meta_default.keywords');
         $metatag = \App\Services\MetatagService::getCurrent();
         $image = !empty($__env->yieldContent('image')) ? trim($__env->yieldContent('image')) : asset("/img/poster.jpg?v=2");
         if($metatag){
@@ -48,7 +48,7 @@
     <meta property="og:url" content="https://vr-arena.pt">
     <meta property="og:image" content="{{$image}}">
     <meta property="og:site_name" content="Another World Lisboa">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="{{app()->getLocale() == 'pt' ? 'pt_PT' : 'en_US'}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{$title}}">
     <meta name="twitter:description" content="{{$description}}">
