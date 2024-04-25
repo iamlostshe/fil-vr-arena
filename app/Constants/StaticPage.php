@@ -25,11 +25,16 @@ abstract class StaticPage {
             'prefix_path' => '/',
             'route' => self::PREFIX_ROUTE . self::ABOUT
         ],
+        self::TERMS_AND_CONDITIONS => [
+            'prefix_path' => '/',
+            'route' => self::PREFIX_ROUTE . self::TERMS_AND_CONDITIONS
+        ],
 
     ];
     const COMPANY_INFO = 'company-info';
     const PRIVACY_POLICY = 'privacy-policy';
     const USER_AGREEMENT = 'user-agreement';
+    const TERMS_AND_CONDITIONS = 'terms-and-conditions';
     const CONTACTS = 'contacts';
     const ABOUT = 'about';
 

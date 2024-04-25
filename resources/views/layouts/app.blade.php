@@ -5,14 +5,10 @@
 
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-    <meta name='viewport' id='viewport'
-          content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
-    <meta http-equiv="Cache-Control" content="max-age=0"/><!--31536000-->
-    <meta charset="UTF-8" />
+    <meta name='viewport' id='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
+    <meta http-equiv="Cache-Control" content="max-age=0"/>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-
     <meta name="apple-mobile-web-app-capable" content="yes">
-
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('/img/icons/apple-touch-icon.png')}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('/img/icons/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/img/icons/favicon-16x16.png')}}">
@@ -80,6 +76,7 @@ $contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\
 $company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
 $privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
 $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
+$terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
 @endphp
 <body>
 
@@ -186,7 +183,7 @@ $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Cons
                         <a href="{{route($privacy_policy_route_name)}}" class="{{$current_route_name === $privacy_policy_route_name ? 'is-active' : ''}}">{{ __('app.privacy_policy') }}</a>
                     </li>
                     <li>
-                        <a href="{{route($user_agreement_route_name)}}" class="{{$current_route_name === $user_agreement_route_name ? 'is-active' : ''}}">{{ __('app.user_agreement') }}</a>
+                        <a href="{{route($terms_and_conditions_route_name)}}" class="{{$current_route_name === $terms_and_conditions_route_name ? 'is-active' : ''}}">{{ __('app.term_and_conditions') }}</a>
                     </li>
                 </ul>
             </div>

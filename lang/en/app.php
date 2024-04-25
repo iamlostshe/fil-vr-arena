@@ -14,6 +14,7 @@ return [
     'company_information' => 'Company Information',
     'privacy_policy' => 'Privacy Policy',
     'user_agreement' => 'User Agreement',
+    'term_and_conditions' => 'Terms and Conditions',
     'phone_number' => 'Phone Number',
     'email' => 'Email',
     'gameplay' => 'Gameplay',
