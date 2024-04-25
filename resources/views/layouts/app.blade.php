@@ -148,13 +148,13 @@ $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Cons
     <main class="c-main">
         @yield('page')
     </main>
-    <footer class="c-footer">
+    <footer class="c-footer">(fix)
         <div class="c-layout">
             <div class="c-footer__container">
                 <a href="/" class="c-footer__logo"></a>
                 <nav class="c-footer__nav">
                     <ul>
-                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{{ __('app.adventure') }}</a></li>
+                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{{ __('app.adventures') }}</a></li>
                         <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
                     </ul>
