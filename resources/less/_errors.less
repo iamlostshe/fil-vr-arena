@@ -1,0 +1,35 @@
+.c-error {
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10vh 0;
+
+  &__media {
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 2rem;
+    }
+  }
+
+  &__meta {
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 1rem;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__text {
+    &:empty {
+      display: none;
+    }
+  }
+}
