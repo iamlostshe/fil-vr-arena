@@ -148,7 +148,7 @@ $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Cons
     <main class="c-main">
         @yield('page')
     </main>
-    <footer class="c-footer">(fix)
+    <footer class="c-footer">
         <div class="c-layout">
             <div class="c-footer__container">
                 <a href="/" class="c-footer__logo"></a>
