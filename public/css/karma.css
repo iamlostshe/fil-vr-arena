@@ -557,9 +557,6 @@ body.is-bar .c-header {
   z-index: 3;
   border: 1px solid #fff;
 }
-.is-bar.is-bar-closing .c-bar__close {
-  transform: scale(0);
-}
 .c-bar__close:hover {
   opacity: 0.7;
 }

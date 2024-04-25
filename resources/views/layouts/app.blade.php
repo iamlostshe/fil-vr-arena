@@ -86,8 +86,8 @@ $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Cons
 <div class="c-site" id="app">
     <aside class="c-bar">
         <div class="c-bar__overlay js-bar-close"></div>
-        <button class="c-bar__close js-bar-close"></button>
         <div class="c-bar__main">
+            <button class="c-bar__close js-bar-close"></button>
             <div class="c-bar__content">
                 <ul>
                     <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
