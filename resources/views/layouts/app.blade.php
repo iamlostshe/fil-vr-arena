@@ -3,6 +3,12 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 
+    @if (app()->isProduction())
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PH3FC62K');</script>
+        <!-- End Google Tag Manager -->
+    @endif
+    <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name='viewport' id='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
@@ -79,7 +85,11 @@ $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Cons
 $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
 @endphp
 <body>
-
+@if (app()->isProduction())
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH3FC62K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+@endif
 <div class="c-site" id="app">
     <aside class="c-bar">
         <div class="c-bar__overlay js-bar-close"></div>
