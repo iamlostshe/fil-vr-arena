@@ -11,12 +11,14 @@ use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -66,81 +68,96 @@ class Game extends Resource {
             Tabs::make(Languages::EN_FULL, [
                 Tab::make(Languages::PT_FULL, [
                     Text::make('Title', EntityFields::TITLE . '_pt')
+                        ->help('The title is displayed on the main page.')
                         ->withMeta(['value' => $pt_title ?? NULL])
                         ->rules('required', 'max:255')
                         ->hideFromIndex(),
                     TextArea::make('Teaser', EntityFields::TEASER . '_pt')
+                        ->help('The teaser is a short description of the game.')
                         ->withMeta(['value' => $pt_teaser ?? NULL])
                         ->rules('required')
                         ->help('The teaser is displayed on the main page.'),
 
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_pt')
+                        ->help('The description is displayed on the game page.')
                         ->withMeta(['value' => $pt_description ?? NULL])
                         ->options(self::editorOptions(320))
                         ->hideFromIndex()
                         ->onlyOnForms()
                         ->rules('required'),
                     Text::make('Genre', EntityFields::GENRE . '_pt')
+                        ->help('The genre is displayed on the game page and on the main page.')
                         ->withMeta(['value' => $pt_genre ?? NULL])
                         ->hideFromIndex(),
 
                 ]),
                 Tab::make(Languages::EN_FULL, [
                     Text::make('Title', EntityFields::TITLE . '_en')
+                        ->help('The title is displayed on the main page.')
                         ->withMeta(['value' => $eng_title ?? NULL])
                         ->rules('required', 'max:255'),
                     TextArea::make('Teaser', EntityFields::TEASER . '_en')
+                        ->help('The teaser is a short description of the game.')
                         ->withMeta(['value' => $eng_teaser ?? NULL])
                         ->rules('required')
                         ->help('The teaser is displayed on the main page.'),
                     NovaTinyMCE::make('Description', EntityFields::DESCRIPTION . '_en')
+                        ->help('The description is displayed on the game page.')
                         ->withMeta(['value' => $eng_description ?? NULL])
                         ->options(self::editorOptions(320))
                         ->onlyOnForms()
                         ->rules('required'),
                     Text::make('Genre', EntityFields::GENRE . '_en')
+                        ->help('The genre is displayed on the game page and on the main page.')
                         ->withMeta(['value' => $eng_genre ?? NULL])
                         ->rules('required'),
                 ]),
 
             ]),
             Images::make('Poster image', MediaNames::GAME_POSTER_IMAGE)
-                ->help(__('Valid formats are .jpeg, .png Maximum size: 10 MB.'))
+                ->help(__('Main image of the game.<br>Valid formats are .jpeg, .png Maximum size: 10 MB.'))
                 ->setAllowedFileTypes(['image'])
                 ->singleImageRules([new ImageSizeRule(10)])
                 ->conversionOnIndexView('teaser')
                 ->conversionOnDetailView('teaser')
-                ->help('The poster image is displayed on the main page.')
                 ->conversionOnForm('teaser'),
             Images::make('Description image', MediaNames::GAME_DESCRIPTION_IMAGE)
-                ->help(__('Valid formats are .jpeg, .png Maximum size: 10 MB.'))
+                ->help(__('Description image shows on the game page.<br>Valid formats are .jpeg, .png Maximum size: 10 MB.'))
                 ->setAllowedFileTypes(['image'])
                 ->singleImageRules([new ImageSizeRule(10)])
                 ->conversionOnIndexView('teaser')
                 ->conversionOnDetailView('teaser')
-                ->conversionOnForm('teaser')
-                ->help('The image is displayed on the game detail page.'),
+                ->conversionOnForm('teaser'),
             Images::make('Gallery Images', MediaNames::GAME_DETAIL_GALLERY)
-                ->help(__('Valid formats are .jpeg, .png Maximum size: 10 MB.'))
+                ->help(__('Images of the gallery on game page.<br>Valid formats are .jpeg, .png Maximum size: 10 MB.'))
                 ->setAllowedFileTypes(['image'])
                 ->singleImageRules([new ImageSizeRule(10)])
                 ->conversionOnIndexView('teaser')
                 ->conversionOnDetailView('teaser')
-                ->conversionOnForm('teaser')
-                ->help('The gallery images are displayed on the game detail page.'),
-            Text::make('Duration', EntityFields::DURATION)
+                ->conversionOnForm('teaser'),
+            Select::make('Duration', EntityFields::DURATION)
+                ->help('The duration of the game.')
+                ->options([
+                    '30 min' => '30 min',
+                    '60 min' => '60 min',
+                ])
                 ->rules('required'),
             Text::make('Players', EntityFields::PLAYERS)
+                ->help('The number of players that can play the game at the same time.')
                 ->rules('required'),
             Text::make('Age', EntityFields::AGE)
+                ->help('The recommended age for the game.')
                 ->rules('required'),
             Text::make('Trailer link', EntityFields::TRAILER_LINK)
+                ->help('The youtube link to the trailer of the game.<br>The link should be in the embed format: https://www.youtube.com/embed/VIDEO_ID')
                 ->rules('required'),
             Number::make('Weight', EntityFields::WEIGHT)
+                ->help('The higher the weight, the lower the game will be displayed on the list.')
                 ->rules('required')
                 ->help('The higher the weight, the lower the FAQ will be displayed on the list.')
                 ->default(500),
             Boolean::make('Status', EntityFields::STATUS)
+                ->help('The status of the game.')
                 ->rules('required'),
         ];
     }
@@ -191,5 +208,15 @@ class Game extends Resource {
     public function actions(NovaRequest $request) {
 
         return [];
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return false
+     */
+    public function authorizedToReplicate(Request $request) {
+
+        return FALSE;
     }
 }
