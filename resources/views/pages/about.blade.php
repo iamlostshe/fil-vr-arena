@@ -16,7 +16,7 @@
                         {!! $page->getPageBody() !!}
                     </div>
                     <div class="c-page__actions">
-                        <a href="game.html" class="c-button c-button--readmore">sobre a aventura</a>
+                        <a href="{{route('games')}}" class="c-button c-button--readmore">{!! __('app.about_the_adventure') !!}</a>
                         <a href="https://www.youtube.com/watch?v=no4D4xJdxYQ&amp;t=3s" data-fancybox="" class="c-button c-button--readmore">{!! __('app.watch_trailer') !!}</a>
                         @include('partials.reserve_button')
                     </div>
