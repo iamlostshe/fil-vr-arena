@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+@import "_vars";
+
+html {
+    background: #ddd;
+}
+
+
+#tinymce {
+    font-family: @font;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.5;
+    font-weight: 400;
+    color: @color-main;
+    background: #fff;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 20px;
+
+    & .mce-content-body:not([dir=rtl])[data-mce-placeholder]:not(.mce-visualblocks)::before {
+        left: 20px;
+    }
+
+    &:after {
+        display: block;
+        content:"\0020";
+        height: 1px;
+        width: 100%;
+        clear: both;
+        opacity: 0;
+    }
+
+    @media screen and (max-width: 640px) {
+        font-size: 15px;
+    }
+
+    // Dublicate of is-print
+    @import (multiple) "_format";
+
+}
+

@@ -1,0 +1,266 @@
+.c-format {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6
+  {
+    font-style: normal;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+  }
+
+  & h1 {
+    font-size: 48px;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.85rem;
+    }
+  }
+
+  & h2 {
+    font-size: 32px;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.625rem;
+    }
+  }
+
+  & h3 {
+    font-size: 24px;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  & h4 {
+    font-size: 20px;
+    line-height: 1.4;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  & h5 {
+    font-size: 1.25rem;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.125rem;
+    }
+  }
+
+  & h6 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  & p {
+    margin-bottom: 1em;
+  }
+
+  & strong {
+    font-weight: bold;
+  }
+
+  & a {
+      color:@color-red;
+      text-decoration: underline;
+
+      &:hover {
+          color:@color-red;
+          text-decoration: none;
+      }
+  }
+
+  & ul,
+  & ol {
+    margin-bottom: 1em;
+  }
+
+  & ul {
+
+    & li {
+      display: block;
+      margin-bottom: 5px;
+      position: relative;
+      padding-left: 1rem;
+
+      &:before {
+        content: "\0020";
+        display: block;
+        width: 4px;
+        height: 4px;
+        background: @color-red;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        border-radius: 100%;
+      }
+    }
+  }
+
+
+    & ol {
+        list-style-type: none;
+        counter-reset: num;
+        margin-bottom: 1rem;
+
+        & li {
+            display: block;
+            position: relative;
+            margin-bottom: 0.4rem;
+            padding-left: 20px;
+
+            &:before {
+                content: counter(num) '.';
+                counter-increment: num;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                color: #222;
+                opacity: 0.7;
+            }
+        }
+    }
+
+  & table {
+    width: 100%;
+    text-align: left;
+
+    & th {
+      background: transparent;
+      text-align: left;
+    }
+    & th,
+    & td {
+      border: 1px solid @color-red;
+      vertical-align: middle;
+      padding: 4px 6px;
+      font-size: 0.8rem;
+      line-height: 1.1;
+
+      &.align-center {
+        text-align: center;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+  }
+
+  & blockquote {
+    display: block;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 640px) {
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+
+    & img {
+        display: block;
+        height: auto;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        &.is-wide {
+            width: 100%;
+        }
+
+
+        &.is-left {
+            float: left;
+            width: 50%;
+            margin-left: 1rem;
+
+            @media screen and (max-width: 640px) {
+                float: none;
+                margin-left: 0;
+            }
+        }
+
+        &.is-right {
+            float: right;
+            width: 50%;
+            margin-right: 1rem;
+
+            @media screen and (max-width: 640px) {
+                float: none;
+                margin-right: 0;
+            }
+        }
+    }
+
+    & figure {
+        margin-bottom: 1rem;
+
+        & img,
+        & img.is-wide,
+        & img.is-left,
+        & img.is-right
+        {
+            width: 100%;
+            float: none;
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    & figcaption {
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 400;
+        color: @color-gray;
+    }
+
+  & figcaption {
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    color: @color-gray;
+  }
+
+
+    & iframe {
+        display: block;
+        width: 100%;
+        min-height: 405px;
+
+        @media screen and (max-width: 640px) {
+            min-height: 320px;
+        }
+    }
+
+}
+
+
+.c-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+
+.c-format a {
+  &.js-fancybox,
+  &[data-fancybox] {
+    cursor: zoom-in;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

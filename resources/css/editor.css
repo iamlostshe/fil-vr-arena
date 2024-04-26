@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v35/0QI6MX1D_JOuGQbT0gvTJPa787weuyJG.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v35/0QI6MX1D_JOuGQbT0gvTJPa787wsuyJG.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v35/0QI6MX1D_JOuGQbT0gvTJPa787zAvCJG.ttf) format('truetype');
+}
+html {
+  background: #ddd;
+}
+#tinymce {
+  font-family: 'Object Sans', serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#tinymce .mce-content-body:not([dir=rtl])[data-mce-placeholder]:not(.mce-visualblocks)::before {
+  left: 20px;
+}
+#tinymce:after {
+  display: block;
+  content: "\0020";
+  height: 1px;
+  width: 100%;
+  clear: both;
+  opacity: 0;
+}
+@media screen and (max-width: 640px) {
+  #tinymce {
+    font-size: 15px;
+  }
+}
+#tinymce .c-format h1,
+#tinymce .c-format h2,
+#tinymce .c-format h3,
+#tinymce .c-format h4,
+#tinymce .c-format h5,
+#tinymce .c-format h6 {
+  font-style: normal;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+}
+#tinymce .c-format h1 {
+  font-size: 48px;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format h1 {
+    font-size: 1.85rem;
+  }
+}
+#tinymce .c-format h2 {
+  font-size: 32px;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format h2 {
+    font-size: 1.625rem;
+  }
+}
+#tinymce .c-format h3 {
+  font-size: 24px;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format h3 {
+    font-size: 1.5rem;
+  }
+}
+#tinymce .c-format h4 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format h4 {
+    font-size: 1.25rem;
+  }
+}
+#tinymce .c-format h5 {
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format h5 {
+    font-size: 1.125rem;
+  }
+}
+#tinymce .c-format h6 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+#tinymce .c-format p {
+  margin-bottom: 1em;
+}
+#tinymce .c-format strong {
+  font-weight: bold;
+}
+#tinymce .c-format a {
+  color: #de1943;
+  text-decoration: underline;
+}
+#tinymce .c-format a:hover {
+  color: #de1943;
+  text-decoration: none;
+}
+#tinymce .c-format ul,
+#tinymce .c-format ol {
+  margin-bottom: 1em;
+}
+#tinymce .c-format ul li {
+  display: block;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 1rem;
+}
+#tinymce .c-format ul li:before {
+  content: "\0020";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #de1943;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border-radius: 100%;
+}
+#tinymce .c-format ol {
+  list-style-type: none;
+  counter-reset: num;
+  margin-bottom: 1rem;
+}
+#tinymce .c-format ol li {
+  display: block;
+  position: relative;
+  margin-bottom: 0.4rem;
+  padding-left: 20px;
+}
+#tinymce .c-format ol li:before {
+  content: counter(num) '.';
+  counter-increment: num;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  color: #222;
+  opacity: 0.7;
+}
+#tinymce .c-format table {
+  width: 100%;
+  text-align: left;
+}
+#tinymce .c-format table th {
+  background: transparent;
+  text-align: left;
+}
+#tinymce .c-format table th,
+#tinymce .c-format table td {
+  border: 1px solid #de1943;
+  vertical-align: middle;
+  padding: 4px 6px;
+  font-size: 0.8rem;
+  line-height: 1.1;
+}
+#tinymce .c-format table th.align-center,
+#tinymce .c-format table td.align-center {
+  text-align: center;
+}
+#tinymce .c-format table p {
+  margin-bottom: 0;
+}
+#tinymce .c-format blockquote {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format blockquote {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+}
+#tinymce .c-format img {
+  display: block;
+  height: auto;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+#tinymce .c-format img.is-wide {
+  width: 100%;
+}
+#tinymce .c-format img.is-left {
+  float: left;
+  width: 50%;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format img.is-left {
+    float: none;
+    margin-left: 0;
+  }
+}
+#tinymce .c-format img.is-right {
+  float: right;
+  width: 50%;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format img.is-right {
+    float: none;
+    margin-right: 0;
+  }
+}
+#tinymce .c-format figure {
+  margin-bottom: 1rem;
+}
+#tinymce .c-format figure img,
+#tinymce .c-format figure img.is-wide,
+#tinymce .c-format figure img.is-left,
+#tinymce .c-format figure img.is-right {
+  width: 100%;
+  float: none;
+  margin: 0 0 1rem 0;
+}
+#tinymce .c-format figcaption {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #B3B3B3;
+}
+#tinymce .c-format figcaption {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #B3B3B3;
+}
+#tinymce .c-format iframe {
+  display: block;
+  width: 100%;
+  min-height: 405px;
+}
+@media screen and (max-width: 640px) {
+  #tinymce .c-format iframe {
+    min-height: 320px;
+  }
+}
+#tinymce .c-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+#tinymce .c-format a.js-fancybox,
+#tinymce .c-format a[data-fancybox] {
+  cursor: zoom-in;
+}
+#tinymce .c-format a.js-fancybox:hover,
+#tinymce .c-format a[data-fancybox]:hover {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=editor.css.map */

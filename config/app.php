@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Lisbon',
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt',
 
     /*
     |--------------------------------------------------------------------------
@@ -163,12 +163,15 @@ return [
         /*
          * Application Service Providers...
          */
+        Spatie\TranslationLoader\TranslationServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\MetaTagsServiceProvider::class,
         App\Providers\NovaServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -185,5 +188,32 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+    /*
+     * Url ignored by localization
+     */
+    'localeUrlsIgnored' => [
+        '/skipped',
+        '/admin',
+        '/admin/*',
+        '/_debugbar',
+        '/_debugbar/*',
+        '/nova',
+        '/nova/*',
+        '/nova-api/*',
+        '/horizon',
+        '/horizon/*',
+        '/telescope',
+        '/telescope/*',
+        'filemanager',
+        'filemanager/*',
+        'filemanager-api',
+        'filemanager-api/*',
+        'vendor/*',
+        '/storage/*',
+        '/nova-vendor/*',
+        'vendor',
+        '*.js'
+    ],
 
 ];
