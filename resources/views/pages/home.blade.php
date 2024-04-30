@@ -74,12 +74,12 @@
                         <tr>
                             <td>2 - 12 {!! __('home.prices_block_people') !!}</td>
                             <td>30</td>
-                            <td>19€</td>
+                            <td>20€</td>
                         </tr>
                         <tr>
                             <td>2 - 12 {!! __('home.prices_block_people') !!}</td>
                             <td>60</td>
-                            <td>24€</td>
+                            <td>30€</td>
                         </tr>
                         </tbody></table>
                 </div>
