@@ -18,6 +18,9 @@ return [
     'prices_block_title' => 'PRICE <span>GAMES</span>',
     'prices_block_duration_header' => 'DURATION, MINS',
     'prices_block_price_header' => 'PRICE',
+    'prices_block_single' => 'Single VR',
+    'prices_block_multy' => 'Arena games (2-12 players)',
     'prices_block_people' => 'people',
+    'prices_block_players' => 'players',
     'prices_block_arenas' => 'arenas',
 ];
