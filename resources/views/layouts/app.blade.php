@@ -95,6 +95,11 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                     <li>
                         <a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a>
                     </li>
+                    <li>
+                        <a href="https://www.google.com/maps/place/Another+World+Parking/@38.750559,-9.1047117,19z/data=!3m1!4b1!4m6!3m5!1s0xd19330018a0c101:0x176e741ebce86d37!8m2!3d38.750558!4d-9.104068!16s%2Fg%2F11vxqtxll6?entry=tts&g_ep=EgoyMDI0MDUyMi4wKgBIAVAD" target="_blank">
+                            {{ __('app.parking') }}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
