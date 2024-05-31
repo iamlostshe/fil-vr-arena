@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\StaticPage;
+use App\Constants\StaticPage;
 use App\Services\StaticPageService;
 use Illuminate\Http\Request;
 
@@ -37,8 +37,11 @@ class StaticPageController extends Controller {
         if (empty($page))
             abort(404);
         $view = 'pages.page';
-        if ($pageKey == 'about') {
+        if ($pageKey == StaticPage::ABOUT) {
             $view = 'pages.about';
+        }
+        if($pageKey == StaticPage::CONTACTS) {
+            $view = 'pages.contacts';
         }
 
 
