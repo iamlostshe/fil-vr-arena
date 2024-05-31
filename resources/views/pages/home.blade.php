@@ -66,22 +66,73 @@
                 <div class="c-section__text">
                     <table>
                         <tbody>
-                        <tr>
-                            <td></td>
-                            <td>{!! __('home.prices_block_duration_header') !!}</td>
-                            <td>{!! __('home.prices_block_price_header') !!}</td>
-                        </tr>
-                        <tr>
-                            <td>2 - 12 {!! __('home.prices_block_people') !!}</td>
-                            <td>30</td>
-                            <td>20€</td>
-                        </tr>
-                        <tr>
-                            <td>2 - 12 {!! __('home.prices_block_people') !!}</td>
-                            <td>60</td>
-                            <td>30€</td>
-                        </tr>
-                        </tbody></table>
+                            <tr>
+                                <td class="o-highlight">{!! __('home.prices_block_multy') !!}</td>
+                                <td>30 MIN</td>
+                                <td>60 MIN</td>
+                            </tr>
+                            <tr>
+                                <td>2 {!! __('home.prices_block_players') !!}</td>
+                                <td>25€</td>
+                                <td>35€</td>
+                            </tr>
+                            <tr>
+                                <td>3 {!! __('home.prices_block_players') !!}</td>
+                                <td>24€</td>
+                                <td>34€</td>
+                            </tr>
+                            <tr>
+                                <td>4 {!! __('home.prices_block_players') !!}</td>
+                                <td>23€</td>
+                                <td>33€</td>
+                            </tr>
+                            <tr>
+                                <td>5 {!! __('home.prices_block_players') !!}</td>
+                                <td>22€</td>
+                                <td>32€</td>
+                            </tr>
+                            <tr>
+                                <td>6 {!! __('home.prices_block_players') !!}</td>
+                                <td>21€</td>
+                                <td>31€</td>
+                            </tr>
+                            <tr>
+                                <td>7 {!! __('home.prices_block_players') !!}</td>
+                                <td>20€</td>
+                                <td>30€</td>
+                            </tr>
+                            <tr>
+                                <td>8 {!! __('home.prices_block_players') !!}</td>
+                                <td>19€</td>
+                                <td>29€</td>
+                            </tr>
+                            <tr>
+                                <td>9 {!! __('home.prices_block_players') !!}</td>
+                                <td>18€</td>
+                                <td>28€</td>
+                            </tr>
+                            <tr>
+                                <td>10 {!! __('home.prices_block_players') !!}</td>
+                                <td>17€</td>
+                                <td>27€</td>
+                            </tr>
+                            <tr>
+                                <td>11 {!! __('home.prices_block_players') !!}</td>
+                                <td>16€</td>
+                                <td>26€</td>
+                            </tr>
+                            <tr>
+                                <td>12 {!! __('home.prices_block_players') !!}</td>
+                                <td>15€</td>
+                                <td>25€</td>
+                            </tr>
+                            <tr>
+                                <td class="o-highlight">{!! __('home.prices_block_single') !!}</td>
+                                <td><strong>20€</strong></td>
+                                <td><strong>25€</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="c-section__actions">
                     @include('partials.reserve_button')

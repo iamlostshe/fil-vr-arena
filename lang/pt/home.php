@@ -18,7 +18,10 @@ return [
     'prices_block_title' => 'PREÇO<span> JOGOS</span>',
     'prices_block_duration_header' => 'DURAÇÃO, MINS',
     'prices_block_price_header' => 'PREÇO',
+    'prices_block_single' => 'Single VR',
+    'prices_block_multy' => 'Arena jogos (2-12 players)',
     'prices_block_people' => 'pessoas',
+'   prices_block_players' => 'jogadoras',
     'prices_block_arenas' => 'arenas',
 
 
