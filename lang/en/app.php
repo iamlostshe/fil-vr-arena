@@ -8,6 +8,7 @@ return [
     'contacts' => 'Contacts',
     'franchise' => 'Franchise',
     'adventure' => 'Adventure',
+    'parking' => 'Parking',
     'about_the_adventure' => 'About the Adventure',
     'reserve_experience_button' => 'Book your experience',
     'more_details' => 'More Details',

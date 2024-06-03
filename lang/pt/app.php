@@ -7,6 +7,7 @@ return [
     'contacts' => 'Contatos',
     'franchise' => 'Franquia',
     'adventure' => 'Aventura',
+    'parking' => 'Estacionamento',
     'about_the_adventure' => 'Sobre a Aventura',
     'reserve_experience_button' => 'Reserva a tua experiência',
     'more_details' => 'Mais informações',
