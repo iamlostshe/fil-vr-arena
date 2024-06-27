@@ -161,9 +161,9 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                 </div>
                 <div class="c-header__contacts">
                     <div class="c-header__contacts__desktop">
-                        <a href="{{__('contacts.reserve_link')}}">{{__('contacts.phone_number')}}</a>
+                        <a href="{{__('contacts.reserve_link_whatsapp')}}">{{__('contacts.phone_number')}}</a>
                         <a target="_blank" class="c-social-item"
-                           href="{{__('contacts.instagram_link')}}"></a>
+                           href="{{__('contacts.instagram_link_whatsapp')}}"></a>
                     </div>
                     <a href="{{ __('contacts.reserve_link') }}" class="c-header__contacts__booking" target="_blank">{{ __('app.reserve_experience') }}</a>
                     <div class="c-header__contacts__mobile">
