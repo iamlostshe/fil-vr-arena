@@ -61,10 +61,8 @@
             <div class="c-layout">
                 <div class="c-section__title">
                     {!! __('home.prices_block_title') !!}
+                    <div class="c-section__title-description">{!! __('home.prices_per_person') !!}</div>
                 </div>
-                <p>
-                    {!! __('home.prices_per_person') !!}
-                </p>
 
                 <div class="c-section__text">
                     <table>
