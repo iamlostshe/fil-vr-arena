@@ -21,8 +21,8 @@ return [
     'prices_block_single' => 'Single VR',
     'prices_block_multy' => 'Arena jogos (2-12 players)',
     'prices_block_people' => 'pessoas',
-'   prices_block_players' => 'jogadoras',
+    'prices_block_players' => 'jogadoras',
     'prices_block_arenas' => 'arenas',
-
+    'prices_per_person' => 'por pessoa',
 
 ];

@@ -62,6 +62,9 @@
                 <div class="c-section__title">
                     {!! __('home.prices_block_title') !!}
                 </div>
+                <p>
+                    {!! __('home.prices_per_person') !!}
+                </p>
 
                 <div class="c-section__text">
                     <table>
@@ -73,58 +76,58 @@
                             </tr>
                             <tr>
                                 <td>2 {!! __('home.prices_block_players') !!}</td>
+                                <td>30€</td>
+                                <td>40€</td>
+                            </tr>
+                            <tr>
+                                <td>3 {!! __('home.prices_block_players') !!}</td>
+                                <td>29€</td>
+                                <td>39€</td>
+                            </tr>
+                            <tr>
+                                <td>4 {!! __('home.prices_block_players') !!}</td>
+                                <td>28€</td>
+                                <td>38€</td>
+                            </tr>
+                            <tr>
+                                <td>5 {!! __('home.prices_block_players') !!}</td>
+                                <td>27€</td>
+                                <td>37€</td>
+                            </tr>
+                            <tr>
+                                <td>6 {!! __('home.prices_block_players') !!}</td>
+                                <td>26€</td>
+                                <td>36€</td>
+                            </tr>
+                            <tr>
+                                <td>7 {!! __('home.prices_block_players') !!}</td>
                                 <td>25€</td>
                                 <td>35€</td>
                             </tr>
                             <tr>
-                                <td>3 {!! __('home.prices_block_players') !!}</td>
+                                <td>8 {!! __('home.prices_block_players') !!}</td>
                                 <td>24€</td>
                                 <td>34€</td>
                             </tr>
                             <tr>
-                                <td>4 {!! __('home.prices_block_players') !!}</td>
+                                <td>9 {!! __('home.prices_block_players') !!}</td>
                                 <td>23€</td>
                                 <td>33€</td>
                             </tr>
                             <tr>
-                                <td>5 {!! __('home.prices_block_players') !!}</td>
+                                <td>10 {!! __('home.prices_block_players') !!}</td>
                                 <td>22€</td>
                                 <td>32€</td>
                             </tr>
                             <tr>
-                                <td>6 {!! __('home.prices_block_players') !!}</td>
+                                <td>11 {!! __('home.prices_block_players') !!}</td>
                                 <td>21€</td>
                                 <td>31€</td>
                             </tr>
                             <tr>
-                                <td>7 {!! __('home.prices_block_players') !!}</td>
+                                <td>12 {!! __('home.prices_block_players') !!}</td>
                                 <td>20€</td>
                                 <td>30€</td>
-                            </tr>
-                            <tr>
-                                <td>8 {!! __('home.prices_block_players') !!}</td>
-                                <td>19€</td>
-                                <td>29€</td>
-                            </tr>
-                            <tr>
-                                <td>9 {!! __('home.prices_block_players') !!}</td>
-                                <td>18€</td>
-                                <td>28€</td>
-                            </tr>
-                            <tr>
-                                <td>10 {!! __('home.prices_block_players') !!}</td>
-                                <td>17€</td>
-                                <td>27€</td>
-                            </tr>
-                            <tr>
-                                <td>11 {!! __('home.prices_block_players') !!}</td>
-                                <td>16€</td>
-                                <td>26€</td>
-                            </tr>
-                            <tr>
-                                <td>12 {!! __('home.prices_block_players') !!}</td>
-                                <td>15€</td>
-                                <td>25€</td>
                             </tr>
                             <tr>
                                 <td class="o-highlight">{!! __('home.prices_block_single') !!}</td>

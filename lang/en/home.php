@@ -23,4 +23,5 @@ return [
     'prices_block_people' => 'people',
     'prices_block_players' => 'players',
     'prices_block_arenas' => 'arenas',
+    'prices_per_person' => 'per person',
 ];
