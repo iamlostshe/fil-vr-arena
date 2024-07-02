@@ -956,6 +956,9 @@ body.is-bar .c-header {
 .c-section__title span {
   color: #de1943;
 }
+.c-section__title-description {
+  font-size: 1rem;
+}
 .c-section__video video,
 .c-section__video iframe {
   display: block;
