@@ -88,7 +88,7 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
             <div class="c-bar__content">
                 <ul>
                     <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="{{__('contacts.reserve_link')}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
+                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     <li>
                         <a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a>
                     </li>
@@ -122,7 +122,7 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                 <div class="c-header__nav">
                     <ul>
                         <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="{{ __('contacts.reserve_link') }}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
+                        <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
 
                     </ul>
                     <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
@@ -133,15 +133,15 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                 </div>
                 <div class="c-header__contacts">
                     <div class="c-header__contacts__desktop">
-                        <a href="{{__('contacts.reserve_link')}}">{{__('contacts.phone_number')}}</a>
+                        <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}">{{__('contacts.phone_number')}}</a>
                         <a target="_blank" class="c-social-item"
                            href="{{__('contacts.instagram_link')}}"></a>
                     </div>
-                    <a href="{{ __('contacts.reserve_link') }}" class="c-header__contacts__booking" target="_blank">{{ __('app.reserve_experience') }}</a>
+                    <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-header__contacts__booking" target="_blank">{{ __('app.reserve_experience') }}</a>
                     <div class="c-header__contacts__mobile">
                         <a href="{{ __('contacts.tel_link') }}" class="c-social-item"><span>{{ __('contacts.phone_number') }}</span></a>
                     </div>
-                    <a target="_blank" class="c-social-item" href="{{ __('contacts.reserve_link') }}"></a>
+                    <a target="_blank" class="c-social-item" href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}"></a>
                 </div>
                 <button class="c-header__hamburger js-bar-trigger"></button>
             </div>
@@ -162,7 +162,7 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                     </ul>
                 </nav>
                 <div class="c-footer__actions">
-                    <a href="{{ __('contacts.reserve_link') }}" class="c-button c-button--alt" target="_blank">{{ __('app.reserve_experience') }}</a>
+                    <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-button c-button--alt" target="_blank">{{ __('app.reserve_experience') }}</a>
                 </div>
             </div>
             <div class="c-footer__container">
@@ -174,7 +174,7 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                 <div class="c-footer__social">
                     <div class="c-social">
                         <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
-                        <a target="_blank" href="{{ __('contacts.reserve_link') }}"></a>
+                        <a target="_blank" href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}"></a>
                         <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
                     </div>
                 </div>

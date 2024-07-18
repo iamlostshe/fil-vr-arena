@@ -1,7 +1,7 @@
 <?php
 return [
     'title' => 'Another World',
-    'reserve_experience' => 'Reserve uma experiência',
+    'reserve_experience' => 'Reserva online',
     'adventures' => 'Aventuras',
     'about_us' => 'Sobre nós',
     'contacts' => 'Contatos',
