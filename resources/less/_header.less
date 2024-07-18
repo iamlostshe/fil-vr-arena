@@ -68,8 +68,10 @@
 
     & ul {
       display: flex;
+        align-items: center;
       gap:40px;
       width: 100%;
+        line-height: 1;
 
       @media screen and (max-width: 1200px) {
         display: none;
@@ -81,6 +83,15 @@
 
       & li {
         display: block;
+
+          & .c-link--highlight {
+              position: relative;
+              top:-1px;
+
+              @media screen and (max-width: 767px) {
+                  top:auto;
+              }
+          }
       }
 
     }
