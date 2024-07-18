@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('page')
 <section class="c-section" id="section-online-booking">
     <div class="c-layout">
         <div id="resova-wrapper"></div>
@@ -12,3 +13,4 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'resova-pi'));
 </script>
+@endsection
