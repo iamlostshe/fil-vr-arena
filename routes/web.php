@@ -34,6 +34,8 @@ Route::group([
         ->name(RouteNames::GAMES);
     Route::get('/games/{game}', [GameController::class, 'show'])
         ->name(RouteNames::GAMES_DETAIL);
+    Route::view('/online-book', 'pages.online_book')
+    ->name(RouteNames::ONLINE_BOOK);
 
 
 });

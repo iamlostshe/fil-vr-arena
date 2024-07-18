@@ -2,7 +2,7 @@
 
 return [
     'title' => 'Another World',
-    'reserve_experience' => 'Book an experience',
+    'reserve_experience' => 'Book online',
     'adventures' => 'Adventures',
     'about_us' => 'About Us',
     'contacts' => 'Contacts',

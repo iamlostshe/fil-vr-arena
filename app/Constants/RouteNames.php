@@ -7,4 +7,5 @@ abstract class RouteNames {
     public const HOME = 'home';
     public const GAMES = 'games';
     public const GAMES_DETAIL = 'games.detail';
+    public const ONLINE_BOOK = 'online-book';
 }
