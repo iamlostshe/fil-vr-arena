@@ -2,7 +2,30 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-
+    @if (app()->isProduction())
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PH3FC62K');</script>
+        <!-- End Google Tag Manager -->
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7607e2d2-4fc2-41e9-ad44-ee94cab72014" data-blockingmode="auto" type="text/javascript"></script>
+        <!-- Meta Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2438271943229556');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=2438271943229556&ev=PageView&noscript=1"
+            /></noscript>
+        <!-- End Meta Pixel Code -->
+    @endif
+    <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name='viewport' id='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
@@ -79,7 +102,11 @@ $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Cons
 $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
 @endphp
 <body>
-
+@if (app()->isProduction())
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH3FC62K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+@endif
 <div class="c-site" id="app">
     <aside class="c-bar">
         <div class="c-bar__overlay js-bar-close"></div>
@@ -198,5 +225,8 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
         </div>
     </footer>
 </div>
+@if (app()->isProduction())
+    <script>(function(a,m,o,c,r,m){a[m]={id:"1019157",hash:"f8c17e1f791354f242139edcb1087f1894a5651a79ed45febc06df6f9fc7a8ba",locale:"en",setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.kommo.com/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'crmPlugin',0,0,'crm_plugin'));</script>
+@endif
 </body>
 </html>
