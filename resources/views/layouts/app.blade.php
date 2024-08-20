@@ -6,7 +6,7 @@
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PH3FC62K');</script>
         <!-- End Google Tag Manager -->
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7607e2d2-4fc2-41e9-ad44-ee94cab72014" data-blockingmode="auto" type="text/javascript"></script>
+{{--        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7607e2d2-4fc2-41e9-ad44-ee94cab72014" data-blockingmode="auto" type="text/javascript"></script>--}}
     @endif
     <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
