@@ -940,7 +940,6 @@ body.is-bar .c-header {
 }
 .c-section__container {
   display: flex;
-  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .c-section__container {
