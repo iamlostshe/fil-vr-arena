@@ -299,7 +299,7 @@ button {
 .c-link--highlight {
   color: #fff;
   background: #de1943;
-  padding: 5px 10px;
+  padding: 5px 10px 4px 10px;
   white-space: nowrap;
   border-radius: 2px;
   text-decoration: none;
@@ -665,8 +665,10 @@ body.is-bar .c-header {
 }
 .c-header__nav ul {
   display: flex;
+  align-items: center;
   gap: 40px;
   width: 100%;
+  line-height: 1;
 }
 @media screen and (max-width: 1200px) {
   .c-header__nav ul {
@@ -678,6 +680,15 @@ body.is-bar .c-header {
 }
 .c-header__nav ul li {
   display: block;
+}
+.c-header__nav ul li .c-link--highlight {
+  position: relative;
+  top: -1px;
+}
+@media screen and (max-width: 767px) {
+  .c-header__nav ul li .c-link--highlight {
+    top: auto;
+  }
 }
 .c-header__contacts {
   position: absolute;
