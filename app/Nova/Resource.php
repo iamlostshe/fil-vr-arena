@@ -78,6 +78,7 @@ abstract class Resource extends NovaResource
             ],
             'toolbar' => 'undo redo | styles | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | image | bullist numlist outdent indent | link | code',
             'use_lfm' => true,
+            'verify_html' => false,
             //'language' => 'ru',
             //'language_url' => '/vendor/tinymce/langs/ru.js',
         ];
