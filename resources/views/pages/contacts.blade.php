@@ -3,11 +3,11 @@
 @section('page')
     <section class="c-section" id="section-contacts">
         <div class="c-layout">
+            <div class="c-page__title">
+                {!! $page->getTitle() !!}
+            </div>
             <div class="c-section__container">
                 <div class="c-section__meta">
-                    <div class="c-page__title">
-                        {!! $page->getTitle() !!}
-                    </div>
                     <div class="c-page__text c-format">
                         {!! $page->getPageBody() !!}
                     </div>
