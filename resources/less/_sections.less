@@ -23,6 +23,24 @@
     padding-top: 0;
   }
 
+  &__container {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__meta {
+    flex-grow: 1;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 500px;
+  }
+
   &__title {
     font-size: 36px;
     text-transform: uppercase;
