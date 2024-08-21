@@ -169,7 +169,7 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                     <div class="c-header__contacts__mobile">
                         <a href="{{ __('contacts.tel_link') }}" class="c-social-item"><span>{{ __('contacts.phone_number') }}</span></a>
                     </div>
-                    <a target="_blank" class="c-social-item" href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}"></a>
+                    <!-- <a target="_blank" class="c-social-item" href="{{--route(\App\Constants\RouteNames::ONLINE_BOOK)--}}"></a> -->
                 </div>
                 <button class="c-header__hamburger js-bar-trigger"></button>
             </div>
@@ -202,7 +202,7 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
                 <div class="c-footer__social">
                     <div class="c-social">
                         <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
-                        <a target="_blank" href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}"></a>
+                        <!--<a target="_blank" href="{{-- route(\App\Constants\RouteNames::ONLINE_BOOK) --}}"></a>-->
                         <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
                     </div>
                 </div>

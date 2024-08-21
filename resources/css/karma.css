@@ -929,6 +929,7 @@ body.is-bar .c-header {
 }
 .c-section__container {
   display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .c-section__container {
@@ -937,7 +938,11 @@ body.is-bar .c-header {
 }
 .c-section__meta {
   flex-grow: 1;
-  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .c-section__meta {
+    margin-bottom: 40px;
+  }
 }
 .c-section__form {
   width: 100%;
