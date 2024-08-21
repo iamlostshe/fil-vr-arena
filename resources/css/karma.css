@@ -938,6 +938,22 @@ body.is-bar .c-header {
 .c-section#section-page {
   padding-top: 0;
 }
+.c-section__container {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .c-section__container {
+    display: block;
+  }
+}
+.c-section__meta {
+  flex-grow: 1;
+  margin-bottom: 40px;
+}
+.c-section__form {
+  width: 100%;
+  max-width: 500px;
+}
 .c-section__title {
   font-size: 36px;
   text-transform: uppercase;
