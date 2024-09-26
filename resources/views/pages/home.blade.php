@@ -69,8 +69,8 @@
                         <tbody>
                             <tr>
                                 <td class="o-highlight">{!! __('home.prices_block_multy') !!}</td>
-                                <td>30 MIN</td>
-                                <td>60 MIN</td>
+                                <td>25 MIN</td>
+                                <td>50 MIN</td>
                                 <td>EVENTS</td>
                             </tr>
                             <tr>
