@@ -24,5 +24,6 @@ return [
     'prices_block_players' => 'jogadoras',
     'prices_block_arenas' => 'arenas',
     'prices_per_person' => 'por pessoa',
+    'prices_event_packs' => 'PACOTES DE EVENTOS',
 
 ];
