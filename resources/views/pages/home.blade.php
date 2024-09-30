@@ -71,7 +71,7 @@
                                 <td class="o-highlight">{!! __('home.prices_block_multy') !!}</td>
                                 <td>25 MIN</td>
                                 <td>50 MIN</td>
-                                <td>EVENTS</td>
+                                <td>{!! __('home.prices_event_packs') !!}</td>
                             </tr>
                             <tr>
                                 <td>2 {!! __('home.prices_block_players') !!}</td>

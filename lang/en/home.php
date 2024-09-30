@@ -24,4 +24,5 @@ return [
     'prices_block_players' => 'players',
     'prices_block_arenas' => 'arenas',
     'prices_per_person' => 'per person',
+    'prices_event_packs' => 'EVENT PACKS',
 ];
