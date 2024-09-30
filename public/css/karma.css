@@ -1028,6 +1028,14 @@ body.is-bar .c-header {
   font-weight: bold;
   color: #de1943;
 }
+.c-section__text table th span.o-highlight,
+.c-section__text table td span.o-highlight,
+.c-section__text table th strong.o-highlight,
+.c-section__text table td strong.o-highlight {
+  color: #de1943;
+  position: relative;
+  top: 2px;
+}
 .c-section__text table th strong,
 .c-section__text table td strong {
   font-weight: bold;
