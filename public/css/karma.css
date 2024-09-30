@@ -1038,6 +1038,12 @@ body.is-bar .c-header {
 .c-section__text table tr {
   border-bottom: 1px solid #393939;
 }
+.c-section__text table tr.o-footer {
+  border: none;
+}
+.c-section__text table tr.o-footer td {
+  padding-top: 50px;
+}
 .swiper {
   position: relative;
 }

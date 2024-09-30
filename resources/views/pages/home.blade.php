@@ -134,12 +134,12 @@
                                 <td>31€</td>
                             </tr>
                             <tr>
-                                <td>12 {!! __('home.prices_block_players') !!}</td>
+                                <td>12+ {!! __('home.prices_block_players') !!}</td>
                                 <td>20€</td>
                                 <td>25€</td>
                                 <td>30€</td>
                             </tr>
-                            <tr>
+                            <tr class="o-footer">
                                 <td class="o-highlight">{!! __('home.prices_block_single') !!}</td>
                                 <td><strong>20€</strong></td>
                                 <td><strong>25€</strong></td>
