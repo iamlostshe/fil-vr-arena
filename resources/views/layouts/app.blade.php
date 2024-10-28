@@ -1,4 +1,14 @@
 @php use Illuminate\Support\Facades\Route; @endphp
+@php
+    $current_route_name = Route::currentRouteName();
+    $about_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT);
+    $contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS);
+    $company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
+    $privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
+    $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
+    $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
+    $cookiebot_pages = [ \App\Constants\RouteNames::HOME, \App\Constants\RouteNames::ONLINE_BOOK, \App\Constants\RouteNames::GAMES];
+@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -6,8 +16,19 @@
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PH3FC62K');</script>
         <!-- End Google Tag Manager -->
-{{--        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7607e2d2-4fc2-41e9-ad44-ee94cab72014" data-blockingmode="auto" type="text/javascript"></script>--}}
+        
+        @php        
+            $is_shown = session()->get('cookiebot', false);
+            if (!$is_shown) {
+                session()->put('cookiebot', true);
+            }
+        @endphp
+        
+        @if (!$is_shown && in_array($current_route_name, $cookiebot_pages))
+            <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8bfa4c5d-123f-4194-9fa8-6a236d70f30d" data-blockingmode="auto" type="text/javascript"></script>
+        @endif
     @endif
+        
     <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
@@ -93,15 +114,6 @@
             <!-- End Meta Pixel Code -->
         @endif
 </head>
-@php
-$current_route_name = Route::currentRouteName();
-$about_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT);
-$contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS);
-$company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
-$privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
-$user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
-$terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
-@endphp
 <body>
 @if (app()->isProduction())
     <!-- Google Tag Manager (noscript) -->
