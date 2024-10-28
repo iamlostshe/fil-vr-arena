@@ -16,17 +16,7 @@
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PH3FC62K');</script>
         <!-- End Google Tag Manager -->
-        
-        @php        
-            $is_shown = session()->get('cookiebot', false);
-            if (!$is_shown) {
-                session()->put('cookiebot', true);
-            }
-        @endphp
-        
-        @if (!$is_shown && in_array($current_route_name, $cookiebot_pages))
-            <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/b40c9464bc56035fe92622e4/script.js"></script> <!-- End cookieyes banner -->
-        @endif
+        <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/b40c9464bc56035fe92622e4/script.js"></script> <!-- End cookieyes banner -->
     @endif
         
     <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
