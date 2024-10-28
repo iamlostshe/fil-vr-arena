@@ -25,7 +25,7 @@
         @endphp
         
         @if (!$is_shown && in_array($current_route_name, $cookiebot_pages))
-            <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8bfa4c5d-123f-4194-9fa8-6a236d70f30d" data-blockingmode="auto" type="text/javascript"></script>
+            <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/b40c9464bc56035fe92622e4/script.js"></script> <!-- End cookieyes banner -->
         @endif
     @endif
         
