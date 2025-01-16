@@ -125,6 +125,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH3FC62K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
 @endif
 <div class="c-site" id="app">
     <aside class="c-bar">
@@ -247,7 +248,6 @@
 </div>
 @if (app()->isProduction())
     <script>(function(a,m,o,c,r,m){a[m]={id:"1019157",hash:"f8c17e1f791354f242139edcb1087f1894a5651a79ed45febc06df6f9fc7a8ba",locale:"en",setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.kommo.com/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'crmPlugin',0,0,'crm_plugin'));</script>
-    <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
     <script src="https://message.help/app/widget/js/widget_new.js" type="text/javascript" data="d370e6e3-f659-4cf9-94c1-c4d425ca" id="script_widget_chat"></script>
 @endif
 </body>
