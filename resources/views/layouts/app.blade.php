@@ -125,7 +125,6 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH3FC62K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
 @endif
 <div class="c-site" id="app">
     <aside class="c-bar">
@@ -196,6 +195,7 @@
     </header>
     <main class="c-main">
         @yield('page')
+        <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
     </main>
     <footer class="c-footer">
         <div class="c-layout">
