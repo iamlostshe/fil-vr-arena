@@ -119,6 +119,11 @@
                 /></noscript>
             <!-- End Meta Pixel Code -->
         @endif
+    <style>
+        #chatovkrkxjrjjsnaqlrovozomwmtp > .mini-widget {
+            z-index: 99!important;
+        }
+    </style>
 </head>
 <body>
 @if (app()->isProduction())
