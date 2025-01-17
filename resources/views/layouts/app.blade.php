@@ -200,7 +200,11 @@
     </header>
     <main class="c-main">
         @yield('page')
-        <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
+        @if (app()->isProduction() && request()->query('message_help_debug', false))
+            <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
+            <script src="https://message.help/app/widget/js/widget_new.js" type="text/javascript" data="d370e6e3-f659-4cf9-94c1-c4d425ca" id="script_widget_chat"></script>
+            <script src="https://message.help/mini_widget/?tool=true&whatsapp=https://api.whatsapp.com/send/?phone=351919777900&text&type=phone_number&app_absent=0&telegram=https://t.me/+351919777900"></script>
+        @endif
     </main>
     <footer class="c-footer">
         <div class="c-layout">
@@ -253,8 +257,6 @@
 </div>
 @if (app()->isProduction())
     <script>(function(a,m,o,c,r,m){a[m]={id:"1019157",hash:"f8c17e1f791354f242139edcb1087f1894a5651a79ed45febc06df6f9fc7a8ba",locale:"en",setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.kommo.com/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'crmPlugin',0,0,'crm_plugin'));</script>
-{{--    <script src="https://message.help/app/widget/js/widget_new.js" type="text/javascript" data="d370e6e3-f659-4cf9-94c1-c4d425ca" id="script_widget_chat"></script>--}}
-    <script src="https://message.help/mini_widget/?tool=true&whatsapp=https://api.whatsapp.com/send/?phone=351919777900&text&type=phone_number&app_absent=0&telegram=https://t.me/+351919777900"></script>
 @endif
 </body>
 </html>
