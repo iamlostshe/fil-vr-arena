@@ -118,6 +118,16 @@
                            src="https://www.facebook.com/tr?id=2438271943229556&ev=PageView&noscript=1"
                 /></noscript>
             <!-- End Meta Pixel Code -->
+            <!-- Roistat Counter Start -->
+            <script>
+                (function(w, d, s, h, id) {
+                    w.roistatProjectId = id; w.roistatHost = h;
+                    var p = d.location.protocol == "https:" ? "https://" : "http://";
+                    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+                    var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+                })(window, document, 'script', 'cloud.roistat.com', '0823693c2d38c8d29ccbc03c1a44ca0b');
+            </script>
+            <!-- Roistat Counter End -->
         @endif
     <style>
         #chatovkrkxjrjjsnaqlrovozomwmtp > .mini-widget {
@@ -203,7 +213,6 @@
         @if (app()->isProduction() && request()->query('message_help_debug', false))
             <div id="chatovkrkxjrjjsnaqlrovozomwmtp"></div>
             <script src="https://message.help/app/widget/js/widget_new.js" type="text/javascript" data="d370e6e3-f659-4cf9-94c1-c4d425ca" id="script_widget_chat"></script>
-            <script src="https://message.help/mini_widget/?tool=true&whatsapp=https://api.whatsapp.com/send/?phone=351919777900&text&type=phone_number&app_absent=0&telegram=https://t.me/+351919777900"></script>
         @endif
     </main>
     <footer class="c-footer">
