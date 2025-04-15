@@ -249,6 +249,7 @@ a,
 .c-bar__overlay,
 .c-bar__main,
 .c-logo,
+.c-logotype,
 .c-button,
 .c-delete,
 .c-form-actions button[type="reset"],
@@ -642,7 +643,7 @@ body.is-bar .c-header {
   }
 }
 .c-header__logo {
-  margin: 0 40px;
+  margin: 0 40px 0 0;
 }
 @media screen and (max-width: 1200px) {
   .c-header__logo {
@@ -675,9 +676,6 @@ body.is-bar .c-header {
     display: none;
   }
 }
-.c-header__nav ul:first-child {
-  justify-content: flex-end;
-}
 .c-header__nav ul li {
   display: block;
 }
@@ -691,22 +689,12 @@ body.is-bar .c-header {
   }
 }
 .c-header__contacts {
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  right: 0;
   display: flex;
   align-items: center;
   gap: 20px;
 }
-@media screen and (max-width: 1200px) {
-  .c-header__contacts {
-    right: 50px;
-  }
-}
 @media screen and (max-width: 767px) {
   .c-header__contacts {
-    right: 45px;
     gap: 10px;
   }
 }
@@ -1200,8 +1188,7 @@ body.is-bar .c-header {
   color: #de1943;
   font-weight: bold;
 }
-.c-logo,
-.c-header__logo {
+.c-logo {
   display: block;
   width: 78px;
   min-width: 78px;
@@ -1217,14 +1204,37 @@ body.is-bar .c-header {
   opacity: 0.8;
 }
 @media screen and (max-width: 1200px) {
-  .c-logo,
-  .c-header__logo {
+  .c-logo {
     width: 55px;
     min-width: 55px;
     height: 28px;
   }
 }
 .c-logo span {
+  display: none;
+}
+.c-logotype,
+.c-header__logo {
+  display: block;
+  width: 239px;
+  min-width: 239px;
+  height: 36px;
+  background: url(/images/logotype.svg?2c9ead37cec8b2184bb087337fc02dc0);
+  background-size: cover;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 1;
+  text-indent: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .c-logotype,
+  .c-header__logo {
+    width: 172px;
+    min-width: 172px;
+    height: 26px;
+  }
+}
+.c-logotype span {
   display: none;
 }
 .c-button {
@@ -1361,6 +1371,34 @@ body.is-bar .c-header {
   height: 50vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
 }
+.c-hero__media {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.c-hero__media video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.c-hero > .c-layout {
+  position: relative;
+  z-index: 2;
+}
 .c-hero__meta {
   min-height: 80vh;
   position: relative;
@@ -1422,6 +1460,7 @@ body.is-bar .c-header {
   display: flex;
   gap: 40px;
   padding: 20px 0 40px;
+  max-width: 600px;
 }
 @media screen and (max-width: 1023px) {
   .c-hero__options {

@@ -26,3 +26,26 @@
   }
 }
 
+.c-logotype {
+    display: block;
+    width: 239px;
+    min-width: 239px;
+    height: 36px;
+    background: url("../img/logotype.svg");
+    background-size: cover;
+    overflow: hidden;
+    font-size: 1px;
+    line-height: 1;
+    text-indent: 100px;
+    &:extend(.o-tr);
+
+    @media screen and (max-width: 1200px) {
+        width: 172px;
+        min-width: 172px;
+        height: 26px;
+    }
+
+    & span {
+        display: none;
+    }
+}

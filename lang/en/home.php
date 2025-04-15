@@ -1,10 +1,10 @@
 <?php
 return [
-    'block_1_title' => 'PARK <span>VIRTUAL REALITY LISBON</span> WITH FREE MOVEMENT',
+    'block_1_title' => '<span>VIRTUAL REALITY</span> GAMES WITH  FREE MOUVEMENT',
     'block_1_list' => [
-        'item_1' => 'birthday parties',
-        'item_2' => 'corporate events',
-        'item_3' => 'experiences',
+        'item_1' => 'Group & Single games — up to 20 players',
+        'item_2' => 'Birthdays, team buildings & more',
+        'item_3' => 'Immersive VR fun — for ages 6+',
     ],
     'book_button' => 'Book your experience',
     'block_2_title' => '<span>ANOTHER WORLD PARK</span><br/> - THIS IS',

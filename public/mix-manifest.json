@@ -3,7 +3,7 @@
     "/css/plugins/select2/select2.min.css": "/css/plugins/select2/select2.min.css?id=bd5f654c0d552b0272b0a1026b8071f8",
     "/css/plugins/fancybox/jquery.fancybox.min.css": "/css/plugins/fancybox/jquery.fancybox.min.css?id=683c861d625144890f71c3b2f3a90d24",
     "/css/plugins/aos/aos.css": "/css/plugins/aos/aos.css?id=d80e46b71f8b6b0accfd1477ef6eee7f",
-    "/css/karma.css": "/css/karma.css?id=e82129e9ab6892108d3dcbe1dd6a809a",
+    "/css/karma.css": "/css/karma.css?id=3509a5e33a1f896d4113fb46bef46df8",
     "/js/jquery-3.3.1.min.js": "/js/jquery-3.3.1.min.js?id=4b57cf46dc8cb95c4cca54afc85e9540",
     "/js/device.js": "/js/device.js?id=7db7b2e08dbfd5b35eaaba673b3296bb",
     "/js/jquery.mask.min.js": "/js/jquery.mask.min.js?id=fcf88d42f36e4a8594fab3dd87a614cf",
@@ -58,5 +58,7 @@
     "/media/game-2.jpg": "/media/game-2.jpg?id=3c3fbb21f129ff7e35c96aba2ba88c08",
     "/media/game-colony-color-red.jpg": "/media/game-colony-color-red.jpg?id=bda31ffc3a0a27517e91b570176d2670",
     "/media/game-kernel-confrontation.jpg": "/media/game-kernel-confrontation.jpg?id=55a3ddcf8107e7d6672b40f7c03f1e7e",
-    "/media/game-shmooter.jpg": "/media/game-shmooter.jpg?id=b10d9dd6568722466b60828c29fa641d"
+    "/media/game-shmooter.jpg": "/media/game-shmooter.jpg?id=b10d9dd6568722466b60828c29fa641d",
+    "/media/video/hero-mobile.mp4": "/media/video/hero-mobile.mp4?id=954e3df1b3253208f18b7f0b55d9a19d",
+    "/media/video/hero.mp4": "/media/video/hero.mp4?id=f543c35e6b5e5cb6e48603a667b96cd7"
 }
