@@ -1,8 +1,35 @@
 @php use Illuminate\Support\Facades\Route; @endphp
+@php
+    $current_route_name = Route::currentRouteName();
+    $about_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT);
+    $contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS);
+    $company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
+    $privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
+    $user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
+    $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
+    $cookiebot_pages = [ \App\Constants\RouteNames::HOME, \App\Constants\RouteNames::ONLINE_BOOK, \App\Constants\RouteNames::GAMES];
+@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    @if (app()->isProduction())
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PH3FC62K');</script>
+        <!-- End Google Tag Manager -->
 
+        @php
+            $is_shown = session()->get('cookiebot', false);
+            if (!$is_shown) {
+                session()->put('cookiebot', true);
+            }
+        @endphp
+
+        @if (!$is_shown && in_array($current_route_name, $cookiebot_pages))
+            <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8bfa4c5d-123f-4194-9fa8-6a236d70f30d" data-blockingmode="auto" type="text/javascript"></script>
+        @endif
+    @endif
+
+    <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name='viewport' id='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'/>
@@ -67,19 +94,32 @@
 
     <script type="text/javascript" src="{{ mix('js/core.swiper.js') }}"></script>
     <script type="text/javascript" src="{{ mix('js/core.js') }}"></script>
-
+        @if (app()->isProduction())
+            <!-- Meta Pixel Code -->
+            <script>
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                    n.queue=[];t=b.createElement(e);t.async=!0;
+                    t.src=v;s=b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t,s)}(window, document,'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '2438271943229556');
+                fbq('track', 'PageView');
+            </script>
+            <noscript><img height="1" width="1" style="display:none"
+                           src="https://www.facebook.com/tr?id=2438271943229556&ev=PageView&noscript=1"
+                /></noscript>
+            <!-- End Meta Pixel Code -->
+        @endif
 </head>
-@php
-$current_route_name = Route::currentRouteName();
-$about_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::ABOUT);
-$contacts_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::CONTACTS);
-$company_info_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::COMPANY_INFO);
-$privacy_policy_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::PRIVACY_POLICY);
-$user_agreement_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::USER_AGREEMENT);
-$terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\App\Constants\StaticPage::TERMS_AND_CONDITIONS);
-@endphp
 <body>
-
+@if (app()->isProduction())
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH3FC62K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+@endif
 <div class="c-site" id="app">
     <aside class="c-bar">
         <div class="c-bar__overlay js-bar-close"></div>
@@ -119,11 +159,14 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
     <header class="c-header">
         <div class="c-layout">
             <div class="c-header__container">
-                <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
                 <div class="c-header__nav">
                     <ul>
                         <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
                         <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
+
+                    </ul>
+                    <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
+                    <ul>
                         <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
                     </ul>
@@ -195,5 +238,8 @@ $terms_and_conditions_route_name = \App\Services\StaticPageService::getRoute(\Ap
         </div>
     </footer>
 </div>
+@if (app()->isProduction())
+    <script>(function(a,m,o,c,r,m){a[m]={id:"1019157",hash:"f8c17e1f791354f242139edcb1087f1894a5651a79ed45febc06df6f9fc7a8ba",locale:"en",setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.kommo.com/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'crmPlugin',0,0,'crm_plugin'));</script>
+@endif
 </body>
 </html>
