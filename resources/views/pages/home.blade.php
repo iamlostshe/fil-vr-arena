@@ -52,13 +52,15 @@
                     </div><!--/c-promo-->
 
                 </div>
-
-                <div class="c-hero__media">
-                    <video width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
-                        <source src="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
-                    </video>
-                </div>
             </div>
+
+            <div class="c-hero__media">
+                <video width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
+                <source src="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
+                </video>
+            </div>
+
+
         </section>
 
        @include('widgets.games', ['games' => $games])
