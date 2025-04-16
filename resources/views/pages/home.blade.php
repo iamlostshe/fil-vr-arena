@@ -55,9 +55,16 @@
             </div>
 
             <div class="c-hero__media">
-                <video width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
-                <source src="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
-                </video>
+                <div class="c-hero__video__main">
+                    <video class="js-hero-video" width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
+                        <source src="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="c-hero__video__mobile">
+                    <video class="js-hero-video-mobile" width="1920" height="1080" loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
+                    <source src="{{asset("/media/video/hero-mobile.mp4")}}" type="video/mp4" />
+                    </video>
+                </div>
             </div>
 
 

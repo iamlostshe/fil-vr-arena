@@ -195,3 +195,21 @@
   }
 
 }
+
+
+.c-hero__video {
+
+    &__main {
+        .portrait & {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        .portrait & {
+            display: block;
+        }
+    }
+}

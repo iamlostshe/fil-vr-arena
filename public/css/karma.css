@@ -677,6 +677,7 @@ body.is-bar .c-header {
 .c-header__nav ul {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   width: 100%;
   line-height: 1;
@@ -1226,9 +1227,9 @@ body.is-bar .c-header {
 .c-logotype,
 .c-header__logo {
   display: block;
-  width: 239px;
-  min-width: 239px;
-  height: 36px;
+  width: 219px;
+  min-width: 219px;
+  height: 32px;
   background: url(/images/logotype.svg?2c9ead37cec8b2184bb087337fc02dc0);
   background-size: cover;
   overflow: hidden;
@@ -1524,6 +1525,15 @@ body.is-bar .c-header {
   .c-hero__actions {
     justify-content: center;
   }
+}
+.portrait .c-hero__video__main {
+  display: none;
+}
+.c-hero__video__mobile {
+  display: none;
+}
+.portrait .c-hero__video__mobile {
+  display: block;
 }
 .c-social {
   display: flex;

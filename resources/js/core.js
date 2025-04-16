@@ -180,3 +180,21 @@ $(function () {
     }
 });
 
+/* Play or stop visible hero video */
+$(function () {
+    heroVideoController();
+
+    $(window).resize(function (){
+        heroVideoController();
+    });
+});
+
+function heroVideoController() {
+    if(device.portrait()) {
+        $('.js-hero-video')[0].paused();
+        $('.js-hero-video-mobile')[0].play();
+    } else {
+        $('.js-hero-video')[0].play();
+        $('.js-hero-video-mobile')[0].paused();
+    }
+}
