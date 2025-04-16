@@ -2,6 +2,18 @@
 @section('page')
 
         <section class="c-hero" id="section-hero">
+            <div class="c-hero__media">
+                <div class="c-hero__video__main">
+                    <video class="js-hero-video" width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
+                    <source src="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="c-hero__video__mobile">
+                    <video class="js-hero-video-mobile" width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
+                    <source src="{{asset("/media/video/hero-mobile.mp4")}}" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
             <div class="c-layout">
                 <div class="c-hero__meta">
                     <div class="c-hero__logo">
@@ -53,21 +65,6 @@
 
                 </div>
             </div>
-
-            <div class="c-hero__media">
-                <div class="c-hero__video__main">
-                    <video class="js-hero-video" width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
-                        <source src="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
-                    </video>
-                </div>
-                <div class="c-hero__video__mobile">
-                    <video class="js-hero-video-mobile" width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
-                    <source src="{{asset("/media/video/hero-mobile.mp4")}}" type="video/mp4" />
-                    </video>
-                </div>
-            </div>
-
-
         </section>
 
        @include('widgets.games', ['games' => $games])
