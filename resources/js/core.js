@@ -187,20 +187,20 @@ function heroVideoController(videoDesktopPath, videoMobilePath) {
     } else {
         $('.js-hero-video source').attr('src', videoDesktopPath);
     }
-    //$('#js-hero-video')[0].load();
-    //$('#js-hero-video')[0].play();
+    $('#js-hero-video').get(0).load();
+    $('#js-hero-video').get(0).play();
 }
 
 /* Play or stop visible hero video */
 $(function () {
-    var $video = $('#js-hero-video source');
-    var videoDesktopPath = $('#js-hero-video source').attr('data-video');
-    var videoMobilePath = $('#js-hero-video source').attr('src');
+    var $videoSource = $('#js-hero-video source');
+    var videoDesktopPath = $videoSource.attr('data-video');
+    var videoMobilePath = $videoSource.attr('src');
 
     if(device.desktop()) {
-        $('#js-hero-video source').attr('src', videoDesktopPath);
-        //$video[0].load();
-        //$video[0].play();
+        $videoSource.attr('src', videoDesktopPath);
+        $('#js-hero-video').get(0).load();
+        $('#js-hero-video').get(0).play();
     } else {
         heroVideoController(videoDesktopPath, videoMobilePath);
 
