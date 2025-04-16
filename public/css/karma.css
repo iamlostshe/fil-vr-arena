@@ -1404,7 +1404,7 @@ body.is-bar .c-header {
 }
 .c-hero__meta .c-layout {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .c-hero__meta:before {
   display: block;
@@ -1415,7 +1415,7 @@ body.is-bar .c-header {
   left: 50%;
   width: 50%;
   max-width: 740px;
-  z-index: 1;
+  z-index: 2;
   background-size: 100% auto;
   background-position: bottom center;
   background-repeat: no-repeat;

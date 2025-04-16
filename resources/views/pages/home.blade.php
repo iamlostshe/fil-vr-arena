@@ -4,8 +4,16 @@
         <section class="c-hero" id="section-hero">
             <div class="c-hero__media">
                 <div class="c-hero__video">
-                    <video id="js-hero-video" width="1920" height="1080" autoplay loop muted poster="{{asset("/img/bg-with-people.jpg")}}">
-                    <source src="{{asset("/media/video/hero-mobile.mp4")}}" data-video="{{asset("/media/video/hero.mp4")}}" type="video/mp4" />
+                    <video
+                        id="js-hero-video"
+                        width="1920"
+                        height="1080"
+                        autoplay
+                        loop
+                        muted
+                        poster="{{asset("/img/hero.jpg")}}"
+                        data-video="{{asset("/media/video/hero.mp4")}}" type="video/mp4">
+                    <source src="{{asset("/media/video/hero-mobile.mp4")}}" />
                     </video>
                 </div>
             </div>

@@ -180,24 +180,6 @@ $(function () {
     }
 });
 
-/* Play or stop visible hero video */
-$(function () {
-    var videoDesktopPath = $('#js-hero-video source').attr('data-video');
-    var videoMobilePath = $('#js-hero-video source').attr('src');
-
-    if(device.desktop()) {
-        $('#js-hero-video source').attr('src', videoDesktopPath);
-        $('#js-hero-video')[0].load();
-        $('#js-hero-video')[0].play();
-    } else {
-        heroVideoController(videoDesktopPath, videoMobilePath);
-
-        $(window).resize(function (){
-            heroVideoController(videoDesktopPath, videoMobilePath);
-        });
-    }
-});
-
 function heroVideoController(videoDesktopPath, videoMobilePath) {
 
     if(device.portrait()) {
@@ -208,3 +190,24 @@ function heroVideoController(videoDesktopPath, videoMobilePath) {
     $('#js-hero-video')[0].load();
     $('#js-hero-video')[0].play();
 }
+
+/* Play or stop visible hero video */
+$(function () {
+    var $video = $('#js-hero-video source');
+    var videoDesktopPath = $('#js-hero-video source').attr('data-video');
+    var videoMobilePath = $('#js-hero-video source').attr('src');
+
+    if(device.desktop()) {
+        $('#js-hero-video source').attr('src', videoDesktopPath);
+        $video[0].load();
+        $video[0].play();
+    } else {
+        heroVideoController(videoDesktopPath, videoMobilePath);
+
+        $(window).resize(function (){
+            heroVideoController(videoDesktopPath, videoMobilePath);
+        });
+    }
+});
+
+
