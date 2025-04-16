@@ -180,9 +180,9 @@ $(function () {
     }
 });
 
-function heroVideoController(videoDesktopPath, videoMobilePath) {
+function heroVideoController(orientation, videoDesktopPath, videoMobilePath) {
 
-    if(device.portrait()) {
+    if(orientation === 'portrait' || orientation === 'portrait-primary' || orientation === 'portrait-secondary') {
         $('#js-hero-video source').attr('src', videoMobilePath);
     } else {
         $('.js-hero-video source').attr('src', videoDesktopPath);
@@ -202,10 +202,8 @@ $(function () {
         $('#js-hero-video').get(0).load();
         $('#js-hero-video').get(0).play();
     } else {
-        heroVideoController(videoDesktopPath, videoMobilePath);
-
-        $(window).resize(function (){
-            heroVideoController(videoDesktopPath, videoMobilePath);
+        window.addEventListener("orientationchange", (event) => {
+            heroVideoController(event.target.screen.orientation.type, videoDesktopPath, videoMobilePath);
         });
     }
 });
