@@ -1347,7 +1347,6 @@ body.is-bar .c-header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding-bottom: 70px;
-  overflow: hidden;
 }
 .is-safari .c-hero {
   background-attachment: scroll;
@@ -1393,15 +1392,21 @@ body.is-bar .c-header {
 .c-hero__media {
   max-height: 80vh;
   position: sticky;
-  top: 0;
+  top: 60px;
   z-index: 1;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .c-hero__media {
+    top: 50px;
+  }
 }
 .c-hero__media:after {
   display: block;
   content: "\0020";
   position: absolute;
   z-index: 2;
-  bottom: 99%;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 20vh;

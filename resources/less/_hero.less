@@ -8,7 +8,6 @@
   background-repeat: no-repeat;
   //padding-top: @header_height;
   padding-bottom: 70px;
-    overflow: hidden;
 
   .is-safari & {
     background-attachment: scroll;
@@ -55,15 +54,20 @@
     &__media {
         max-height: 80vh;
         position: sticky;
-        top:0;
+        top: @header_height;
         z-index: 1;
+        overflow: hidden;
+
+        @media screen and (max-width: 1200px) {
+            top: @header_height_mobile;
+        }
 
         &:after {
             display: block;
             content: "\0020";
             position: absolute;
             z-index: 2;
-            bottom: 99%;
+            bottom: 0;
             left: 0;
             right: 0;
             height: 20vh;
