@@ -13,38 +13,12 @@
     background-attachment: scroll;
   }
 
-  &:before {
-    display: block;
-    content: "\0020";
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 50%;
-    width: 50%;
-    max-width: 740px;
-    z-index: 1;
-    background-size: 100% auto;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-image: url("../img/people.png");
-
-    @media screen and (max-width: 1200px) {
-      left: 60%;
-      width: 40%;
-      background-position: center;
-    }
-
-    @media screen and (max-width: 1023px) {
-      display: none;
-    }
-  }
-
   &:after {
     display: block;
     content: "\0020";
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
     height: 50vh;
@@ -52,7 +26,7 @@
   }
 
     &__media {
-        max-height: 80vh;
+        max-height: 70vh;
         position: sticky;
         top: @header_height;
         z-index: 1;
@@ -93,13 +67,38 @@
   &__meta {
     //min-height: 80vh;
     position: relative;
-      padding-top: 10px;
+    padding-top: 10px;
     z-index: 2;
-      background: #000;
 
       & .c-layout {
           position: relative;
           z-index: 2;
+      }
+
+      &:before {
+          display: block;
+          content: "\0020";
+          position: absolute;
+          top:0;
+          bottom: 0;
+          left: 50%;
+          width: 50%;
+          max-width: 740px;
+          z-index: 1;
+          background-size: 100% auto;
+          background-position: bottom center;
+          background-repeat: no-repeat;
+          background-image: url("../img/people.png");
+
+          @media screen and (max-width: 1200px) {
+              left: 60%;
+              width: 40%;
+              background-position: center;
+          }
+
+          @media screen and (max-width: 1023px) {
+              display: none;
+          }
       }
 
       &:after {
