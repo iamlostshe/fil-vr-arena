@@ -1547,15 +1547,6 @@ body.is-bar .c-header {
 .c-hero__video {
   position: relative;
 }
-.portrait .c-hero__video__main {
-  display: none;
-}
-.c-hero__video__mobile {
-  display: none;
-}
-.portrait .c-hero__video__mobile {
-  display: block;
-}
 .c-social {
   display: flex;
   gap: 20px;

@@ -182,24 +182,29 @@ $(function () {
 
 /* Play or stop visible hero video */
 $(function () {
-    // heroVideoController();
-    //
-    // $(window).resize(function (){
-    //     heroVideoController();
-    // });
-});
-
-function heroVideoController() {
+    var videoDesktopPath = $('#js-hero-video source').attr('data-video');
+    var videoMobilePath = $('#js-hero-video source').attr('src');
 
     if(device.desktop()) {
-        $('.js-hero-video-mobile').remove();
+        $('#js-hero-video source').attr('src', videoDesktopPath);
+        $('#js-hero-video')[0].load();
+        $('#js-hero-video')[0].play();
+    } else {
+        heroVideoController(videoDesktopPath, videoMobilePath);
+
+        $(window).resize(function (){
+            heroVideoController(videoDesktopPath, videoMobilePath);
+        });
     }
+});
+
+function heroVideoController(videoDesktopPath, videoMobilePath) {
 
     if(device.portrait()) {
-        $('.js-hero-video')[0].paused();
-        $('.js-hero-video-mobile')[0].play();
+        $('#js-hero-video source').attr('src', videoMobilePath);
     } else {
-        $('.js-hero-video')[0].play();
-        $('.js-hero-video-mobile')[0].paused();
+        $('.js-hero-video source').attr('src', videoDesktopPath);
     }
+    $('#js-hero-video')[0].load();
+    $('#js-hero-video')[0].play();
 }
