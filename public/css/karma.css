@@ -1390,20 +1390,10 @@ body.is-bar .c-header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
 }
 .c-hero__media {
+  max-height: 80vh;
   position: sticky;
   top: 0;
   z-index: 1;
-}
-.c-hero__media:after {
-  display: block;
-  content: "\0020";
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 20vh;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
 }
 .c-hero__media video {
   position: relative;
@@ -1421,12 +1411,20 @@ body.is-bar .c-header {
   z-index: 2;
 }
 .c-hero__meta {
-  min-height: 80vh;
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: #000;
+}
+.c-hero__meta:after {
+  display: block;
+  content: "\0020";
+  position: absolute;
+  z-index: 2;
+  bottom: 99%;
+  left: 0;
+  right: 0;
+  height: 20vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
 }
 .c-hero__logo {
   width: 100%;

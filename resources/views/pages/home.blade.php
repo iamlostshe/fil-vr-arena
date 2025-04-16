@@ -14,8 +14,8 @@
                     </video>
                 </div>
             </div>
-            <div class="c-layout">
-                <div class="c-hero__meta">
+            <div class="c-hero__meta">
+                <div class="c-layout">
                     <div class="c-hero__logo">
                         <img src="{{asset("/img/logo-text.svg")}}" alt="ANOTHER WORLD"/>
                     </div>
@@ -60,9 +60,7 @@
                                 </div>
                             </article>
                         </div><!--/c-promo__list-->
-
                     </div><!--/c-promo-->
-
                 </div>
             </div>
         </section>
