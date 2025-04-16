@@ -1526,10 +1526,22 @@ body.is-bar .c-header {
     justify-content: center;
   }
 }
+.c-hero__video__main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .portrait .c-hero__video__main {
   display: none;
 }
 .c-hero__video__mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: none;
 }
 .portrait .c-hero__video__mobile {

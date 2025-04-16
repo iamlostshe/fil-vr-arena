@@ -182,14 +182,19 @@ $(function () {
 
 /* Play or stop visible hero video */
 $(function () {
-    heroVideoController();
-
-    $(window).resize(function (){
-        heroVideoController();
-    });
+    // heroVideoController();
+    //
+    // $(window).resize(function (){
+    //     heroVideoController();
+    // });
 });
 
 function heroVideoController() {
+
+    if(device.desktop()) {
+        $('.js-hero-video-mobile').remove();
+    }
+
     if(device.portrait()) {
         $('.js-hero-video')[0].paused();
         $('.js-hero-video-mobile')[0].play();
