@@ -187,8 +187,8 @@ function heroVideoController(videoDesktopPath, videoMobilePath) {
     } else {
         $('.js-hero-video source').attr('src', videoDesktopPath);
     }
-    $('#js-hero-video')[0].load();
-    $('#js-hero-video')[0].play();
+    //$('#js-hero-video')[0].load();
+    //$('#js-hero-video')[0].play();
 }
 
 /* Play or stop visible hero video */
@@ -199,8 +199,8 @@ $(function () {
 
     if(device.desktop()) {
         $('#js-hero-video source').attr('src', videoDesktopPath);
-        $video[0].load();
-        $video[0].play();
+        //$video[0].load();
+        //$video[0].play();
     } else {
         heroVideoController(videoDesktopPath, videoMobilePath);
 

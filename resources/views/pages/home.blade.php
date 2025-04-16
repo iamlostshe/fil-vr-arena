@@ -11,9 +11,11 @@
                         autoplay
                         loop
                         muted
-                        poster="{{asset("/img/hero.jpg")}}"
-                        data-video="{{asset("/media/video/hero.mp4")}}" type="video/mp4">
-                    <source src="{{asset("/media/video/hero-mobile.mp4")}}" />
+                        poster="{{asset("/img/hero.jpg")}}">
+                    <source
+                        src="{{asset("/media/video/hero-mobile.mp4")}}"
+                        data-video="{{asset("/media/video/hero.mp4")}}" type="video/mp4"
+                    />
                     </video>
                 </div>
             </div>
