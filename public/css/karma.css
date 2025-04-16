@@ -1347,6 +1347,7 @@ body.is-bar .c-header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding-bottom: 70px;
+  overflow: hidden;
 }
 .is-safari .c-hero {
   background-attachment: scroll;
@@ -1395,6 +1396,17 @@ body.is-bar .c-header {
   top: 0;
   z-index: 1;
 }
+.c-hero__media:after {
+  display: block;
+  content: "\0020";
+  position: absolute;
+  z-index: 2;
+  bottom: 99%;
+  left: 0;
+  right: 0;
+  height: 20vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
+}
 .c-hero__media video {
   position: relative;
   z-index: 1;
@@ -1412,18 +1424,23 @@ body.is-bar .c-header {
 }
 .c-hero__meta {
   position: relative;
+  padding-top: 10px;
   z-index: 2;
   background: #000;
+}
+.c-hero__meta .c-layout {
+  position: relative;
+  z-index: 2;
 }
 .c-hero__meta:after {
   display: block;
   content: "\0020";
   position: absolute;
-  z-index: 2;
-  bottom: 99%;
+  z-index: 1;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 20vh;
+  height: 120%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
 }
 .c-hero__logo {
@@ -1529,22 +1546,10 @@ body.is-bar .c-header {
 .c-hero__video {
   position: relative;
 }
-.c-hero__video__main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 .portrait .c-hero__video__main {
   display: none;
 }
 .c-hero__video__mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: none;
 }
 .portrait .c-hero__video__mobile {

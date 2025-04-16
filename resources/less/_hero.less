@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   //padding-top: @header_height;
   padding-bottom: 70px;
+    overflow: hidden;
 
   .is-safari & {
     background-attachment: scroll;
@@ -57,6 +58,18 @@
         top:0;
         z-index: 1;
 
+        &:after {
+            display: block;
+            content: "\0020";
+            position: absolute;
+            z-index: 2;
+            bottom: 99%;
+            left: 0;
+            right: 0;
+            height: 20vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 90%);
+        }
+
         & video {
             position: relative;
             z-index: 1;
@@ -76,18 +89,24 @@
   &__meta {
     //min-height: 80vh;
     position: relative;
+      padding-top: 10px;
     z-index: 2;
       background: #000;
+
+      & .c-layout {
+          position: relative;
+          z-index: 2;
+      }
 
       &:after {
           display: block;
           content: "\0020";
           position: absolute;
-          z-index: 2;
-          bottom: 99%;
+          z-index: 1;
+          bottom: 0;
           left: 0;
           right: 0;
-          height: 20vh;
+          height: 120%;
           background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 90%);
       }
   }
@@ -205,11 +224,6 @@
     position: relative;
 
     &__main {
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
 
         .portrait & {
             display: none;
@@ -217,11 +231,6 @@
     }
 
     &__mobile {
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
 
         display: none;
 
