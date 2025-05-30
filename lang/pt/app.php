@@ -13,6 +13,7 @@ return [
     'more_details' => 'Mais informações',
     'watch_trailer' => 'Ver trailer',
     'company_information' => 'Informação da companhia',
+    'company_name' => 'Another World - Lisboa é uma experiência de realidade virtual gerida pela Momento Formoso Unipessoal LDA',
     'privacy_policy' => 'Política de Confidencialidade',
     'user_agreement' => 'Acordo do usuário',
     'term_and_conditions' => 'Termos e Condições',

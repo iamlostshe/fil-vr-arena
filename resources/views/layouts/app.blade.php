@@ -232,7 +232,7 @@
             </div>
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
-                    MOMENTO FORMOSO UNIPESSOAL LDA<br/>
+                    {{__('app.company_name')}}<br/>
                     <a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
                     <a href="mailto:{{ __('contacts.email') }}">{{ __('contacts.email') }}</a><br/>
                 </div>
