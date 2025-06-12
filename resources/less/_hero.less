@@ -241,4 +241,22 @@
     //        display: block;
     //    }
     //}
+
+    &:after {
+        content: '';
+        transition: all .3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 9;
+    }
+}
+
+.is-sticky {
+    .c-hero__video {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 }
