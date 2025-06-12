@@ -68,6 +68,14 @@
 
        @include('widgets.games', ['games' => $games])
 
+        <section class="c-section" id="events">
+            <h3>Events</h3>
+        </section>
+
+        <section class="c-section" id="gifts_cards">
+            <h3>Gifts Cards</h3>
+        </section>
+
         <section class="c-section" id="section-price">
             <div class="c-layout">
                 <div class="c-section__title">

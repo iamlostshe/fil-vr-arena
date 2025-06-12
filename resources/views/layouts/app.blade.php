@@ -127,19 +127,12 @@
             <button class="c-bar__close js-bar-close"></button>
             <div class="c-bar__content">
                 <ul>
+                    <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
                     <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
-                    <li>
-                        <a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a>
-                    </li>
-                    <li>
-                        <a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com/maps/place/Another+World+Parking/@38.750559,-9.1047117,19z/data=!3m1!4b1!4m6!3m5!1s0xd19330018a0c101:0x176e741ebce86d37!8m2!3d38.750558!4d-9.104068!16s%2Fg%2F11vxqtxll6?entry=tts&g_ep=EgoyMDI0MDUyMi4wKgBIAVAD" target="_blank">
-                            {{ __('app.parking') }}
-                        </a>
-                    </li>
+                    <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
+                    <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}">{{ __('app.gifts_cards') }}</a></li>
+                    <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
+                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                 </ul>
             </div>
         </div>
@@ -162,10 +155,12 @@
                 <div class="c-header__nav">
                     <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
                     <ul>
-                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                         <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
+                        <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
+                        <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}">{{ __('app.gifts_cards') }}</a></li>
                         <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">

@@ -4,6 +4,8 @@ return [
     'reserve_experience' => 'Reserva online',
     'adventures' => 'Aventuras',
     'about_us' => 'Sobre nós',
+    'events' => 'Eventos',
+    'gifts_cards' => 'Cartões de presente',
     'contacts' => 'Contatos',
     'franchise' => 'Franquia',
     'adventure' => 'Aventura',

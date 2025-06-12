@@ -5,6 +5,8 @@ return [
     'reserve_experience' => 'Book online',
     'adventures' => 'Adventures',
     'about_us' => 'About Us',
+    'events' => 'Events',
+    'gifts_cards' => 'Gift cards',
     'contacts' => 'Contacts',
     'franchise' => 'Franchise',
     'adventure' => 'Adventure',
