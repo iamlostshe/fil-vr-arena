@@ -7,7 +7,7 @@ return [
         'item_3' => 'Immersive VR fun — for ages 6+',
     ],
     'book_button' => 'Book your experience',
-    'block_2_title' => '<span>ANOTHER WORLD PARK</span><br/> - THIS IS',
+    'block_2_title' => '<span>ANOTHER WORLD LISBOA</span><br/> - THIS IS',
     'block_2_list' => [
         'item_1' => ' A unique experience in one<br><span>of the largest VR arenas in Europe</span>',
         'item_2' => 'Cutting-edge technology<br><span>and free movement</span>',

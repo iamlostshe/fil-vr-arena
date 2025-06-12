@@ -7,7 +7,7 @@ return [
         'item_3' => 'Diversão imersiva em realidade virtual — para maiores de 6 anos',
     ],
     'book_button' => 'Reserve a sua experiência',
-    'block_2_title' => '<span>ANOTHER WORLD VIRTUAL REALITY</span><br/> - ISTO É',
+    'block_2_title' => '<span>ANOTHER WORLD LISBOA</span><br/> - ISTO É',
     'block_2_list' => [
         'item_1' => 'Experiência única numa das<br> <span>maiores arenas VR da Europa</span>',
         'item_2' => 'Tecnologia de última <br><span>geração e movimento livre</span>',
