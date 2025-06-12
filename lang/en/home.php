@@ -9,9 +9,9 @@ return [
     'book_button' => 'Book your experience',
     'block_2_title' => '<span>ANOTHER WORLD PARK</span><br/> - THIS IS',
     'block_2_list' => [
-        'item_1' => '<span>Multilevel, virtual platform</span><br> 3 times larger than a real playing field',
-        'item_2' => 'Advanced <span>tracking system</span><br> will transfer your movements to<br>game as realistic as possible',
-        'item_3' => '<span>Support and assistance</span><br> from our qualified VR attendants',
+        'item_1' => ' A unique experience in one<br><span>of the largest VR arenas in Europe</span>',
+        'item_2' => 'Cutting-edge technology<br><span>and free movement</span>',
+        'item_3' => 'Total immersion<br><span>for all ages</span>',
     ],
     'block_3_title' => 'GET YOUR TEAM TOGETHER<br> <span>OTHER WORLDS ARE WAITING FOR YOU!</span>',
     'find_block_title' => 'HOW CAN WE <span>FIND?</span>',
