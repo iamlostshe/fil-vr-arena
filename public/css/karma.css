@@ -1558,7 +1558,7 @@ body.is-bar .c-header {
   background-color: rgba(0, 0, 0, 0);
   z-index: 9;
 }
-.is-sticky .c-hero__video {
+.is-sticky .c-hero__video:after {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .c-social {
