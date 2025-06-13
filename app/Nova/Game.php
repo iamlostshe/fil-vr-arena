@@ -138,7 +138,9 @@ class Game extends Resource {
             Select::make('Duration', EntityFields::DURATION)
                 ->help('The duration of the game.')
                 ->options([
+                    '25 min' => '25 min',
                     '30 min' => '30 min',
+                    '25-50 min' => '25-50 min',
                     '60 min' => '60 min',
                 ])
                 ->rules('required'),
