@@ -38,7 +38,7 @@
                         <div class="c-promo__list">
                             <article class="c-promo-item">
                                 <div class="c-promo-item__media">
-                                    <img src="{{asset('/img/promo-girl.png')}}" alt=""/>
+                                    <img src="{{asset('/img/promo-1.png')}}" alt=""/>
                                 </div>
                                 <div class="c-promo-item__meta">
                                     {!! __('home.block_2_list.item_1') !!}
@@ -46,7 +46,7 @@
                             </article>
                             <article class="c-promo-item">
                                 <div class="c-promo-item__media">
-                                    <img src="{{asset('/img/promo-visor.png')}}" alt=""/>
+                                    <img src="{{asset('/img/promo-2.png')}}" alt=""/>
                                 </div>
                                 <div class="c-promo-item__meta">
                                     {!! __('home.block_2_list.item_2') !!}
@@ -54,7 +54,7 @@
                             </article>
                             <article class="c-promo-item">
                                 <div class="c-promo-item__media">
-                                    <img src="{{asset('/img/promo-boy.png')}}" alt=""/>
+                                    <img src="{{asset('/img/promo-3.png')}}" alt=""/>
                                 </div>
                                 <div class="c-promo-item__meta">
                                     {!! __('home.block_2_list.item_3') !!}
