@@ -23,12 +23,37 @@ $(function () {
     });
 
     $('.js-bar-close').click(function () {
+        closeBarMenu();
+    });
+
+    // Закрытие бара при клике на ссылку внутри .js-bar-menu
+    $('.js-bar-menu').on('click', 'a', function () {
+        closeBarMenu();
+    });
+
+    function closeBarMenu() {
         $body.addClass('is-bar-closing');
         setTimeout(function () {
             $body.removeClass('is-bar-closing').removeClass('is-bar');
         }, 500);
+    }
+
+});
+
+// Пример JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+    const triggers = document.querySelectorAll(".js-header-language-trigger");
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener("click", function (e) {
+            e.preventDefault(); // если кнопка — preventDefault на всякий случай
+            const parent = trigger.closest(".js-header-language");
+            parent.classList.toggle("is-open");
+        });
     });
 });
+
+
 
 function browserDetect() {
     var browser = '';

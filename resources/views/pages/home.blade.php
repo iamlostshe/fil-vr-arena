@@ -9,8 +9,9 @@
                         width="1920" height="1080" autoplay loop muted frameborder="0" allowfullscreen playsinline
                         poster="{{asset("/media/video/img/hero.jpg")}}">
                     <source
-                        src="{{asset("/media/video/hero-mobile.mp4")}}"
-                        data-video="{{asset("/media/video/hero.mp4")}}" type="video/mp4"
+                        src="https://arena.fhtagn.studio/media/video/hero.mp4"
+{{--                        src="{{asset("/media/video/hero-mobile.mp4")}}"--}}
+                        data-video="https://arena.fhtagn.studio/media/video/hero.mp4" type="video/mp4"
                     />
                     </video>
                 </div>
@@ -69,11 +70,15 @@
        @include('widgets.games', ['games' => $games])
 
         <section class="c-section" id="events">
-            <h3>Events</h3>
+            <div class="c-layout c-layout--wide">
+                <img src="{{asset("/img/temp-events.png")}}" style="width: 100%;">
+            </div>
         </section>
 
         <section class="c-section" id="gifts_cards">
-            <h3>Gifts Cards</h3>
+            <div class="c-layout c-layout--wide">
+                <img src="{{asset("/img/temp-gift.png")}}" style="width: 100%;">
+            </div>
         </section>
 
         <section class="c-section" id="section-price">

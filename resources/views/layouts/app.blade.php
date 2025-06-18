@@ -121,33 +121,46 @@
     <!-- End Google Tag Manager (noscript) -->
 @endif
 <div class="c-site" id="app">
-    <aside class="c-bar">
-        <div class="c-bar__overlay js-bar-close"></div>
-        <div class="c-bar__main">
-            <button class="c-bar__close js-bar-close"></button>
-            <div class="c-bar__content">
-                <ul>
-                    <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
-                    <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
-                    <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}">{{ __('app.gifts_cards') }}</a></li>
-                    <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
-                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
-                </ul>
-            </div>
-        </div>
-    </aside>
     @php
         $currentUrl = url()->current();
         $selectedLang = LaravelLocalization::getCurrentLocale();
     @endphp
 
+    <aside class="c-bar">
+        <div class="c-bar__overlay js-bar-close"></div>
+        <div class="c-bar__main">
+            <button class="c-bar__close js-bar-close"></button>
+            <div class="c-bar__header">
+                <a href="/en" class="c-header__logo"></a>
+            </div>
+            <div class="c-bar__content js-bar-menu">
+                <ul>
+                    <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
+                    <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
+                    <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
+                    <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}" class="c-menu-gift">{{ __('app.gifts_cards') }}</a></li>
+                    <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
+                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-menu-book-now" target="_blank">{{ __('app.reserve_experience') }}</a></li>
+                </ul>
+            </div>
+            <div class="c-bar__contacts">
+                <div class="c-bar__contacts__language">
+                    <a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a>
+                </div>
+                <div class="c-social">
+                    <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
+                    <!--<a target="_blank" href="{{-- route(\App\Constants\RouteNames::ONLINE_BOOK) --}}"></a>-->
+                    <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
+                </div>
+                <div class="c-bar__contacts__links">
+                    MOMENTO FORMOSO UNIPESSOAL LDA
+                    <br><a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
+                </div>
 
-    <ul class="c-languages">
-        <li><a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a></li>
-        <li><a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a></li>
-    </ul>
-
+            </div>
+        </div>
+    </aside>
 
     <header class="c-header">
         <div class="c-layout">
@@ -168,6 +181,15 @@
                         <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}">{{__('contacts.phone_number')}}</a>
                         <a target="_blank" class="c-social-item"
                            href="{{__('contacts.instagram_link')}}"></a>
+                        <div class="c-header-language js-header-language">
+                            <button class="js-header-language-trigger">
+                                {{ strtoupper($selectedLang) }}
+                            </button>
+                            <div class="c-header-language__list">
+                                <a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a>
+                                <a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a>
+                            </div>
+                        </div>
                     </div>
                     <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-header__contacts__booking" target="_blank">{{ __('app.reserve_experience') }}</a>
                     <div class="c-header__contacts__mobile">
