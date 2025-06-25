@@ -234,3 +234,30 @@ $(function () {
 });
 
 
+// BOOK NOW POPUP CUSTOM
+document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.querySelector('.js-custom-popup-book');
+    const triggers = document.querySelectorAll('.js-custom-popup-book-trigger');
+    const closeBtn = document.querySelector('.js-custom-popup-book-close');
+
+    // Открытие попапа при клике на любую кнопку
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            popup.classList.add('is-opened');
+        });
+    });
+
+    // Закрытие попапа
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('is-opened');
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            popup.classList.remove('is-opened');
+        }
+    });
+
+});

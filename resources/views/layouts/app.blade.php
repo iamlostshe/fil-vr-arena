@@ -113,6 +113,13 @@
                 /></noscript>
             <!-- End Meta Pixel Code -->
         @endif
+
+    <script type="text/javascript" src="https://anotherworld.dgft.com/script"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            IframeWidgetFunctional.init('.js_iframe_widget');
+        });
+    </script>
 </head>
 <body>
 @if (app()->isProduction())
