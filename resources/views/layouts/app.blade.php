@@ -228,7 +228,7 @@
             </div>
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
-                    Av. Infante Dom Henrique 286, Lisboa<br><br>
+                    <a href="https://maps.app.goo.gl/WKcwZfHZiPK92tsG8" target="_blank" rel="nofollow">Av. Infante Dom Henrique 286, Lisboa</a><br><br>
                     {!! __('contacts.work_hours') !!}<br><br>
                     <a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
                     <a href="mailto:{{ __('contacts.email') }}">{{ __('contacts.email') }}</a><br/>
