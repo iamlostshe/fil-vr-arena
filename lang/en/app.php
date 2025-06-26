@@ -22,7 +22,7 @@ return [
     'phone_number' => 'Phone Number',
     'email' => 'Email',
     'gameplay' => 'Gameplay',
-    'all_rights_reserved' => '© 2024 All rights reserved',
+    'all_rights_reserved' => '© 2025 All rights reserved',
     'meta_default' => [
         'title' => 'Virtual Reality Free Roam Arena in Lisbon, Portugal',
         'description' => 'Explore the ultimate virtual reality free roam arena experience in Lisbon, Portugal. Immerse yourself in thrilling VR adventures with friends and family. Book your session now!',

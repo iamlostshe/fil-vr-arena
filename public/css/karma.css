@@ -751,7 +751,7 @@ body.is-bar .c-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 14px;
   width: 100%;
   line-height: 1;
 }
