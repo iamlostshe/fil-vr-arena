@@ -25,5 +25,9 @@ return [
     'prices_block_arenas' => 'arenas',
     'prices_per_person' => 'por pessoa',
     'prices_event_packs' => 'PACOTES DE EVENTOS',
-
+    'book_now' => 'RESERVA AGORA',
+    'price_title_1' => 'sala privada 2h 30m<br>com <strong>50 min</strong> jogo',
+    'price_extra_title' => 'Extra',
+    'price_extra_25_min' => '+25 min jogo',
+    'price_extra_50_min' => '+50 min jogo',
 ];

@@ -178,7 +178,7 @@
                         <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
                         <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
                         <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
-                        <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}">{{ __('app.gifts_cards') }}</a></li>
+                        <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}" class="c-link--blue-highlight">{{ __('app.gifts_cards') }}</a></li>
                         <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
                         <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     </ul>
@@ -228,7 +228,8 @@
             </div>
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
-                    MOMENTO FORMOSO UNIPESSOAL LDA<br/>
+                    Av. Infante Dom Henrique 286, Lisboa<br><br>
+                    {!! __('contacts.work_hours') !!}<br><br>
                     <a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
                     <a href="mailto:{{ __('contacts.email') }}">{{ __('contacts.email') }}</a><br/>
                 </div>

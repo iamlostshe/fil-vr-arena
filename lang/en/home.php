@@ -25,4 +25,9 @@ return [
     'prices_block_arenas' => 'arenas',
     'prices_per_person' => 'per person',
     'prices_event_packs' => 'EVENT PACKS',
+    'book_now' => 'BOOK NOW',
+    'price_title_1' => 'Private Room for 2h 30<br>Includes <strong>50&nbsp;min</strong> of VR gameplay',
+    'price_extra_title' => 'Extra',
+    'price_extra_25_min' => '+25 min game',
+    'price_extra_50_min' => '+50 min game',
 ];

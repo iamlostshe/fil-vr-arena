@@ -99,150 +99,148 @@
 
     <section class="c-section" id="price">
         <div class="c-layout c-layout--wide">
-            <div class="c-price-list">
-                <div class="c-price-item">
-                    <div class="c-price-item-hover"></div>
-                    <div class="c-price-item__title">
-                        <img src="{{ asset('/img/price/price-name-6.png') }}"
-                             srcset="{{ asset('/img/price/price-name-6@2x.png') }} 2x" alt="Festa Ate 6">
-                    </div>
-                    <div class="c-price-item__main">
-                        <div class="c-price-item__main__text">
-                            sala privada 2h 30m
-                            <br>com <strong>50 min</strong> jogo
+            <div class="swiper js-swiper-price c-price-list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide c-price-item">
+                        <div class="c-price-item-hover"></div>
+                        <div class="c-price-item__title">
+                            <img src="{{ asset('/img/price/price-name-6.png') }}"
+                                 srcset="{{ asset('/img/price/price-name-6@2x.png') }} 2x" alt="Festa Ate 6">
                         </div>
-                        <div class="c-price-item__main__price">
-                            240€
+                        <div class="c-price-item__main">
+                            <div class="c-price-item__main__text">
+                                {!! __('home.price_title_1') !!}
+                            </div>
+                            <div class="c-price-item__main__price">
+                                240€
+                            </div>
                         </div>
-                    </div>
-                    <div class="c-price-item__info">
-                        <div class="c-price-item__info__extra">
-                            Extra
-                        </div>
-                        <div class="c-price-item__info__name">
-                            +25 min jogo
-                        </div>
-                        <div class="c-price-item__info__price">
-                            +150€
-                        </div>
-                        <div class="c-price-item__info__name">
-                            +50 min jogo
-                        </div>
-                        <div class="c-price-item__info__price">
-                            +170€
-                        </div>
+                        <div class="c-price-item__info">
+                            <div class="c-price-item__info__extra">
+                                {!! __('home.price_extra_title') !!}
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_25_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +150€
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_50_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +170€
+                            </div>
 
-                    </div>
-                    <div class="c-price-item__action">
-                        <button class="js-custom-popup-book-trigger">BOOK NOW</button>
-                    </div>
-                </div>
-                <div class="c-price-item">
-                    <div class="c-price-item-hover"></div>
-                    <div class="c-price-item__title">
-                        <img src="{{ asset('/img/price/price-name-12.png') }}"
-                             srcset="{{ asset('/img/price/price-name-12@2x.png') }} 2x" alt="Festa Ate 12">
-                    </div>
-                    <div class="c-price-item__main">
-                        <div class="c-price-item__main__text">
-                            sala privada 2h 30m
-                            <br>com <strong>50 min</strong> jogo
                         </div>
-                        <div class="c-price-item__main__price">
-                            360€
+                        <div class="c-price-item__action">
+                            <button class="js-custom-popup-book-trigger">{!! __('home.book_now') !!}</button>
                         </div>
                     </div>
-                    <div class="c-price-item__info">
-                        <div class="c-price-item__info__extra">
-                            Extra
+                    <div class="swiper-slide c-price-item">
+                        <div class="c-price-item-hover"></div>
+                        <div class="c-price-item__title">
+                            <img src="{{ asset('/img/price/price-name-12.png') }}"
+                                 srcset="{{ asset('/img/price/price-name-12@2x.png') }} 2x" alt="Festa Ate 12">
                         </div>
-                        <div class="c-price-item__info__name">
-                            +25 min jogo
+                        <div class="c-price-item__main">
+                            <div class="c-price-item__main__text">
+                                {!! __('home.price_title_1') !!}
+                            </div>
+                            <div class="c-price-item__main__price">
+                                360€
+                            </div>
                         </div>
-                        <div class="c-price-item__info__price">
-                            +240€
+                        <div class="c-price-item__info">
+                            <div class="c-price-item__info__extra">
+                                {!! __('home.price_extra_title') !!}
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_25_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +240€
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_50_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +290€
+                            </div>
                         </div>
-                        <div class="c-price-item__info__name">
-                            +50 min jogo
-                        </div>
-                        <div class="c-price-item__info__price">
-                            +290€
-                        </div>
-                    </div>
-                    <div class="c-price-item__action">
-                        <button class="js-custom-popup-book-trigger">BOOK NOW</button>
-                    </div>
-                </div>
-                <div class="c-price-item">
-                    <div class="c-price-item-hover"></div>
-                    <div class="c-price-item__title">
-                        <img src="{{ asset('/img/price/price-name-18.png') }}"
-                             srcset="{{ asset('/img/price/price-name-18@2x.png') }} 2x" alt="Festa Ate 18">
-                    </div>
-                    <div class="c-price-item__main">
-                        <div class="c-price-item__main__text">
-                            sala privada 2h 30m
-                            <br>com <strong>50 min</strong> jogo
-                        </div>
-                        <div class="c-price-item__main__price">
-                            540€
-                        </div>
-                    </div>
-                    <div class="c-price-item__info">
-                        <div class="c-price-item__info__extra">
-                            Extra
-                        </div>
-                        <div class="c-price-item__info__name">
-                            +25 min jogo
-                        </div>
-                        <div class="c-price-item__info__price">
-                            +360€
-                        </div>
-                        <div class="c-price-item__info__name">
-                            +50 min jogo
-                        </div>
-                        <div class="c-price-item__info__price">
-                            +430€
+                        <div class="c-price-item__action">
+                            <button class="js-custom-popup-book-trigger">{!! __('home.book_now') !!}</button>
                         </div>
                     </div>
-                    <div class="c-price-item__action">
-                        <button class="js-custom-popup-book-trigger">BOOK NOW</button>
+                    <div class="swiper-slide c-price-item">
+                        <div class="c-price-item-hover"></div>
+                        <div class="c-price-item__title">
+                            <img src="{{ asset('/img/price/price-name-18.png') }}"
+                                 srcset="{{ asset('/img/price/price-name-18@2x.png') }} 2x" alt="Festa Ate 18">
+                        </div>
+                        <div class="c-price-item__main">
+                            <div class="c-price-item__main__text">
+                                {!! __('home.price_title_1') !!}
+                            </div>
+                            <div class="c-price-item__main__price">
+                                540€
+                            </div>
+                        </div>
+                        <div class="c-price-item__info">
+                            <div class="c-price-item__info__extra">
+                                {!! __('home.price_extra_title') !!}
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_25_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +360€
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_50_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +430€
+                            </div>
+                        </div>
+                        <div class="c-price-item__action">
+                            <button class="js-custom-popup-book-trigger">{!! __('home.book_now') !!}</button>
+                        </div>
                     </div>
-                </div>
-                <div class="c-price-item">
-                    <div class="c-price-item-hover"></div>
-                    <div class="c-price-item__title">
-                        <img src="{{ asset('/img/price/price-name-24.png') }}"
-                             srcset="{{ asset('/img/price/price-name-24@2x.png') }} 2x" alt="Festa Ate 24">
-                    </div>
-                    <div class="c-price-item__main">
-                        <div class="c-price-item__main__text">
-                            sala privada 2h 30m
-                            <br>com <strong>50 min</strong> jogo
+                    <div class="swiper-slide c-price-item">
+                        <div class="c-price-item-hover"></div>
+                        <div class="c-price-item__title">
+                            <img src="{{ asset('/img/price/price-name-24.png') }}"
+                                 srcset="{{ asset('/img/price/price-name-24@2x.png') }} 2x" alt="Festa Ate 24">
                         </div>
-                        <div class="c-price-item__main__price">
-                            720€
+                        <div class="c-price-item__main">
+                            <div class="c-price-item__main__text">
+                                {!! __('home.price_title_1') !!}
+                            </div>
+                            <div class="c-price-item__main__price">
+                                720€
+                            </div>
                         </div>
-                    </div>
-                    <div class="c-price-item__info">
-                        <div class="c-price-item__info__extra">
-                            Extra
+                        <div class="c-price-item__info">
+                            <div class="c-price-item__info__extra">
+                                {!! __('home.price_extra_title') !!}
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_25_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +480€
+                            </div>
+                            <div class="c-price-item__info__name">
+                                {!! __('home.price_extra_50_min') !!}
+                            </div>
+                            <div class="c-price-item__info__price">
+                                +580€
+                            </div>
                         </div>
-                        <div class="c-price-item__info__name">
-                            +25 min jogo
+                        <div class="c-price-item__action">
+                            <button class="js-custom-popup-book-trigger">{!! __('home.book_now') !!}</button>
                         </div>
-                        <div class="c-price-item__info__price">
-                            +480€
-                        </div>
-                        <div class="c-price-item__info__name">
-                            +50 min jogo
-                        </div>
-                        <div class="c-price-item__info__price">
-                            +580€
-                        </div>
-                    </div>
-                    <div class="c-price-item__action">
-                        <button class="js-custom-popup-book-trigger">BOOK NOW</button>
                     </div>
                 </div>
             </div>
@@ -295,73 +293,61 @@
                             <td class="o-highlight">{!! __('home.prices_block_multy') !!}</td>
                             <td>25 MIN</td>
                             <td>50 MIN</td>
-                            <td>{!! __('home.prices_event_packs') !!}</td>
                         </tr>
                         <tr>
                             <td>2 {!! __('home.prices_block_players') !!}</td>
                             <td>30€</td>
                             <td>35€</td>
-                            <td>40€</td>
                         </tr>
                         <tr>
                             <td>3 {!! __('home.prices_block_players') !!}</td>
                             <td>29€</td>
                             <td>34€</td>
-                            <td>39€</td>
                         </tr>
                         <tr>
                             <td>4 {!! __('home.prices_block_players') !!}</td>
                             <td>28€</td>
                             <td>33€</td>
-                            <td>38€</td>
                         </tr>
                         <tr>
                             <td>5 {!! __('home.prices_block_players') !!}</td>
                             <td>27€</td>
                             <td>32€</td>
-                            <td>37€</td>
                         </tr>
                         <tr>
                             <td>6 {!! __('home.prices_block_players') !!}</td>
                             <td>26€</td>
                             <td>31€</td>
-                            <td>36€</td>
                         </tr>
                         <tr>
                             <td>7 {!! __('home.prices_block_players') !!}</td>
                             <td>25€</td>
                             <td>30€</td>
-                            <td>35€</td>
                         </tr>
                         <tr>
                             <td>8 {!! __('home.prices_block_players') !!}</td>
                             <td>24€</td>
                             <td>29€</td>
-                            <td>34€</td>
                         </tr>
                         <tr>
                             <td>9 {!! __('home.prices_block_players') !!}</td>
                             <td>23€</td>
                             <td>28€</td>
-                            <td>33€</td>
                         </tr>
                         <tr>
                             <td>10 {!! __('home.prices_block_players') !!}</td>
                             <td>22€</td>
                             <td>27€</td>
-                            <td>32€</td>
                         </tr>
                         <tr>
                             <td>11 {!! __('home.prices_block_players') !!}</td>
                             <td>21€</td>
                             <td>26€</td>
-                            <td>31€</td>
                         </tr>
                         <tr>
                             <td>12 {!! __('home.prices_block_players') !!} <span class="o-highlight">+</span></td>
                             <td>20€</td>
                             <td>25€</td>
-                            <td>30€</td>
                         </tr>
                         <tr class="o-footer">
                             <td class="o-highlight">{!! __('home.prices_block_single') !!}</td>

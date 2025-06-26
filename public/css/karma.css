@@ -297,6 +297,24 @@ button {
     height: 400px;
   }
 }
+.c-link--blue-highlight {
+  color: #fff;
+  background: #0062ba;
+  padding: 5px 10px 4px 10px;
+  white-space: nowrap;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.c-link--blue-highlight:hover {
+  background: #007ded;
+  color: #fff !important;
+  text-decoration: none;
+}
+.c-footer .c-link--blue-highlight,
+.c-bar .c-link--blue-highlight {
+  position: relative;
+  left: -10px;
+}
 .c-link--highlight {
   color: #fff;
   background: #de1943;
@@ -1285,8 +1303,10 @@ body.is-bar .c-header {
   width: 219px;
   min-width: 219px;
   height: 32px;
-  background: url(/images/logotype.svg?2c9ead37cec8b2184bb087337fc02dc0);
-  background-size: cover;
+  background-image: url(/images/logotype.svg?2c9ead37cec8b2184bb087337fc02dc0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
   overflow: hidden;
   font-size: 1px;
   line-height: 1;
@@ -1415,7 +1435,7 @@ body.is-bar .c-header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
 }
 .c-hero__media {
-  height: 80vh;
+  height: 75vh;
   position: sticky;
   top: 60px;
   z-index: 1;
@@ -2901,38 +2921,19 @@ select:-webkit-autofill:focus {
     padding: 0 20px;
   }
 }
-.c-price-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-}
-.c-price-list .c-price-item {
-  width: calc((100% - 22px * 3) / 4);
-}
 @media (max-width: 1280px) {
   .c-price-list {
     padding: 0 40px;
-    gap: 14px;
-  }
-  .c-price-list .c-price-item {
-    width: calc((100% - 14px * 3) / 4);
   }
 }
 @media (max-width: 1023px) {
   .c-price-list {
     padding: 0 30px;
   }
-  .c-price-list .c-price-item {
-    width: calc((100% - 14px) / 2);
-  }
 }
 @media (max-width: 640px) {
   .c-price-list {
     padding: 0 20px;
-    gap: 22px;
-  }
-  .c-price-list .c-price-item {
-    width: 100%;
   }
 }
 .c-price-item {
@@ -2944,6 +2945,7 @@ select:-webkit-autofill:focus {
   padding: 32px 40px;
   background: linear-gradient(#1C3A8C 0%, #0C2262 100%);
   transition: all 0.3s ease;
+  min-height: unset !important;
 }
 .c-price-item .c-price-item-hover {
   background: linear-gradient(#B51DA6 0%, #E41646 100%);
@@ -2990,7 +2992,8 @@ select:-webkit-autofill:focus {
 }
 .c-price-item__title img {
   margin: 0 auto;
-  width: 90%;
+  width: 90% !important;
+  position: static !important;
 }
 .c-price-item__main {
   display: flex;
