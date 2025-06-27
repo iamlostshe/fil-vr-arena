@@ -333,6 +333,16 @@ button {
   position: relative;
   left: -10px;
 }
+@media (min-width: 993px) {
+  .c-mobile-only {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .c-desktop-only {
+    display: none;
+  }
+}
 .c-loader {
   width: 30px;
   height: 30px;
@@ -585,7 +595,7 @@ body.is-bar .c-header {
   left: 20px;
   top: 80px;
   right: 20px;
-  bottom: 180px;
+  bottom: 260px;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -763,11 +773,13 @@ body.is-bar .c-header {
 .c-header__nav ul li {
   display: block;
 }
+.c-header__nav ul li .c-link--blue-highlight,
 .c-header__nav ul li .c-link--highlight {
   position: relative;
   top: -1px;
 }
 @media screen and (max-width: 767px) {
+  .c-header__nav ul li .c-link--blue-highlight,
   .c-header__nav ul li .c-link--highlight {
     top: auto;
   }
@@ -2858,6 +2870,9 @@ select:-webkit-autofill:focus {
 .c-gift-block img {
   width: 100%;
 }
+.c-gift-block button {
+  width: 100%;
+}
 @media (max-width: 1280px) {
   .c-gift-block {
     padding: 0 40px;
@@ -2946,6 +2961,7 @@ select:-webkit-autofill:focus {
   background: linear-gradient(#1C3A8C 0%, #0C2262 100%);
   transition: all 0.3s ease;
   min-height: unset !important;
+  height: auto;
 }
 .c-price-item .c-price-item-hover {
   background: linear-gradient(#B51DA6 0%, #E41646 100%);
@@ -2960,8 +2976,10 @@ select:-webkit-autofill:focus {
   opacity: 0;
   transition: all 0.3s ease;
 }
-.c-price-item:hover .c-price-item-hover {
-  opacity: 1;
+@media (hover: hover) {
+  .c-price-item:hover .c-price-item-hover {
+    opacity: 1;
+  }
 }
 .c-price-item:after {
   content: "";
@@ -3143,9 +3161,11 @@ select:-webkit-autofill:focus {
   transition: all 0.3s ease;
   line-height: 1;
 }
-.c-price-item__action button:hover {
-  text-decoration: none;
-  background: #e32e58;
+@media (hover: hover) {
+  .c-price-item__action button:hover {
+    text-decoration: none;
+    background: #e32e58;
+  }
 }
 @media (max-width: 1200px) {
   .c-price-item__action button {
@@ -3230,6 +3250,7 @@ body:has(.c-custom-popup.is-opened) {
 .c-promo-item {
   width: 100%;
   max-width: 290px;
+  font-size: 16px;
 }
 @media screen and (max-width: 767px) {
   .c-promo-item {

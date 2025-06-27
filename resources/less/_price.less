@@ -22,6 +22,7 @@
   background: linear-gradient(#1C3A8C 0%, #0C2262 100%);
   transition: all .3s ease;
   min-height: unset !important;
+  height: auto;
 
   .c-price-item-hover {
     background: linear-gradient(#B51DA6 0%, #E41646 100%);
@@ -37,9 +38,11 @@
     transition: all .3s ease;
   }
 
-  &:hover {
-    .c-price-item-hover {
-      opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      .c-price-item-hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -219,9 +222,11 @@
       transition: all .3s ease;
       line-height: 1;
 
-      &:hover {
-        text-decoration: none;
-        background: #e32e58;
+      @media (hover: hover) {
+        &:hover {
+          text-decoration: none;
+          background: #e32e58;
+        }
       }
 
       @media (max-width: 1200px) {
