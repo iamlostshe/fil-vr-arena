@@ -1513,7 +1513,7 @@ body.is-bar .c-header {
 }
 @media (max-width: 767px) {
   .c-hero__meta {
-    top: -320px;
+    margin-top: -320px;
   }
 }
 .c-hero__logo {
