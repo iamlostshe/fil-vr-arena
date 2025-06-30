@@ -26,7 +26,7 @@
   }
 
     &__media {
-        height: 70vh;
+        height: 73vh;
         position: sticky;
         top: @header_height;
         z-index: 1;
@@ -118,15 +118,12 @@
           background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 90%);
       }
 
-    @media (max-width: 767px) {
-      margin-top: -320px;
-    }
   }
 
   &__logo {
     width: 100%;
     max-width: 1000px;
-    margin: 6vh auto 0;
+    margin: 6vh 0 0;
 
     @media screen and (max-width: 767px) {
       max-width: 300px;
@@ -271,6 +268,41 @@
         background-color: rgba(0, 0, 0, 0);
         z-index: 9;
     }
+
+  &:before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6875 37.6074C12.6875 42.2487 14.5314 46.7002 17.8132 49.9819C21.0951 53.2639 25.5462 55.1072 30.1875 55.1072C34.8288 55.1072 39.28 53.2639 42.562 49.9819C45.8438 46.7002 47.6875 42.2487 47.6875 37.6074V22.6074C47.6875 17.9661 45.8438 13.515 42.562 10.2331C39.28 6.95127 34.8288 5.10742 30.1875 5.10742C25.5462 5.10742 21.0951 6.95127 17.8132 10.2331C14.5314 13.515 12.6875 17.9661 12.6875 22.6074V37.6074Z' stroke='white' stroke-width='3.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M30.1875 15.1074V35.1074' stroke='white' stroke-width='3.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M37.6875 27.6074L30.1875 35.1074L22.6875 27.6074' stroke='white' stroke-width='3.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 20;
+    animation: scrollDown 2s ease-in-out infinite;
+    transition: all .3s ease;
+
+    @media (max-width: 767px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    bottom: 60px;
+  }
+  50% {
+    bottom: 44px;
+  }
+  100% {
+    bottom: 60px;
+  }
 }
 
 .is-sticky {
@@ -280,6 +312,11 @@
 }
 
 @media (max-width: 767px) {
+  .is-sticky {
+    .c-hero__video:before {
+      opacity: .25;
+    }
+  }
   .c-hero__video:after {
     background-color: rgba(0, 0, 0, 0.6);
   }
