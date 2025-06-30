@@ -46,7 +46,6 @@ $(function() {
         slidesPerView: 4,
         spaceBetween: 22,
         loop: false,
-
         breakpoints: {
             320: {
                 spaceBetween: 10,
@@ -71,6 +70,10 @@ $(function() {
                 slidesPerView: 4,
                 grabCursor: false,
             },
+        },
+        navigation: {
+            nextEl: '.js-swiper-price-next',
+            prevEl: '.js-swiper-price-prev',
         },
     });
 

@@ -241,6 +241,8 @@
                         </div>
                     </div>
                 </div>
+                <button class="swiper-button-prev js-swiper-price-prev"></button>
+                <button class="swiper-button-next js-swiper-price-next"></button>
             </div>
         </div>
     </section>
