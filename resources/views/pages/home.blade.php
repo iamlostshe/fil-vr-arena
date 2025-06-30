@@ -79,19 +79,17 @@
                 <button class="js-custom-popup-book-trigger">
                     <picture>
                         <source
-                            srcset="{{ asset('/img/events/event-' . $selectedLang . '-mobile.png') }}"
+                            srcset="{{ asset('/img/events/event-' . $selectedLang . '-mobile.png') }} 1x,
+                                    {{ asset('/img/events/event-' . $selectedLang . '-mobile@2x.png') }} 2x"
                             media="(max-width: 767px)">
                         <source
-                            srcset="{{ asset('/img/events/event-' . $selectedLang . '-mobile@2x.png') }} 2x"
-                            media="(max-width: 767px)">
-                        <source
-                            srcset="{{ asset('/img/events/event-' . $selectedLang . '.png') }}">
-                        <source
-                            srcset="{{ asset('/img/events/event-' . $selectedLang . '@2x.png') }} 2x">
+                            srcset="{{ asset('/img/events/event-' . $selectedLang . '.png') }} 1x,
+                                    {{ asset('/img/events/event-' . $selectedLang . '@2x.png') }} 2x">
                         <img
                             src="{{ asset('/img/events/event-' . $selectedLang . '.png') }}"
                             alt="Events {{ strtoupper($selectedLang) }}">
                     </picture>
+
                 </button>
             </div>
         </div>
@@ -253,19 +251,17 @@
                 <button class="js_iframe_widget" type="button">
                     <picture>
                         <source
-                            srcset="{{ asset('/img/gift/e-gift-' . $selectedLang . '-mobile.png') }}"
+                            srcset="{{ asset('/img/gift/e-gift-' . $selectedLang . '-mobile.png') }} 1x,
+                                    {{ asset('/img/gift/e-gift-' . $selectedLang . '-mobile@2x.png') }} 2x"
                             media="(max-width: 767px)">
                         <source
-                            srcset="{{ asset('/img/gift/e-gift-' . $selectedLang . '-mobile@2x.png') }} 2x"
-                            media="(max-width: 767px)">
-                        <source
-                            srcset="{{ asset('/img/gift/e-gift-' . $selectedLang . '.png') }}">
-                        <source
-                            srcset="{{ asset('/img/gift/e-gift-' . $selectedLang . '@2x.png') }} 2x">
+                            srcset="{{ asset('/img/gift/e-gift-' . $selectedLang . '.png') }} 1x,
+                                    {{ asset('/img/gift/e-gift-' . $selectedLang . '@2x.png') }} 2x">
                         <img
                             src="{{ asset('/img/gift/e-gift-' . $selectedLang . '.png') }}"
                             alt="E-Gift {{ strtoupper($selectedLang) }}">
                     </picture>
+
                 </button>
             </div>
         </div>
