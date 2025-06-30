@@ -159,7 +159,7 @@
                     <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
                     <!--<a target="_blank" href="{{-- route(\App\Constants\RouteNames::ONLINE_BOOK) --}}"></a>-->
                     <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
-                    <a target="_blank" href="https://wa.me/{{ __('contacts.instagram_link') }}"><span>whatsapp</span></a>
+                    <a target="_blank" href="https://wa.me/vrarena.pt"><span>whatsapp</span></a>
                 </div>
                 <div class="c-bar__contacts__links">
                     <a href="https://maps.app.goo.gl/WKcwZfHZiPK92tsG8" target="_blank" rel="nofollow">Av. Infante Dom Henrique 286, Lisboa</a><br>
@@ -240,7 +240,7 @@
                         <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
                         <!--<a target="_blank" href="{{-- route(\App\Constants\RouteNames::ONLINE_BOOK) --}}"></a>-->
                         <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
-                        <a target="_blank" href="https://wa.me/{{ __('contacts.instagram_link') }}"><span>whatsapp</span></a>
+                        <a target="_blank" href="https://wa.me/vrarena.pt"><span>whatsapp</span></a>
                     </div>
                 </div>
             </div>

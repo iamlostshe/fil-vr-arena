@@ -1458,6 +1458,11 @@ body.is-bar .c-header {
     top: 50px;
   }
 }
+@media screen and (max-width: 767px) {
+  .c-hero__media {
+    height: 70vh;
+  }
+}
 .c-hero__media:after {
   display: block;
   content: "\0020";
