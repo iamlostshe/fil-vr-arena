@@ -1460,7 +1460,7 @@ body.is-bar .c-header {
 }
 @media screen and (max-width: 767px) {
   .c-hero__media {
-    height: 35vh;
+    height: 80vh;
   }
 }
 .c-hero__media:after {
@@ -1510,6 +1510,11 @@ body.is-bar .c-header {
   right: 0;
   height: 120%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%);
+}
+@media (max-width: 767px) {
+  .c-hero__meta {
+    top: -320px;
+  }
 }
 .c-hero__logo {
   width: 100%;
@@ -1636,6 +1641,11 @@ body.is-bar .c-header {
 }
 .is-sticky .c-hero__video:after {
   background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 767px) {
+  .c-hero__video:after {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 .c-social {
   display: flex;
