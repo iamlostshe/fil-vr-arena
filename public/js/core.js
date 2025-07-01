@@ -82,12 +82,17 @@ $(function () {
     //get nav position
     var sticky = true;
     var navY = 40;
+    var navYMobile = 140;
     var fix = false;
     var root = $('body');
 
     if (window.pageYOffset > navY) {
         root.addClass("is-sticky");
         fix = true;
+    }
+    if (window.pageYOffset > navYMobile) {
+        console.log('111');
+        root.addClass("is-more-scroll");
     }
     if (sticky == true) {
         $(window).scroll(function () {
@@ -96,9 +101,13 @@ $(function () {
                     root.addClass("is-sticky");
                     fix = true;
                 }
+                if (window.pageYOffset > navYMobile) {
+                    root.addClass("is-more-scroll");
+                }
             } else {
                 if (fix) {
                     root.removeClass("is-sticky");
+                    root.removeClass("is-more-scroll");
                     fix = false;
                 }
             }
