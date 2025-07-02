@@ -34,7 +34,7 @@
 {{--        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/b40c9464bc56035fe92622e4/script.js"></script>--}}
 {{--        <!-- End cookieyes banner -->--}}
     @endif
-        
+
     <meta name="google-site-verification" content="gEKmlymokKoICuFnqkpb20c3NAbFXxCgckDkrZbUUSA" />
     <meta name="language" content="{{app()->getLocale() == 'pt' ? 'Portugues' : 'English'}}">
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
@@ -134,6 +134,12 @@
             z-index: 99!important;
         }
     </style>
+    <script type="text/javascript" src="https://anotherworld.dgft.com/script"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            IframeWidgetFunctional.init('.js_iframe_widget');
+        });
+    </script>
 </head>
 <body>
 @if (app()->isProduction())

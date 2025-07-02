@@ -3289,7 +3289,7 @@ select:-webkit-autofill:focus {
   height: 100%;
 }
 .c-custom-popup__wrapper iframe {
-  min-height: 450px !important;
+  height: 450px !important;
 }
 body:has(.c-custom-popup.is-opened) {
   overflow: hidden;
