@@ -26,7 +26,7 @@ return [
     'prices_per_person' => 'per person',
     'prices_event_packs' => 'EVENT PACKS',
     'book_now' => 'BOOK NOW',
-    'price_title_1' => 'Private Room<br class="c-mobile-only"> for 2h 30<br class="c-desktop-only">Includes<br class="c-mobile-only"> <strong>50&nbsp;min</strong> of VR gameplay',
+    'price_title_1' => 'Private Room<br class="c-mobile-only"> for 2h&nbsp;30<br class="c-desktop-only">Includes<br class="c-mobile-only"> <strong>50&nbsp;min</strong> of&nbsp;VR&nbsp;gameplay',
     'price_extra_title' => 'Extra',
     'price_extra_25_min' => '+25 min game',
     'price_extra_50_min' => '+50 min game',
