@@ -40,4 +40,41 @@ $(function() {
         },
     });
 
+    const swiperPrice = new Swiper('.js-swiper-price', {
+        lazy: true,
+        direction: 'horizontal',
+        slidesPerView: 4,
+        spaceBetween: 22,
+        loop: false,
+        breakpoints: {
+            320: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                grabCursor: true,
+                // Параметры для блокировки вертикального скролла на мобильном
+                touchAngle: 30,
+                threshold: 5,
+                touchMoveStopPropagation: true,
+            },
+            641: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                grabCursor: true,
+                // Параметры для блокировки вертикального скролла на планшете
+                touchAngle: 35,
+                threshold: 4,
+                touchMoveStopPropagation: true,
+            },
+            1024: {
+                spaceBetween: 22,
+                slidesPerView: 4,
+                grabCursor: false,
+            },
+        },
+        navigation: {
+            nextEl: '.js-swiper-price-next',
+            prevEl: '.js-swiper-price-prev',
+        },
+    });
+
 });

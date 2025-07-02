@@ -35,20 +35,28 @@
     flex-grow: 1;
     height: @header_height;
     position: relative;
-    gap:40px;
+    gap: 20px;
 
     @media screen and (max-width: 1200px) {
       height: @header_height_mobile;
     }
+
+      @media screen and (max-width: 767px) {
+          gap: 20px;
+      }
   }
 
   &__logo {
-    &:extend(.c-logo);
-    margin: 0 40px;
+    &:extend(.c-logotype);
+    margin: 0 40px 0 0;
 
     @media screen and (max-width: 1200px) {
       margin: 0 20px 0 0;
     }
+
+      @media screen and (max-width: 767px) {
+          margin: 0;
+      }
 
 
     & span {
@@ -68,46 +76,59 @@
 
     & ul {
       display: flex;
-      gap:40px;
+        align-items: center;
+        justify-content: center;
+      gap: 14px;
       width: 100%;
+        line-height: 1;
 
       @media screen and (max-width: 1200px) {
         display: none;
       }
 
-      &:first-child {
-        justify-content: flex-end;
-      }
+      //&:first-child {
+      //  justify-content: flex-end;
+      //}
 
       & li {
         display: block;
+
+          & .c-link--blue-highlight,
+          & .c-link--highlight {
+              position: relative;
+              top:-1px;
+
+              @media screen and (max-width: 767px) {
+                  top:auto;
+              }
+          }
       }
 
     }
   }
 
   &__contacts {
-    position: absolute;
-    top:10px;
-    bottom: 10px;
-    right: 0;
+    //position: absolute;
+    //top:10px;
+    //bottom: 10px;
+    //right: 0;
     display: flex;
     align-items: center;
     gap: 20px;
 
     @media screen and (max-width: 1200px) {
-      right: 50px;
+      //right: 50px;
     }
 
     @media screen and (max-width: 767px) {
-      right: 45px;
+      //right: 45px;
       gap: 10px;
     }
 
     &__desktop {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 10px;
 
       @media screen and (max-width: 1200px) {
         display: none;

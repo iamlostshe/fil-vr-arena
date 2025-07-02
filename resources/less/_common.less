@@ -98,10 +98,30 @@ button {
 
 
 .c-link {
+  &--blue-highlight {
+    color: #fff;
+    background: @color-blue;
+    padding: 5px 10px 4px 10px;
+    white-space: nowrap;
+    border-radius: 2px;
+    text-decoration: none;
+
+    &:hover {
+      background: lighten(@color-blue, 10%);
+      color: #fff !important;
+      text-decoration: none;
+    }
+
+    .c-footer &,
+    .c-bar & {
+      position: relative;
+      left: -10px;
+    }
+  }
   &--highlight {
     color: #fff;
     background: @color-red;
-    padding: 5px 10px;
+    padding: 5px 10px 4px 10px;
     white-space: nowrap;
     border-radius: 2px;
     text-decoration: none;
@@ -118,5 +138,16 @@ button {
       left: -10px;
     }
   }
+}
 
+.c-mobile-only {
+  @media (min-width: 993px) {
+    display: none;
+  }
+}
+
+.c-desktop-only {
+  @media (max-width: 992px) {
+    display: none;
+  }
 }

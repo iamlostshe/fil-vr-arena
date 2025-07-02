@@ -1,0 +1,51 @@
+.c-event-block {
+  position: relative;
+  overflow: hidden;
+  font-size: 0;
+  transition: all .8s ease;
+  box-shadow: 0 0 60px rgba(0, 79, 143, 0);
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 30px rgba(0, 79, 143, 0.75);
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 210px;
+    height: 160%;
+    position: absolute;
+    top: -70px;
+    left: -100%;
+    background: #fff;
+    display: block;
+    z-index: 7;
+    transform: rotate(15deg);
+    opacity: .06;
+    filter: blur(20px);
+    transition: all .7s ease;
+  }
+
+  &:hover {
+    &:after {
+      left: 130%;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 20px;
+  }
+}

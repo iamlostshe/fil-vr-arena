@@ -23,12 +23,37 @@ $(function () {
     });
 
     $('.js-bar-close').click(function () {
+        closeBarMenu();
+    });
+
+    // Закрытие бара при клике на ссылку внутри .js-bar-menu
+    $('.js-bar-menu').on('click', 'a', function () {
+        closeBarMenu();
+    });
+
+    function closeBarMenu() {
         $body.addClass('is-bar-closing');
         setTimeout(function () {
             $body.removeClass('is-bar-closing').removeClass('is-bar');
         }, 500);
+    }
+
+});
+
+// Пример JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+    const triggers = document.querySelectorAll(".js-header-language-trigger");
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener("click", function (e) {
+            e.preventDefault(); // если кнопка — preventDefault на всякий случай
+            const parent = trigger.closest(".js-header-language");
+            parent.classList.toggle("is-open");
+        });
     });
 });
+
+
 
 function browserDetect() {
     var browser = '';
@@ -57,12 +82,17 @@ $(function () {
     //get nav position
     var sticky = true;
     var navY = 40;
+    var navYMobile = 140;
     var fix = false;
     var root = $('body');
 
     if (window.pageYOffset > navY) {
         root.addClass("is-sticky");
         fix = true;
+    }
+    if (window.pageYOffset > navYMobile) {
+        console.log('111');
+        root.addClass("is-more-scroll");
     }
     if (sticky == true) {
         $(window).scroll(function () {
@@ -71,9 +101,13 @@ $(function () {
                     root.addClass("is-sticky");
                     fix = true;
                 }
+                if (window.pageYOffset > navYMobile) {
+                    root.addClass("is-more-scroll");
+                }
             } else {
                 if (fix) {
                     root.removeClass("is-sticky");
+                    root.removeClass("is-more-scroll");
                     fix = false;
                 }
             }
@@ -180,3 +214,95 @@ $(function () {
     }
 });
 
+function heroVideoController(orientation, videoDesktopPath, videoMobilePath) {
+
+    if(orientation === 'portrait' || orientation === 'portrait-primary' || orientation === 'portrait-secondary') {
+        $('#js-hero-video source').attr('src', videoMobilePath);
+    } else {
+        $('.js-hero-video source').attr('src', videoDesktopPath);
+    }
+    $('#js-hero-video').get(0).load();
+    $('#js-hero-video').get(0).play();
+}
+
+/* Play or stop visible hero video */
+$(function () {
+    var $videoSource = $('#js-hero-video source');
+    var videoDesktopPath = $videoSource.attr('data-video');
+    var videoMobilePath = $videoSource.attr('src');
+
+    if(device.desktop()) {
+        $videoSource.attr('src', videoDesktopPath);
+        $('#js-hero-video').get(0).load();
+        $('#js-hero-video').get(0).play();
+    } else {
+        window.addEventListener("orientationchange", (event) => {
+            heroVideoController(event.target.screen.orientation.type, videoDesktopPath, videoMobilePath);
+        });
+    }
+});
+
+
+// BOOK NOW POPUP CUSTOM
+document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.querySelector('.js-custom-popup-book');
+    const triggers = document.querySelectorAll('.js-custom-popup-book-trigger');
+    const closeBtn = document.querySelector('.js-custom-popup-book-close');
+
+    // Открытие попапа при клике на любую кнопку
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            popup.classList.add('is-opened');
+        });
+    });
+
+    // Закрытие попапа
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('is-opened');
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            popup.classList.remove('is-opened');
+        }
+    });
+
+});
+
+
+// SCROLL
+document.addEventListener('DOMContentLoaded', function () {
+    const icon = document.querySelector('.js-desktop-scroll');
+    if (!icon) return;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const viewportHeight = window.innerHeight;
+        const fadeDistance = viewportHeight * 0.7;
+
+        let progress = scrollTop / fadeDistance;
+
+        // Ограничим значение от 0 до 1
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        icon.style.opacity = 1 - progress;
+    });
+
+    const iconMobile = document.querySelector('.js-mobile-scroll');
+    if (!iconMobile) return;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const viewportHeight = window.innerHeight;
+        const fadeDistance = viewportHeight * 0.6;
+
+        let progress = scrollTop / fadeDistance;
+
+        // Ограничим значение от 0 до 1
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        iconMobile.style.opacity = 1 - progress;
+    });
+});

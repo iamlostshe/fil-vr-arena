@@ -142,54 +142,61 @@
     <!-- End Google Tag Manager (noscript) -->
 @endif
 <div class="c-site" id="app">
-    <aside class="c-bar">
-        <div class="c-bar__overlay js-bar-close"></div>
-        <div class="c-bar__main">
-            <button class="c-bar__close js-bar-close"></button>
-            <div class="c-bar__content">
-                <ul>
-                    <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" target="_blank">{{ __('app.reserve_experience') }}</a></li>
-                    <li>
-                        <a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a>
-                    </li>
-                    <li>
-                        <a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com/maps/place/Another+World+Parking/@38.750559,-9.1047117,19z/data=!3m1!4b1!4m6!3m5!1s0xd19330018a0c101:0x176e741ebce86d37!8m2!3d38.750558!4d-9.104068!16s%2Fg%2F11vxqtxll6?entry=tts&g_ep=EgoyMDI0MDUyMi4wKgBIAVAD" target="_blank">
-                            {{ __('app.parking') }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </aside>
     @php
         $currentUrl = url()->current();
         $selectedLang = LaravelLocalization::getCurrentLocale();
     @endphp
 
+    <aside class="c-bar">
+        <div class="c-bar__overlay js-bar-close"></div>
+        <div class="c-bar__main">
+            <button class="c-bar__close js-bar-close"></button>
+            <div class="c-bar__header">
+                <a href="/en" class="c-header__logo"></a>
+            </div>
+            <div class="c-bar__content js-bar-menu">
+                <ul>
+                    <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
+                    <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
+                    <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
+                    <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}" class="c-menu-gift">{{ __('app.gifts_cards') }}</a></li>
+                    <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
+                    <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-menu-book-now" target="_blank">{{ __('app.reserve_experience') }}</a></li>
+                </ul>
+            </div>
+            <div class="c-bar__contacts">
+                <div class="c-bar__contacts__language">
+                    <a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a>
+                </div>
+                <div class="c-social">
+                    <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
+                    <!--<a target="_blank" href="{{-- route(\App\Constants\RouteNames::ONLINE_BOOK) --}}"></a>-->
+                    <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
+                    <a target="_blank" href="https://wa.me/vrarena.pt"><span>whatsapp</span></a>
+                </div>
+                <div class="c-bar__contacts__links">
+                    <a href="https://maps.app.goo.gl/WKcwZfHZiPK92tsG8" target="_blank" rel="nofollow">Av. Infante Dom Henrique 286, Lisboa</a><br>
+                    {!! __('contacts.work_hours') !!}<br>
+                    <br><a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a>
+                </div>
 
-    <ul class="c-languages">
-        <li><a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a></li>
-        <li><a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a></li>
-    </ul>
-
+            </div>
+        </div>
+    </aside>
 
     <header class="c-header">
         <div class="c-layout">
             <div class="c-header__container">
                 <div class="c-header__nav">
-                    <ul>
-                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
-                        <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
-
-                    </ul>
                     <a href="{{ $selectedLang === 'pt' ? '/pt' : '/en' }}" class="c-header__logo"></a>
                     <ul>
                         <li><a href="{{route($about_route_name)}}" class="{{$current_route_name === $about_route_name ? 'is-active' : ''}}">{{ __('app.about_us') }}</a></li>
+                        <li><a href="{{route('games')}}" class="{{$current_route_name === 'games' ? 'is-active' : ''}}">{!! __('app.adventures') !!}</a></li>
+                        <li><a href="{{ $current_route_name === 'home' ? '#events' : '/#events' }}">{{ __('app.events') }}</a></li>
+                        <li><a href="{{ $current_route_name === 'home' ? '#gifts_cards' : '/#gifts_cards' }}" class="c-link--blue-highlight">{{ __('app.gifts_cards') }}</a></li>
                         <li><a href="{{route($contacts_route_name)}}" class="{{$current_route_name === $contacts_route_name ? 'is-active' : ''}}">{{ __('app.contacts') }}</a></li>
+                        <li><a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-link--highlight" target="_blank">{{ __('app.reserve_experience') }}</a></li>
                     </ul>
                 </div>
                 <div class="c-header__contacts">
@@ -197,6 +204,15 @@
                         <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}">{{__('contacts.phone_number')}}</a>
                         <a target="_blank" class="c-social-item"
                            href="{{__('contacts.instagram_link')}}"></a>
+                        <div class="c-header-language js-header-language">
+                            <button class="js-header-language-trigger">
+                                {{ strtoupper($selectedLang) }}
+                            </button>
+                            <div class="c-header-language__list">
+                                <a href="{{ LaravelLocalization::getLocalizedURL('pt', $currentUrl) }}" class="{{ $selectedLang === 'pt' ? 'is-active' : '' }}">PT</a>
+                                <a href="{{ LaravelLocalization::getLocalizedURL('en', $currentUrl) }}" class="{{ $selectedLang === 'en' ? 'is-active' : '' }}">EN</a>
+                            </div>
+                        </div>
                     </div>
                     <a href="{{route(\App\Constants\RouteNames::ONLINE_BOOK)}}" class="c-header__contacts__booking" target="_blank">{{ __('app.reserve_experience') }}</a>
                     <div class="c-header__contacts__mobile">
@@ -233,6 +249,8 @@
             <div class="c-footer__container">
                 <div class="c-footer__contacts">
                     {{__('app.company_name')}}<br/>
+                    <a href="https://maps.app.goo.gl/WKcwZfHZiPK92tsG8" target="_blank" rel="nofollow">Av. Infante Dom Henrique 286, Lisboa</a><br><br>
+                    {!! __('contacts.work_hours') !!}<br><br>
                     <a href="{{ __('contacts.tel_link') }}">{{ __('contacts.phone_number') }}</a><br/>
                     <a href="mailto:{{ __('contacts.email') }}">{{ __('contacts.email') }}</a><br/>
                 </div>
@@ -241,6 +259,7 @@
                         <a href="{{ __('contacts.tel_link') }}"><span>{{ __('contacts.phone_nuber') }}</span></a>
                         <!--<a target="_blank" href="{{-- route(\App\Constants\RouteNames::ONLINE_BOOK) --}}"></a>-->
                         <a target="_blank" href="{{ __('contacts.instagram_link') }}"><span>instagram</span></a>
+                        <a target="_blank" href="https://wa.me/vrarena.pt"><span>whatsapp</span></a>
                     </div>
                 </div>
             </div>
@@ -262,7 +281,6 @@
             </div>
         </div>
     </footer>
-    
 </div>
 @if (app()->isProduction())
     <script>(function(a,m,o,c,r,m){a[m]={id:"1019157",hash:"f8c17e1f791354f242139edcb1087f1894a5651a79ed45febc06df6f9fc7a8ba",locale:"en",setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.kommo.com/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'crmPlugin',0,0,'crm_plugin'));</script>

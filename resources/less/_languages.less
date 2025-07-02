@@ -1,49 +1,71 @@
-.c-languages {
-  display: block;
-  position: fixed;
-  z-index: 10;
-  top:280px;
-  left: 0;
-  background: rgba(9, 9, 9, 0.78);
-  padding: 9px 7px;
+.c-header-language {
+  border: 1px solid #3a3a3a;
+  border-radius: 2px;
+  transition: all .3s ease;
+  position: relative;
 
-  & li {
-    display: block;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+  button {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    gap: 12px;
+    cursor: pointer;
+    padding: 3px 6px 0 6px;
+    display: flex;
+    align-items: center;
+    height: 28px;
+    position: relative;
+    z-index: 1;
 
-    &:last-child {
-      margin-bottom: 0;
-      border:none;
+    &:after {
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg width='7' height='4' viewBox='0 0 7 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.155366 0.165094C-0.0517887 0.382547 -0.0517887 0.735148 0.155366 0.9526L2.75047 3.67418C3.16486 4.10875 3.83632 4.10858 4.2505 3.67384L6.8446 0.950595C7.0518 0.733142 7.0518 0.380541 6.8446 0.163089C6.63746 -0.0543631 6.30157 -0.0543631 6.09443 0.163089L3.87414 2.49386C3.667 2.71137 3.33111 2.71137 3.12397 2.49386L0.905546 0.165094C0.698391 -0.0523578 0.362521 -0.0523578 0.155366 0.165094Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 7px;
+      min-width: 7px;
+      height: 4px;
+      min-height: 4px;
+      position: relative;
+      top: -1px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .1);
     }
   }
 
-  & a {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
-    line-height: 1;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 100%;
-    border: 1px solid #fff;
-    font-weight: bold;
+  &__list {
+    display: none;
 
-    &:hover {
-      background: @color-red;
-      border-color:@color-red;
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      display: block;
+      padding: 3px 0;
     }
 
-    &.is-active {
-      color: #222;
-      background: #fff;
-      border-color: #fff;
-      pointer-events: none;
+    .is-active {
+      display: none;
+    }
+  }
+
+  &.is-open {
+    border-color: transparent;
+
+    .c-header-language__list {
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      border: 1px solid #3a3a3a;
+      border-radius: 2px;
+      background: rgba(1, 1, 1, 0.8);
+      padding: 30px 6px 0 6px;
     }
   }
 }

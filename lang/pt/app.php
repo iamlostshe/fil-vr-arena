@@ -4,6 +4,8 @@ return [
     'reserve_experience' => 'Reserva online',
     'adventures' => 'Aventuras',
     'about_us' => 'Sobre nós',
+    'events' => 'Eventos',
+    'gifts_cards' => 'Cartões de presente',
     'contacts' => 'Contatos',
     'franchise' => 'Franquia',
     'adventure' => 'Aventura',
@@ -19,7 +21,7 @@ return [
     'term_and_conditions' => 'Termos e Condições',
     'phone_number' => 'Número de telefone',
     'gameplay' => 'Jogabilidade',
-    'all_rights_reserved' => '© 2024 Todos os direitos reservados',
+    'all_rights_reserved' => '© 2025 Todos os direitos reservados',
     'meta_default' => [
         'title' => 'Arena de Realidade Virtual Free Roam em Lisboa, Portugal',
         'description' => 'Explore a experiência definitiva de arena de realidade virtual em Lisboa, Portugal. Mergulhe em aventuras emocionantes de RV com amigos e família. Reserve sua sessão agora!',
