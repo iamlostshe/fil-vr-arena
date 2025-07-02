@@ -270,3 +270,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+
+// SCROLL
+document.addEventListener('DOMContentLoaded', function () {
+    const icon = document.querySelector('.js-desktop-scroll');
+    if (!icon) return;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const viewportHeight = window.innerHeight;
+        const fadeDistance = viewportHeight * 0.7;
+
+        let progress = scrollTop / fadeDistance;
+
+        // Ограничим значение от 0 до 1
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        icon.style.opacity = 1 - progress;
+    });
+
+    const iconMobile = document.querySelector('.js-mobile-scroll');
+    if (!iconMobile) return;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const viewportHeight = window.innerHeight;
+        const fadeDistance = viewportHeight * 0.6;
+
+        let progress = scrollTop / fadeDistance;
+
+        // Ограничим значение от 0 до 1
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        iconMobile.style.opacity = 1 - progress;
+    });
+});

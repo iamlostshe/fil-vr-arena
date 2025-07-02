@@ -18,12 +18,14 @@
                     data-video="https://arena.fhtagn.studio/media/video/hero.mp4" type="video/mp4"
                 />
                 </video>
+                <div class="c-hero__scroll js-mobile-scroll"></div>
             </div>
         </div>
         <div class="c-hero__meta">
             <div class="c-layout">
                 <div class="c-hero__logo">
                     <img src="{{asset("/img/logo-text.svg")}}" alt="ANOTHER WORLD"/>
+                    <div class="c-hero__scroll js-desktop-scroll"></div>
                 </div>
 
                 <div class="c-hero__content">
