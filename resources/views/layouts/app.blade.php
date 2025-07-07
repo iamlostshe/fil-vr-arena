@@ -280,6 +280,9 @@
                     <li>
                         <a href="{{route($terms_and_conditions_route_name)}}" class="{{$current_route_name === $terms_and_conditions_route_name ? 'is-active' : ''}}">{{ __('app.term_and_conditions') }}</a>
                     </li>
+                    <li>
+                        <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank"><?php echo e(__('app.complaints_book')); ?></a>
+                    </li>
                 </ul>
             </div>
             <div class="c-footer__copyright">

@@ -20,6 +20,7 @@ return [
     'privacy_policy' => 'Privacy Policy',
     'user_agreement' => 'User Agreement',
     'term_and_conditions' => 'Terms and Conditions',
+    'complaints_book' => 'Complaints book',
     'phone_number' => 'Phone Number',
     'email' => 'Email',
     'gameplay' => 'Gameplay',

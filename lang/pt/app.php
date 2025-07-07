@@ -19,6 +19,7 @@ return [
     'privacy_policy' => 'Política de Confidencialidade',
     'user_agreement' => 'Acordo do usuário',
     'term_and_conditions' => 'Termos e Condições',
+    'complaints_book' => 'Livro de Reclamações',
     'phone_number' => 'Número de telefone',
     'gameplay' => 'Jogabilidade',
     'all_rights_reserved' => '© 2025 Todos os direitos reservados',
