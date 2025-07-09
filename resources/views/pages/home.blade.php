@@ -11,7 +11,7 @@
                 <video
                     id="js-hero-video"
                     width="1920" height="1080" autoplay loop muted frameborder="0" allowfullscreen playsinline
-                    poster="{{asset("/media/video/img/hero.jpg")}}">
+                    poster="{{asset("/media/video/hero.jpg")}}">
                 <source
                     src="{{asset("/media/video/hero-mobile.mp4")}}"
 {{--                        src="{{asset("/media/video/hero-mobile.mp4")}}"--}}
