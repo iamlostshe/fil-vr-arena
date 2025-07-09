@@ -13,9 +13,9 @@
                     width="1920" height="1080" autoplay loop muted frameborder="0" allowfullscreen playsinline
                     poster="{{asset("/media/video/img/hero.jpg")}}">
                 <source
-                    src="https://arena.fhtagn.studio/media/video/hero.mp4"
+                    src="{{asset("/media/video/hero-mobile.mp4")}}"
 {{--                        src="{{asset("/media/video/hero-mobile.mp4")}}"--}}
-                    data-video="https://arena.fhtagn.studio/media/video/hero.mp4" type="video/mp4"
+                    data-video="{{asset("/media/video/hero.mp4")}}" type="video/mp4"
                 />
                 </video>
                 <div class="c-hero__scroll js-mobile-scroll"></div>
