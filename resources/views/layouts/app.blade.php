@@ -52,14 +52,7 @@
         $title = !empty($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) : __('app.meta_default.title');
         $description = __('app.meta_default.description');
         $keywords = __('app.meta_default.keywords');
-        $metatag = \App\Services\MetatagService::getCurrent();
         $image = !empty($__env->yieldContent('image')) ? trim($__env->yieldContent('image')) : asset("/img/poster.jpg?v=2");
-        if($metatag){
-            $title = $metatag->title;
-            $description = $metatag->description;
-            $keywords = $metatag->keywords;
-        }
-
     @endphp
     <title>{{ $title }}</title>
     <meta name="description" content="{{$description}}">

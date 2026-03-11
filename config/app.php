@@ -170,6 +170,7 @@ return [
         App\Providers\EventServiceProvider::class,
         // App\Providers\MetaTagsServiceProvider::class,
         // App\Providers\NovaServiceProvider::class,
+        App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ])->toArray(),

@@ -25,7 +25,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method void prepareToAttachMedia(Media $media, FileAdder $fileAdder)
  */
 class Game extends Model implements HasMedia, HasUrlAlias {
-    use HasTabs;
     use HasFactory;
     use Translates;
     use SoftDeletes;
