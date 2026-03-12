@@ -1,0 +1,33 @@
+<?php
+return [
+    'block_1_title' => "ARENA DE JUEGOS DE REALIDAD VIRTUAL CON MOVIMIENTO LIBRE",
+    'block_1_list' => [
+        'item_1' => 'Juegos en grupo e individuales — hasta 20 participantes',
+        'item_2' => 'Fiestas de cumpleaños, team buildings y mucho más',
+        'item_3' => 'Diversión inmersiva en realidad virtual — para mayores de 6 años',
+    ],
+    'book_button' => 'Reserva tu experiencia',
+    'block_2_title' => 'ANOTHER WORLD LISBOA - ESTO ES',
+    'block_2_list' => [
+        'item_1' => 'Experiencia única en una de las mayores arenas VR de Europa',
+        'item_2' => 'Tecnología de última generación y movimiento libre',
+        'item_3' => 'Inmersión total para todas las edades',
+    ],
+    'block_3_title' => 'REÚNE A TU EQUIPO ¡OTROS MUNDOS TE ESTÁN ESPERANDO!',
+    'find_block_title' => '¿CÓMO PUEDES ENCONTRARNOS?',
+    'prices_block_title' => 'PRECIO JUEGOS',
+    'prices_block_duration_header' => 'DURACIÓN, MIN',
+    'prices_block_price_header' => 'PRECIO',
+    'prices_block_single' => 'Single VR',
+    'prices_block_multy' => 'Juegos en arena (2-12 jugadores)',
+    'prices_block_people' => 'personas',
+    'prices_block_players' => 'jugadores',
+    'prices_block_arenas' => 'arenas',
+    'prices_per_person' => 'por persona',
+    'prices_event_packs' => 'PAQUETES DE EVENTOS',
+    'book_now' => 'RESERVA AHORA',
+    'price_title_1' => 'sala privada 2h 30mcon 50 min de juego',
+    'price_extra_title' => 'Extra',
+    'price_extra_25_min' => '+25 min de juego',
+    'price_extra_50_min' => '+50 min de juego',
+];

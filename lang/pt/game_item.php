@@ -6,6 +6,4 @@ return [
     'players' => 'Jogadores',
     'duration' => 'Sessão',
     'age' => 'Idade',
-
-
 ];
